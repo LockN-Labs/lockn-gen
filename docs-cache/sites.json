@@ -1,0 +1,8 @@
+[
+  {
+    "name": "OpenClaw Docs",
+    "url": "https://docs.openclaw.ai",
+    "scope": "full",
+    "notes": "Primary docs. Capture full crawl with timestamps and diffs."
+  }
+]
