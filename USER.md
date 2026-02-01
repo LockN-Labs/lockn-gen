@@ -15,6 +15,7 @@
 - Prefers blunt, direct, structured communication; plan-before-execution; A/B/C options with recommendation; label fact vs opinion; minimize surprises.
 - Home turbulence: long-term girlfriend (10 years) relationship destabilized; co-owns house, not leaving yet.
 - Built a powerful server: Threadripper Pro 32c/64t, RTX Pro 6000 Blackwell 96GB, 2× Samsung 9100 Pro 4TB NVMe, 256GB RAM.
+- Wants local embeddings, open-source components (Apache/MIT), strong observability (OpenTelemetry GenAI receipts), and more agent permissions for long-running work.
 
 ---
 

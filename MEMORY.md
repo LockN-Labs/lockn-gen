@@ -8,3 +8,4 @@
 - Predictability/stability sensitive; prefers text over calls; avoid abrupt pivots; reduce ambiguity when stressed.
 - Home situation: long-term girlfriend (10 years) co-owns house; relationship destabilized, she’s not leaving yet.
 - Built a high-end server: Threadripper Pro 32c/64t, RTX Pro 6000 Blackwell 96GB, 2× Samsung 9100 Pro 4TB NVMe, 256GB RAM.
+- Prefers local/open-source components (Apache/MIT), strong observability (OpenTelemetry GenAI receipts), long-running tasks, and higher permissions where safe for agentic workflows.
