@@ -12,6 +12,7 @@
 
 - Solo founder/owner of OneSun Labs with DBAs OneSun Strategies (consulting) and LockN Labs (R&D).
 - Focused on health (exercise, nutrition, mindfulness) and growing AI infrastructure/agentic workflows business for consistent high income and impact.
+- Prefers blunt, direct, structured communication; plan-before-execution; A/B/C options with recommendation; label fact vs opinion; minimize surprises.
 - Home turbulence: long-term girlfriend (10 years) relationship destabilized; co-owns house, not leaving yet.
 - Built a powerful server: Threadripper Pro 32c/64t, RTX Pro 6000 Blackwell 96GB, 2× Samsung 9100 Pro 4TB NVMe, 256GB RAM.
 
