@@ -19,7 +19,7 @@ public class GenerationTests
         generation.Width.Should().Be(1024);
         generation.Height.Should().Be(1024);
         generation.Steps.Should().Be(20);
-        generation.Guidance.Should().Be(7.5);
+        generation.Guidance.Should().Be(7.5f);
         generation.Status.Should().Be(GenerationStatus.Queued);
         generation.CreatedAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromSeconds(1));
     }
