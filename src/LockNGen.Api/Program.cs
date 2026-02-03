@@ -1,9 +1,11 @@
+using LockNGen.Api.Endpoints;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
 using LockNGen.Infrastructure.Data;
 using LockNGen.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +42,18 @@ builder.Services.AddHealthChecks()
     .AddDbContextCheck<AppDbContext>()
     .AddCheck<ComfyUiHealthCheck>("comfyui");
 
+// OpenAPI/Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "LockN Gen API",
+        Version = "v1",
+        Description = "Text-to-image generation API powered by ComfyUI"
+    });
+});
+
 var app = builder.Build();
 
 // Ensure database is created
@@ -48,6 +62,14 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
 }
+
+// Swagger UI (all environments for API visibility)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LockN Gen API v1");
+    c.RoutePrefix = "swagger";
+});
 
 // Health endpoint
 app.MapHealthChecks("/health");
@@ -58,6 +80,10 @@ app.MapGet("/", () => Results.Ok(new {
     version = "0.1.0",
     status = "running"
 }));
+
+// API Endpoints
+app.MapGenerationEndpoints();
+app.MapModelEndpoints();
 
 app.Run();
 
