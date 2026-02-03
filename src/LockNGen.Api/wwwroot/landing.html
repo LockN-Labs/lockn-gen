@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockN Gen — AI Image Generation Platform</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Create Stunning Images with AI</h1>
+            <p class="hero-subtitle">Professional-grade image generation powered by ComfyUI and Stable Diffusion XL</p>
+            <div class="hero-cta">
+                <a href="/index.html" class="btn btn-primary">Start Generating</a>
+                <a href="/index.html#gallery" class="btn btn-secondary">View Gallery</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-grid">
+                <div class="hero-sample"></div>
+                <div class="hero-sample"></div>
+                <div class="hero-sample"></div>
+                <div class="hero-sample"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why LockN Gen?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Powered by ComfyUI backend with optimized workflows for rapid generation times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Multiple Models</h3>
+                    <p>Support for SDXL and custom workflows. Choose the right model for your creative vision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Real-time Progress</h3>
+                    <p>WebSocket streaming shows generation progress live — watch your image come to life.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Developer API</h3>
+                    <p>Full REST API with authentication. Integrate AI image generation into your apps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enter Your Prompt</h3>
+                    <p>Describe what you want to create in natural language.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Settings</h3>
+                    <p>Select model, size, and generation parameters.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Generate & Download</h3>
+                    <p>Watch progress in real-time, then download your creation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section class="api-section" id="api">
+        <div class="container">
+            <h2 class="section-title">Developer API</h2>
+            <p class="section-desc">Integrate AI image generation into your applications with our REST API.</p>
+            <div class="code-block">
+                <pre><code>POST /api/generations
+{
+  "prompt": "A serene mountain landscape at sunset",
+  "width": 1024,
+  "height": 1024,
+  "workflow": "txt2img-sdxl"
+}</code></pre>
+            </div>
+            <div class="api-cta">
+                <a href="/swagger" class="btn btn-secondary">View API Docs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🔒 LockN Gen</h3>
+                    <p>AI Image Generation Platform</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/index.html">Gallery</a>
+                    <a href="/swagger">API Docs</a>
+                    <a href="https://github.com/LockN-AI/lockn-gen">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LockN Labs. Built with ❤️ and AI.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
