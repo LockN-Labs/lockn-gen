@@ -1,4 +1,5 @@
 using LockNGen.Api.Endpoints;
+using LockNGen.Api.Middleware;
 using LockNGen.Api.WebSockets;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
@@ -35,6 +36,7 @@ builder.Services.AddHttpClient<IComfyUiClient, ComfyUiClient>();
 // Services
 builder.Services.AddSingleton<IWorkflowLoader, WorkflowLoader>();
 builder.Services.AddScoped<IGenerationService, GenerationService>();
+builder.Services.AddScoped<IApiKeyService, ApiKeyService>();
 
 // Background workers
 builder.Services.AddHostedService<GenerationWorker>();
@@ -60,6 +62,24 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Description = "Text-to-image generation API powered by ComfyUI"
     });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "API key authentication. Enter your API key (without 'Bearer' prefix).",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 var app = builder.Build();
@@ -82,6 +102,10 @@ app.UseSwaggerUI(c =>
 // WebSocket support
 app.UseWebSockets();
 
+// Authentication and rate limiting middleware
+app.UseMiddleware<ApiKeyAuthMiddleware>();
+app.UseMiddleware<RateLimitMiddleware>();
+
 // Static files for frontend
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -100,6 +124,7 @@ app.MapGet("/", () => Results.Ok(new {
 app.MapGenerationEndpoints();
 app.MapModelEndpoints();
 app.MapProgressWebSocketEndpoints();
+app.MapAdminEndpoints();
 
 app.Run();
 
