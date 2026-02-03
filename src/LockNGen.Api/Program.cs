@@ -118,11 +118,43 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Ensure database is created
+// Database initialization
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    
+    if (db.Database.IsNpgsql())
+    {
+        // Apply pending migrations for PostgreSQL
+        logger.LogInformation("Applying database migrations...");
+        db.Database.Migrate();
+        logger.LogInformation("Database migrations applied successfully");
+    }
+    else
+    {
+        // Use EnsureCreated for InMemory database
+        db.Database.EnsureCreated();
+        logger.LogInformation("InMemory database created");
+    }
+    
+    // Seed development API key if none exists
+    if (app.Environment.IsDevelopment() && !db.ApiKeys.Any())
+    {
+        var devKey = new LockNGen.Domain.Entities.ApiKey
+        {
+            Id = Guid.Parse("00000000-0000-0000-0000-000000000001"),
+            Name = "Development Key",
+            KeyHash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", // SHA256 of empty string
+            KeyPrefix = "dev_",
+            IsAdmin = true,
+            RateLimit = 1000,
+            CreatedAt = DateTime.UtcNow
+        };
+        db.ApiKeys.Add(devKey);
+        db.SaveChanges();
+        logger.LogInformation("Development API key seeded: dev_*** (use any key starting with 'dev_' in development)");
+    }
 }
 
 // Swagger UI (all environments for API visibility)
