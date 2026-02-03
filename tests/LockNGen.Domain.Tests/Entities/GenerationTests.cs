@@ -1,5 +1,6 @@
 using FluentAssertions;
 using LockNGen.Domain.Entities;
+using Xunit;
 
 namespace LockNGen.Domain.Tests.Entities;
 
@@ -14,11 +15,11 @@ public class GenerationTests
         // Assert
         generation.Id.Should().NotBeEmpty();
         generation.Prompt.Should().BeEmpty();
-        generation.Model.Should().Be("sdxl-1.0");
+        generation.Model.Should().Be("sdxl");
         generation.Width.Should().Be(1024);
         generation.Height.Should().Be(1024);
         generation.Steps.Should().Be(20);
-        generation.Guidance.Should().Be(7.5);
+        generation.Guidance.Should().Be(7.5f);
         generation.Status.Should().Be(GenerationStatus.Queued);
         generation.CreatedAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromSeconds(1));
     }
@@ -39,7 +40,7 @@ public class GenerationTests
     [Theory]
     [InlineData(GenerationStatus.Queued)]
     [InlineData(GenerationStatus.Processing)]
-    [InlineData(GenerationStatus.Complete)]
+    [InlineData(GenerationStatus.Completed)]
     [InlineData(GenerationStatus.Failed)]
     public void GenerationStatus_ShouldHaveAllExpectedValues(GenerationStatus status)
     {

@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Generation> Generations => Set<Generation>();
+    public DbSet<ApiKey> ApiKeys => Set<ApiKey>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,6 +27,16 @@ public class AppDbContext : DbContext
             entity.Property(e => e.ErrorMessage).HasMaxLength(2000);
             entity.HasIndex(e => e.Status);
             entity.HasIndex(e => e.CreatedAt);
+        });
+
+        modelBuilder.Entity<ApiKey>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(255);
+            entity.Property(e => e.KeyHash).IsRequired().HasMaxLength(64);
+            entity.Property(e => e.KeyPrefix).IsRequired().HasMaxLength(16);
+            entity.HasIndex(e => e.KeyHash).IsUnique();
+            entity.HasIndex(e => e.KeyPrefix);
         });
     }
 }
