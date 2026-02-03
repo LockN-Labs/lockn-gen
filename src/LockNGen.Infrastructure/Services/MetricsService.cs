@@ -45,10 +45,10 @@ public class MetricsService : IMetricsService
         
         var apiKeys = await _context.ApiKeys
             .Select(k => new ApiKeyUsageDto(
-                ApiKeyId: k.Id,
-                KeyName: k.Name,
-                RequestCount: 0, // TODO: Add tracking once Generation has ApiKeyId
-                LastUsed: k.LastUsedAt ?? k.CreatedAt
+                k.Id,
+                k.Name,
+                0, // TODO: Add tracking once Generation has ApiKeyId
+                k.LastUsedAt ?? k.CreatedAt
             ))
             .ToListAsync();
 
