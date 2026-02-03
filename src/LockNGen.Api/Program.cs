@@ -39,6 +39,7 @@ builder.Services.AddHttpClient<IComfyUiClient, ComfyUiClient>();
 builder.Services.AddSingleton<IWorkflowLoader, WorkflowLoader>();
 builder.Services.AddScoped<IGenerationService, GenerationService>();
 builder.Services.AddScoped<IApiKeyService, ApiKeyService>();
+builder.Services.AddScoped<IMetricsService, MetricsService>();
 
 // Rate limiting
 builder.Services.Configure<RateLimitOptions>(
