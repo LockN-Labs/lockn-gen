@@ -71,6 +71,10 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
+// Static files for frontend
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 // Health endpoint
 app.MapHealthChecks("/health");
 
