@@ -19,9 +19,11 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Generation>(entity =>
         {
             entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Prompt).IsRequired().HasMaxLength(4000);
             entity.Property(e => e.NegativePrompt).HasMaxLength(4000);
             entity.Property(e => e.Model).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.PromptId).HasMaxLength(100);
             entity.Property(e => e.OutputPath).HasMaxLength(500);
             entity.Property(e => e.ThumbnailPath).HasMaxLength(500);
             entity.Property(e => e.ErrorMessage).HasMaxLength(2000);
