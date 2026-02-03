@@ -106,19 +106,15 @@ app.UseWebSockets();
 app.UseMiddleware<ApiKeyAuthMiddleware>();
 app.UseMiddleware<RateLimitMiddleware>();
 
-// Static files for frontend
-app.UseDefaultFiles();
+// Static files for frontend (landing.html as default)
+var defaultFilesOptions = new DefaultFilesOptions();
+defaultFilesOptions.DefaultFileNames.Clear();
+defaultFilesOptions.DefaultFileNames.Add("landing.html");
+app.UseDefaultFiles(defaultFilesOptions);
 app.UseStaticFiles();
 
 // Health endpoint
 app.MapHealthChecks("/health");
-
-// Root endpoint
-app.MapGet("/", () => Results.Ok(new { 
-    service = "LockN Gen", 
-    version = "0.1.0",
-    status = "running"
-}));
 
 // API Endpoints
 app.MapGenerationEndpoints();
