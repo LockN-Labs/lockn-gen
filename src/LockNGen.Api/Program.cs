@@ -4,11 +4,13 @@ using LockNGen.Api.WebSockets;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
 using LockNGen.Infrastructure.Data;
+using LockNGen.Infrastructure.RateLimiting;
 using LockNGen.Infrastructure.Services;
 using LockNGen.Infrastructure.WebSockets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +39,38 @@ builder.Services.AddHttpClient<IComfyUiClient, ComfyUiClient>();
 builder.Services.AddSingleton<IWorkflowLoader, WorkflowLoader>();
 builder.Services.AddScoped<IGenerationService, GenerationService>();
 builder.Services.AddScoped<IApiKeyService, ApiKeyService>();
+
+// Rate limiting
+builder.Services.Configure<RateLimitOptions>(
+    builder.Configuration.GetSection(RateLimitOptions.SectionName));
+
+var redisConfig = builder.Configuration.GetSection("RateLimiting:Redis");
+var redisConnectionString = redisConfig.GetValue<string>("ConnectionString");
+if (!string.IsNullOrEmpty(redisConnectionString))
+{
+    try
+    {
+        var redisOptions = ConfigurationOptions.Parse(redisConnectionString);
+        redisOptions.ConnectTimeout = redisConfig.GetValue("ConnectTimeoutMs", 5000);
+        redisOptions.SyncTimeout = redisConfig.GetValue("SyncTimeoutMs", 1000);
+        redisOptions.AbortOnConnectFail = false;
+        
+        builder.Services.AddSingleton<IConnectionMultiplexer>(
+            ConnectionMultiplexer.Connect(redisOptions));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to connect to Redis: {ex.Message}. Rate limiting will use in-memory fallback.");
+        builder.Services.AddSingleton<IConnectionMultiplexer?>(sp => null);
+    }
+}
+else
+{
+    builder.Services.AddSingleton<IConnectionMultiplexer?>(sp => null);
+}
+
+builder.Services.AddSingleton<InMemoryRateLimitService>();
+builder.Services.AddSingleton<IRateLimitService, RedisRateLimitService>();
 
 // Background workers
 builder.Services.AddHostedService<GenerationWorker>();
