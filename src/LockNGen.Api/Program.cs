@@ -1,7 +1,15 @@
+using LockNGen.Domain.Services;
+using LockNGen.Infrastructure.ComfyUi;
 using LockNGen.Infrastructure.Data;
+using LockNGen.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configuration
+builder.Services.Configure<ComfyUiOptions>(
+    builder.Configuration.GetSection(ComfyUiOptions.SectionName));
 
 // Database configuration
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -17,9 +25,20 @@ else
         options.UseNpgsql(connectionString));
 }
 
+// ComfyUI client
+builder.Services.AddHttpClient<IComfyUiClient, ComfyUiClient>();
+
+// Services
+builder.Services.AddSingleton<IWorkflowLoader, WorkflowLoader>();
+builder.Services.AddScoped<IGenerationService, GenerationService>();
+
+// Background worker
+builder.Services.AddHostedService<GenerationWorker>();
+
 // Health checks
 builder.Services.AddHealthChecks()
-    .AddDbContextCheck<AppDbContext>();
+    .AddDbContextCheck<AppDbContext>()
+    .AddCheck<ComfyUiHealthCheck>("comfyui");
 
 var app = builder.Build();
 
@@ -41,3 +60,30 @@ app.MapGet("/", () => Results.Ok(new {
 }));
 
 app.Run();
+
+/// <summary>
+/// Health check for ComfyUI connectivity.
+/// </summary>
+public class ComfyUiHealthCheck : IHealthCheck
+{
+    private readonly IComfyUiClient _client;
+
+    public ComfyUiHealthCheck(IComfyUiClient client) => _client = client;
+
+    public async Task<HealthCheckResult> CheckHealthAsync(
+        HealthCheckContext context,
+        CancellationToken ct = default)
+    {
+        try
+        {
+            var healthy = await _client.IsHealthyAsync(ct);
+            return healthy 
+                ? HealthCheckResult.Healthy("ComfyUI connected")
+                : HealthCheckResult.Degraded("ComfyUI unreachable");
+        }
+        catch (Exception ex)
+        {
+            return HealthCheckResult.Unhealthy("ComfyUI error", ex);
+        }
+    }
+}
