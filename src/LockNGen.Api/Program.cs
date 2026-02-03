@@ -1,8 +1,10 @@
 using LockNGen.Api.Endpoints;
+using LockNGen.Api.WebSockets;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
 using LockNGen.Infrastructure.Data;
 using LockNGen.Infrastructure.Services;
+using LockNGen.Infrastructure.WebSockets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
@@ -34,8 +36,14 @@ builder.Services.AddHttpClient<IComfyUiClient, ComfyUiClient>();
 builder.Services.AddSingleton<IWorkflowLoader, WorkflowLoader>();
 builder.Services.AddScoped<IGenerationService, GenerationService>();
 
-// Background worker
+// Background workers
 builder.Services.AddHostedService<GenerationWorker>();
+
+// WebSocket progress broadcasting
+builder.Services.AddSingleton<IProgressBroadcaster, ProgressBroadcaster>();
+builder.Services.AddSingleton<ComfyUiProgressMonitor>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<ComfyUiProgressMonitor>());
+builder.Services.AddScoped<ProgressWebSocketHandler>();
 
 // Health checks
 builder.Services.AddHealthChecks()
@@ -71,6 +79,9 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
+// WebSocket support
+app.UseWebSockets();
+
 // Static files for frontend
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -88,6 +99,7 @@ app.MapGet("/", () => Results.Ok(new {
 // API Endpoints
 app.MapGenerationEndpoints();
 app.MapModelEndpoints();
+app.MapProgressWebSocketEndpoints();
 
 app.Run();
 
