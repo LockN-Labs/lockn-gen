@@ -1,0 +1,22 @@
+services:
+  lockn-logger:
+    test_url: "https://test.lockn.ai"
+    prod_url: "https://lockn.ai"
+    health_endpoint: "/health"
+    critical_paths:
+      - "/"
+      - "/metrics"
+  lockn-score:
+    test_url: "https://test.lockn.ai"
+    prod_url: "https://lockn.ai"
+    health_endpoint: "/health"
+    critical_paths:
+      - "/"
+      - "/api/v1/score"
+  # scaffold for other services
+  # my-service:
+  #   test_url: "https://test.example.com"
+  #   prod_url: "https://example.com"
+  #   health_endpoint: "/health"
+  #   critical_paths:
+  #     - "/"

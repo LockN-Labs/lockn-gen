@@ -1,0 +1,9 @@
+# State files (deployment tracking)
+state/*.json
+
+# Environment files with secrets
+*.env
+!*.env.example
+
+# Logs
+*.log
