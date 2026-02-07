@@ -1,5 +1,6 @@
 using LockNGen.Api.Endpoints;
 using LockNGen.Api.Middleware;
+using LockNGen.Api.Telemetry;
 using LockNGen.Api.WebSockets;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
@@ -13,6 +14,9 @@ using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// OpenTelemetry observability
+builder.Services.AddGenerationTelemetry(builder.Configuration);
 
 // Configuration
 builder.Services.Configure<ComfyUiOptions>(

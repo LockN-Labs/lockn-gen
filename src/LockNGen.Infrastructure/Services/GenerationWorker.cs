@@ -2,6 +2,7 @@ using LockNGen.Domain.Entities;
 using LockNGen.Domain.Services;
 using LockNGen.Infrastructure.ComfyUi;
 using LockNGen.Infrastructure.Data;
+using LockNGen.Infrastructure.Telemetry;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -60,7 +61,11 @@ public class GenerationWorker : BackgroundService
         using var scope = _scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-        // Get next queued generation
+        // Get next queued generation and update queue depth metric
+        var queuedCount = await db.Generations
+            .CountAsync(g => g.Status == GenerationStatus.Queued, ct);
+        GenerationInstrumentation.SetQueueDepth(queuedCount);
+
         var generation = await db.Generations
             .Where(g => g.Status == GenerationStatus.Queued)
             .OrderBy(g => g.CreatedAt)
@@ -70,6 +75,11 @@ public class GenerationWorker : BackgroundService
             return;
 
         _logger.LogInformation("Processing generation {Id}", generation.Id);
+        
+        // Start tracing activity
+        using var activity = GenerationInstrumentation.StartProcessingActivity(generation.Id, generation.Model);
+        var queueWaitMs = (DateTime.UtcNow - generation.CreatedAt).TotalMilliseconds;
+        GenerationInstrumentation.IncrementActive();
 
         try
         {
@@ -143,6 +153,12 @@ public class GenerationWorker : BackgroundService
             generation.DurationMs = (int)(generation.CompletedAt.Value - generation.CreatedAt).TotalMilliseconds;
             generation.UpdatedAt = DateTime.UtcNow;
 
+            // Record successful completion metrics
+            var processingDurationMs = (DateTime.UtcNow - generation.UpdatedAt!.Value.AddMilliseconds(-generation.DurationMs!.Value)).TotalMilliseconds;
+            GenerationInstrumentation.RecordCompletion(generation.Model, generation.DurationMs.Value, queueWaitMs);
+            activity?.SetTag("generation.status", "completed");
+            activity?.SetTag("generation.duration_ms", generation.DurationMs);
+
             _logger.LogInformation("Completed generation {Id} in {Duration}ms", generation.Id, generation.DurationMs);
         }
         catch (Exception ex)
@@ -151,6 +167,21 @@ public class GenerationWorker : BackgroundService
             generation.Status = GenerationStatus.Failed;
             generation.ErrorMessage = ex.Message;
             generation.UpdatedAt = DateTime.UtcNow;
+
+            // Record failure metrics
+            var errorType = ex switch
+            {
+                TimeoutException => "timeout",
+                InvalidOperationException => "no_output",
+                _ => "unknown"
+            };
+            GenerationInstrumentation.RecordFailure(generation.Model, errorType);
+            activity?.SetTag("generation.status", "failed");
+            activity?.SetTag("generation.error", errorType);
+        }
+        finally
+        {
+            GenerationInstrumentation.DecrementActive();
         }
 
         await db.SaveChangesAsync(ct);

@@ -6,6 +6,10 @@ services:
     environment:
       - ConnectionStrings__DefaultConnection=Host=db;Database=lockn_gen;Username=postgres;Password=postgres
       - ASPNETCORE_ENVIRONMENT=Development
+      # OpenTelemetry configuration
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_SERVICE_NAME=lockn-gen
+      - OTEL_RESOURCE_ATTRIBUTES=deployment.environment=development
     depends_on:
       db:
         condition: service_healthy

@@ -1,4 +1,5 @@
 using LockNGen.Api.DTOs;
+using LockNGen.Api.Telemetry;
 using LockNGen.Api.Validation;
 using LockNGen.Domain.Entities;
 using LockNGen.Domain.Services;
@@ -57,6 +58,23 @@ public static class GenerationEndpoints
             return validationError;
 
         var generation = await generationService.QueueAsync(request.ToParameters(), ct);
+        
+        // Record telemetry for the incoming request
+        GenerationTelemetry.RecordGenerationRequest(
+            request.Model,
+            request.Width,
+            request.Height);
+        
+        // Estimate cost based on resolution and steps (simple formula)
+        var pixels = request.Width * request.Height;
+        var costEstimate = pixels / 1_000_000.0 * request.Steps * 0.01; // 0.01 credits per megapixel-step
+        GenerationTelemetry.RecordGenerationCost(
+            request.Model,
+            request.Width,
+            request.Height,
+            request.Steps,
+            costEstimate);
+        
         return Results.Created($"/api/generations/{generation.Id}", generation.ToResponse());
     }
 
@@ -108,6 +126,12 @@ public static class GenerationEndpoints
             return Results.Conflict(new { error = $"Cannot cancel generation with status {generation.Status}" });
 
         var cancelled = await generationService.CancelAsync(id, ct);
+        
+        if (cancelled)
+        {
+            GenerationTelemetry.RecordGenerationCancelled(generation.Model);
+        }
+        
         return cancelled ? Results.NoContent() : Results.NotFound();
     }
 
