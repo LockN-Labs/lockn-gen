@@ -37,4 +37,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Run the app
 ENV ASPNETCORE_URLS=http://+:8080
+RUN groupadd -r appuser && useradd -r -g appuser appuser && chown -R appuser:appuser /app
+USER appuser
+
 ENTRYPOINT ["dotnet", "LockNGen.Api.dll"]
