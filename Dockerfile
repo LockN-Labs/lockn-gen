@@ -7,6 +7,7 @@ COPY LockNGen.sln .
 COPY src/LockNGen.Domain/LockNGen.Domain.csproj src/LockNGen.Domain/
 COPY src/LockNGen.Infrastructure/LockNGen.Infrastructure.csproj src/LockNGen.Infrastructure/
 COPY src/LockNGen.Api/LockNGen.Api.csproj src/LockNGen.Api/
+COPY tests/LockNGen.Domain.Tests/LockNGen.Domain.Tests.csproj tests/LockNGen.Domain.Tests/
 
 # Restore dependencies
 RUN dotnet restore
