@@ -1,5 +1,5 @@
 # Build stage
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.2 AS build
 WORKDIR /src
 
 # Copy solution and project files
@@ -19,14 +19,22 @@ WORKDIR /src/src/LockNGen.Api
 RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:9.0.2 AS runtime
+
+# Create non-root user
+RUN groupadd -r appgroup && useradd -r -g appgroup appuser
+
 WORKDIR /app
 
 # Install wget for health checks
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
-# Copy published app
+# Copy published app and set ownership
 COPY --from=build /app/publish .
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
 
 # Expose port
 EXPOSE 8080
