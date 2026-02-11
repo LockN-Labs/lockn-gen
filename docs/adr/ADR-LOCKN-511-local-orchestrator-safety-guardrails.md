@@ -18,6 +18,7 @@ Introduce a policy-driven safety guardrail layer with:
 4. **Hard triggers** for elevated exec, gateway lifecycle actions, sensitive keywords, and destructive shell patterns.
 5. **Two-model approval path** (local planning + cloud approval) and **human gate** for destructive actions.
 6. **Escalation telemetry** JSONL logs (reason/trigger/model/outcome).
+7. **Runtime orchestration mode toggle** (`cloud-first` / `local-first` / `hybrid`) with status visibility and audited mode changes.
 
 ## Why feature-flagged
 

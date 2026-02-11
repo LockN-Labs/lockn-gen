@@ -16,6 +16,7 @@ class RiskTier(str, Enum):
 class PolicyRule:
     risk: RiskTier
     allowed_model_tiers: List[str]
+    requires_local_plan: bool
     requires_cloud_approval: bool
     requires_human_approval: bool
     local_execution_allowed: bool
@@ -25,6 +26,7 @@ POLICY_MATRIX: Dict[RiskTier, PolicyRule] = {
     RiskTier.SAFE: PolicyRule(
         risk=RiskTier.SAFE,
         allowed_model_tiers=["local-small", "local-large", "cloud"],
+        requires_local_plan=False,
         requires_cloud_approval=False,
         requires_human_approval=False,
         local_execution_allowed=True,
@@ -32,6 +34,7 @@ POLICY_MATRIX: Dict[RiskTier, PolicyRule] = {
     RiskTier.CAUTION: PolicyRule(
         risk=RiskTier.CAUTION,
         allowed_model_tiers=["local-large", "cloud"],
+        requires_local_plan=False,
         requires_cloud_approval=False,
         requires_human_approval=False,
         local_execution_allowed=True,
@@ -39,6 +42,7 @@ POLICY_MATRIX: Dict[RiskTier, PolicyRule] = {
     RiskTier.PRIVILEGED: PolicyRule(
         risk=RiskTier.PRIVILEGED,
         allowed_model_tiers=["cloud"],
+        requires_local_plan=True,
         requires_cloud_approval=True,
         requires_human_approval=False,
         local_execution_allowed=False,
@@ -46,6 +50,7 @@ POLICY_MATRIX: Dict[RiskTier, PolicyRule] = {
     RiskTier.DESTRUCTIVE: PolicyRule(
         risk=RiskTier.DESTRUCTIVE,
         allowed_model_tiers=["cloud"],
+        requires_local_plan=True,
         requires_cloud_approval=True,
         requires_human_approval=True,
         local_execution_allowed=False,
