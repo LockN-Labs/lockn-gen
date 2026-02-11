@@ -1,0 +1,12 @@
+[
+  {"tool":"read","action":"","intent":"Read architecture doc","payload":{"path":"docs/architecture.md"}},
+  {"tool":"exec","action":"","intent":"Run unit tests","payload":{"command":"pytest -q"}},
+  {"tool":"exec","action":"","intent":"Restart local gateway after config change","payload":{"command":"openclaw gateway restart"}},
+  {"tool":"exec","action":"","intent":"Clean temp directory","payload":{"command":"rm -rf /tmp/build-cache"}},
+  {"tool":"exec","action":"","intent":"Deploy prod auth hotfix","payload":{"command":"./deploy.sh --env prod"}},
+  {"tool":"linear_update_issue","action":"","intent":"Set issue to In Progress","payload":{"id":"LOCKN-511"}},
+  {"tool":"exec","action":"gateway restart","intent":"bounce gateway","payload":{"command":"openclaw gateway restart"}},
+  {"tool":"exec","action":"","intent":"Run privileged diagnostic","payload":{"command":"journalctl -u openclaw -n 200","elevated":true}},
+  {"tool":"write","action":"","intent":"Update local notes","payload":{"path":"memory/2026-02-11.md"}},
+  {"tool":"exec","action":"","intent":"Investigate billing alerts","payload":{"command":"python scripts/check_billing.py"}}
+]
