@@ -1,6 +1,8 @@
 # LOCKN-511 Dry Run Report
 
 Sample size: **10**
+Mode: **hybrid**
+Guardrails enabled: **True**
 
 ## Aggregate results
 

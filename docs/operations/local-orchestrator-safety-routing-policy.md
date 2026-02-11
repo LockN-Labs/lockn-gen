@@ -27,11 +27,35 @@ Classify immediately as privileged/destructive when any trigger matches:
 
 ## Enforcement behavior
 
-- If risk is `privileged` or `destructive`, local orchestrator is blocked and routed to cloud path.
+- If risk is `privileged` or `destructive`, local orchestrator is blocked and routed to cloud path in **all orchestration modes**.
 - Two-model path for sensitive ops:
-  1) local model generates plan/context
-  2) cloud model approves/executes route
-- Destructive operations require explicit human gate before execution.
+  1) local model generates plan/context (`local_plan`)
+  2) cloud model approves/executes route (`cloud_approval`)
+- Destructive operations require explicit human gate before execution (`human_approval`).
+
+## Runtime orchestration mode toggle (no redeploy)
+
+Supported runtime modes:
+- `cloud-first`
+- `local-first`
+- `hybrid`
+
+Mode state file: `.runs/lockn511_runtime_mode.json`
+
+Guardrails rollout switch: `guardrails_enabled` (default `false` for safe rollout).
+
+CLI control:
+
+```bash
+python scripts/lockn511_mode_ctl.py status
+python scripts/lockn511_mode_ctl.py set-mode cloud-first --actor sean
+python scripts/lockn511_mode_ctl.py set-mode local-first --actor sean
+python scripts/lockn511_mode_ctl.py set-mode hybrid --actor sean
+python scripts/lockn511_mode_ctl.py set-guardrails on --actor sean
+python scripts/lockn511_mode_ctl.py set-guardrails off --actor sean
+```
+
+Every mode/guardrail change is audit-logged to `logs/escalation_telemetry.jsonl`.
 
 ## Telemetry
 

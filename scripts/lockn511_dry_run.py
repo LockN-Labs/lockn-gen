@@ -10,6 +10,7 @@ from typing import Any, Dict, List
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from tools.safety_router.mode import RuntimeModeStore
 from tools.safety_router.router_guard import SafetyRouterGuard
 from tools.safety_router.telemetry import EscalationTelemetry
 
@@ -26,10 +27,17 @@ def main() -> int:
     parser.add_argument("--input", default="docs/operations/lockn511-sample-tasks.json")
     parser.add_argument("--report", default="docs/operations/lockn511-dry-run-report.md")
     parser.add_argument("--telemetry", default="logs/escalation_telemetry.jsonl")
+    parser.add_argument("--mode", choices=["cloud-first", "local-first", "hybrid"], default="hybrid")
+    parser.add_argument("--guardrails-enabled", action="store_true", default=False)
+    parser.add_argument("--state-file", default=".runs/lockn511_runtime_mode.json")
     args = parser.parse_args()
 
-    guard = SafetyRouterGuard()
+    mode_store = RuntimeModeStore(args.state_file)
+    mode_store.set_mode(args.mode, actor="dry-run")
+    mode_store.set_guardrails_enabled(args.guardrails_enabled, actor="dry-run")
+
     telemetry = EscalationTelemetry(args.telemetry)
+    guard = SafetyRouterGuard(mode_store=mode_store)
 
     tasks = load_tasks(Path(args.input))
     counters = Counter()
@@ -67,6 +75,8 @@ def main() -> int:
         "# LOCKN-511 Dry Run Report",
         "",
         f"Sample size: **{len(tasks)}**",
+        f"Mode: **{args.mode}**",
+        f"Guardrails enabled: **{args.guardrails_enabled}**",
         "",
         "## Aggregate results",
         "",

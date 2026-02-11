@@ -9,6 +9,7 @@ from typing import Any, Dict
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from tools.safety_router.mode import RuntimeModeStore
 from tools.safety_router.router_guard import SafetyRouterGuard
 from tools.safety_router.telemetry import EscalationTelemetry
 
@@ -21,10 +22,16 @@ def main() -> int:
     parser.add_argument("--payload", default="{}", help="JSON payload")
     parser.add_argument("--telemetry", default="logs/escalation_telemetry.jsonl")
     parser.add_argument("--local-orchestrator", action="store_true", default=True)
+    parser.add_argument("--mode", choices=["cloud-first", "local-first", "hybrid"], default="hybrid")
+    parser.add_argument("--guardrails-enabled", action="store_true", default=False)
+    parser.add_argument("--state-file", default=".runs/lockn511_runtime_mode.json")
     args = parser.parse_args()
 
     payload: Dict[str, Any] = json.loads(args.payload)
-    guard = SafetyRouterGuard()
+    mode_store = RuntimeModeStore(args.state_file)
+    mode_store.set_mode(args.mode, actor="guard-eval")
+    mode_store.set_guardrails_enabled(args.guardrails_enabled, actor="guard-eval")
+    guard = SafetyRouterGuard(mode_store=mode_store)
     telemetry = EscalationTelemetry(args.telemetry)
 
     decision = guard.evaluate(
