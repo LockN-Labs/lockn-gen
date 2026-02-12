@@ -74,7 +74,7 @@ class SafetyRouterGuard:
             selected_model_tier = "cloud"
             outcome = "allowed"
 
-        if guardrails_enabled and ((local_orchestrator and not policy.local_execution_allowed) or risk_tier in {RiskTier.PRIVILEGED, RiskTier.DESTRUCTIVE}):
+        if guardrails_enabled and (not local_orchestrator or not policy.local_execution_allowed or risk_tier in {RiskTier.PRIVILEGED, RiskTier.DESTRUCTIVE}):
             route = "cloud"
             selected_model_tier = "cloud"
             outcome = "escalated"
