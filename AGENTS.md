@@ -60,6 +60,28 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+## 🔒 Workspace Root Protection (MANDATORY)
+
+### Branch Hygiene
+- **Workspace must stay on `main` branch.** If a subagent switches branches, it must switch back when done.
+- Boot check verifies `git branch --show-current` == `main` — DEGRADED if not.
+- State file edits (MEMORY.md, TOOLS.md, etc.) always commit to `main`.
+
+### Atomic Write-Through
+- **Any edit to a state file MUST be followed by `git add + git commit` in the same operation.**
+- Never leave state files with uncommitted changes. The window between edit and commit is when data loss happens.
+- Commit message format: `chore: update <filename> — <brief reason>`
+
+### Subagent Isolation
+- **Subagents NEVER work directly in the workspace root git tree.**
+- Clone target repos into `repos/` or `/tmp/` for development work.
+- **NEVER run `git clean` or `git checkout <branch>` in the workspace root** — this destroys state files.
+- Workspace root is sacred: it holds agent memory, config, and continuity files.
+
+### Protected State Files
+These files MUST always be committed to `main`:
+`MEMORY.md`, `TOOLS.md`, `USER.md`, `HEARTBEAT.md`, `AGENTS.md`, `SOUL.md`, `BOOT.md`, `IDENTITY.md`
+
 ## Safety
 
 - Don't exfiltrate private data. Ever.
