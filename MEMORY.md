@@ -79,6 +79,15 @@
 - QA agents should autonomously find and run tests, flag regressions, expand coverage.
 - This applies to all agents, not just QA-labeled ones. If you spot a gap, fill it.
 
+## 📋 Promise Tracker System (2026-02-11, Sean directive)
+- **Problem**: Agent promises "I'll update you" then loses track — session compacts, sub-agent fails silently, nobody follows up. Sean has to ask.
+- **Fix 1 — Promise tracker**: `memory/promise-tracker.json` records every update promise with channel, deadline, and watchdog cron ID.
+- **Fix 2 — Spawn watchdog**: Every `sessions_spawn` gets a companion one-shot cron at timeout boundary that checks+reports regardless.
+- **Fix 3 — Failure-loud rule**: All spawn task prompts must include "if you fail, post failure to [channel]". No silent deaths.
+- **Fix 4 — Heartbeat audit**: HEARTBEAT.md checks open promises and escalates overdue ones before Sean has to ask.
+- **Rules**: AGENTS.md Communication Rules #10, #11, #12.
+- **Core principle**: If you promise an update, the system MUST deliver one — success or failure. No fire-and-forget.
+
 ## 🔧 Operational Lessons
 - **2026-02-10 Auth Cascade**: 3 stacked failures (Auth0 Action SDK mismatch, legacy Caddy basic_auth gate, missing callback URLs). 45 min to resolve. Lesson: temp security gates need expiration tracking.
 - **2026-02-11 Execution Gap**: 30+ monitoring crons, 0 execution crons. System went idle for 6+ hours. Lesson: observation without execution is theater.
