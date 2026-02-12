@@ -1,8 +1,8 @@
 # HEARTBEAT.md
 
 ## Cron Scheduler Health Check
-- Run `cron status` (10s timeout). If it times out or errors, restart gateway and post alert to #dev-agents (C0AECSTM8ER).
-- If status returns OK, check that work-executor-hourly last ran within 30min. If stale, flag in #dev-agents.
+- Run `cron status` (10s timeout). If it times out or errors, **DO NOT restart gateway** — just post an alert to #system-heartbeat (C0ACDPDQ9L5) noting the timeout. Restarting on cron timeout causes a restart loop (overdue jobs flood on restart → timeout → restart again).
+- If status returns OK, check that work-executor-10min last ran within 30min. If stale, flag in #system-heartbeat.
 
 ## Workspace State Guard
 - Verify `git branch --show-current` == `main`. If not, switch back and alert.
