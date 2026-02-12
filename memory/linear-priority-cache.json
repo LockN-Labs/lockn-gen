@@ -1,0 +1,254 @@
+{
+  "lastChecked": "2026-02-12T00:18:00Z",
+  "wipPolicy": "staleness-tracking-no-hard-limit",
+  "inProgress": [
+    {
+      "id": "LOCKN-404",
+      "priority": 1,
+      "project": "System Improvements",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-523",
+      "priority": 2,
+      "project": "Revenue: Landing & Conversion",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-405",
+      "priority": 1,
+      "project": "LockN Score UX",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-445",
+      "priority": 1,
+      "project": "System Improvements",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-509",
+      "priority": 2,
+      "project": "UX/UI Overhaul",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-398",
+      "priority": 1,
+      "project": "UX/UI Overhaul",
+      "status": "In Progress"
+    },
+    {
+      "id": "LOCKN-401",
+      "priority": 2,
+      "project": "UX/UI Overhaul",
+      "status": "In Progress"
+    }
+  ],
+  "todo": [
+    {
+      "id": "LOCKN-525",
+      "priority": 2,
+      "project": "Revenue: Billing & Monetization",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-524",
+      "priority": 2,
+      "project": "Marketing & Growth",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-522",
+      "priority": 2,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-443",
+      "priority": 2,
+      "project": "Revenue: Billing & Monetization",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-414",
+      "priority": 2,
+      "project": "Marketing & Growth",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-442",
+      "priority": 2,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-312",
+      "priority": 2,
+      "project": "Marketing & Growth",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-344",
+      "priority": 2,
+      "project": "Revenue: Landing & Conversion",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-444",
+      "priority": 2,
+      "project": "Revenue: Billing & Monetization",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-441",
+      "priority": 2,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-345",
+      "priority": 2,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-109",
+      "priority": 2,
+      "project": "System Improvements",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-172",
+      "priority": 3,
+      "project": "System Improvements",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-217",
+      "priority": 3,
+      "project": "System Improvements",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-310",
+      "priority": 2,
+      "project": "Marketing & Growth",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-335",
+      "priority": 1,
+      "project": "Memory & Search",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-331",
+      "priority": 2,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-330",
+      "priority": 1,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-329",
+      "priority": 2,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-327",
+      "priority": 2,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-325",
+      "priority": 1,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-324",
+      "priority": 2,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-323",
+      "priority": 1,
+      "project": "XRPL Trading",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-85",
+      "priority": 2,
+      "project": "UX/UI Overhaul",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-339",
+      "priority": 2,
+      "project": "Memory & Search",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-338",
+      "priority": 2,
+      "project": "Memory & Search",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-336",
+      "priority": 2,
+      "project": "Memory & Search",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-347",
+      "priority": 2,
+      "project": "Revenue: Billing & Monetization",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-415",
+      "priority": 2,
+      "project": "Revenue: Landing & Conversion",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-257",
+      "priority": 2,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    },
+    {
+      "id": "LOCKN-256",
+      "priority": 1,
+      "project": "Revenue: Auth-to-Checkout Pipeline",
+      "status": "Todo"
+    }
+  ],
+  "blocked": [],
+  "counts": {
+    "inProgress": 7,
+    "todo": 31,
+    "blocked": 0
+  },
+  "changes": [
+    {
+      "time": "2026-02-11T21:59:00Z",
+      "type": "change",
+      "note": "LOCKN-509 entered In Progress (High). In Progress count increased 5 -> 6."
+    },
+    {
+      "time": "2026-02-11T23:29:00Z",
+      "type": "change",
+      "note": "LOCKN-421 left In Progress (completed/moved). LOCKN-404 moved Todo\u2192In Progress (Urgent). LOCKN-523 new ticket entered In Progress (High, revenue-critical). 3 new Todo tickets: LOCKN-525, LOCKN-524, LOCKN-522 (all revenue-critical). WIP 6\u21927."
+    }
+  ]
+}

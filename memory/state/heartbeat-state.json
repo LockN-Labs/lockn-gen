@@ -1,0 +1,35 @@
+{
+  "lastChecks": {
+    "heartbeat": 1770673020,
+    "email": null,
+    "calendar": null,
+    "weather": null
+  },
+  "lastValueRating": 4.50,
+  "intervalActivity": {
+    "timestamp": "2026-02-09T16:37:00-05:00",
+    "notes": "GPU driver crash recovery ongoing. 9 open PRs on platform (LOC-341). Backlog refinement ran (3 new tickets). NVIDIA driver research crew spawned. Main session at 60% context (warning). PR 24 has Dockerfile build bug (adduser syntax). PRs 18,28 pass validate but e2e fails (infra)."
+  },
+  "blockers": [
+    {
+      "item": "9 open PRs on lockn-ai-platform — e2e tests failing (infra/GPU related)",
+      "automatability": 6.0,
+      "note": "PRs 18,28 pass validate; e2e failures are infra. PR 24 has real Dockerfile bug. Need Sean to re-run e2e after GPU recovery."
+    },
+    {
+      "item": "Sandbox isolation blocks autonomous coding pipeline from heartbeats/cron",
+      "automatability": 7.0,
+      "note": "Sean discussed relaxing sandbox — decision pending"
+    },
+    {
+      "item": "GPU driver crash — Sean installing 591.59",
+      "automatability": 1.0,
+      "note": "Research crew spawned for driver analysis"
+    },
+    {
+      "item": "Main session at 60% context (120K/200K)",
+      "automatability": 8.0,
+      "note": "At warning threshold per HEARTBEAT.md. Next heartbeat should suggest /new if it grows."
+    }
+  ]
+}

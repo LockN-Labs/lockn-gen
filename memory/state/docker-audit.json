@@ -1,0 +1,15 @@
+{
+  "lastAuditTimestamp": "2026-02-11T14:22:56-05:00",
+  "containerCount": 33,
+  "imageCount": 77,
+  "diskUsageGB": 487.09,
+  "issuesFound": [
+    "Container unhealthy: lockn-whisper-gpu (Up 40 minutes (unhealthy)). Recommended: check healthcheck and app dependencies.",
+    "Dangling volumes present: 21. Recommended manual review (no auto-delete to avoid data loss).",
+    "Manifest drift: unexpected running containers: lockn-speak-db. Recommended: verify ownership and update manifest if intentional."
+  ],
+  "cleanupActions": [
+    "Pruned dangling images (reclaimed 0B).",
+    "Pruned stopped containers older than 24h: none removed (reclaimed 0B)."
+  ]
+}

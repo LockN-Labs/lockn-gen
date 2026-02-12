@@ -1,0 +1,51 @@
+{
+  "note": "Create these crons after gateway WS reconnects",
+  "pending": [
+    {
+      "name": "cmo-review-weekly",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly CMO Review for LockN Labs + OneSun Strategies.\n\nAnalyze: 1) Brand positioning & differentiation 2) Service offerings (LockN Ship hackathon slots, OneSun Strategies advisory, LockN Labs sprints) with pricing recommendations 3) Go-to-market: landing page, waitlist funnel, content marketing, social 4) Competitive intel via web search 5) Revenue pipeline: fastest path to first paying customer from $0 to $500/mo target.\n\nOutput: Executive summary with 5 prioritized recommendations with revenue impact and timeline.\n\nPost to Slack DM D0AC46HCRNZ.",
+        "model": "anthropic/claude-opus-4-6",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "slack",
+        "to": "D0AC46HCRNZ"
+      },
+      "enabled": true
+    },
+    {
+      "name": "cfo-review-weekly",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * 1",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly CFO Review for OneSun Labs LLC (DBAs: LockN Labs, OneSun Strategies).\n\nAnalyze: 1) Cost structure (OpenAI Pro $200/mo, Claude Max $200/mo, Ollama Pro $20/mo, hardware amortization ~$8K server) 2) Revenue analysis per offering (LockN Ship, OneSun Advisory, LockN Sprint) with break-even 3) Subscription ROI (usage vs capacity for each) 4) Cash flow projections (3mo and 6mo) 5) Top 3 cost optimizations + top 3 revenue acceleration moves 6) LockN Swap (XRPL atomic arbitrage) + LockN Swing (XRPL triangle swing trading) \u2014 capital deployment status, trading P&L if live (both strategies), infrastructure costs, risk exposure, and ROI vs projections. If not yet live, track development costs and projected launch capital requirements.\n\nOutput: Executive financial summary with actionable recommendations.\n\nPost to Slack DM D0AC46HCRNZ.",
+        "model": "anthropic/claude-opus-4-6",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "slack",
+        "to": "D0AC46HCRNZ"
+      },
+      "enabled": true
+    }
+  ],
+  "also_retrigger": [
+    "2f4dc214-8589-46de-b889-45c5a52a927a",
+    "a3c3fc90-843c-4fe4-9bb3-33db902522e8"
+  ]
+}

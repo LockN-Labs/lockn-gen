@@ -1,0 +1,6 @@
+{
+  "description": "Tracks all temporary security measures. Each entry MUST have an expiration date and Linear ticket.",
+  "gates": [],
+  "lastAudit": "2026-02-10T13:23:00Z",
+  "notes": "Created after auth cascade failure (2026-02-10). The Caddy basic_auth gate that caused the incident has been removed."
+}

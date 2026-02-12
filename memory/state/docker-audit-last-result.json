@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-08 15:33:03 EST",
+  "summary": "\u26a0\ufe0f Docker Infrastructure Alert \u2014 2026-02-08 15:33:03 EST\n- Dangling resources: 0 images (0.00 GiB), 9 volumes (0.00 GiB). Recommended: keep images pruned; review volumes manually before deletion.\n- Unexpected new running containers: lockn-auth-api-1, lockn-auth-db-1, lockn-brain, lockn-gen-api-1, lockn-gen-db-1. Recommended: verify if intentional and update manifest if approved.\nAuto-cleaned: Pruned dangling images (reclaimed 0B).; Pruned stopped containers older than 24h (0 removed, reclaimed 0B).",
+  "critical": false,
+  "criticalReasons": [],
+  "issues": [
+    "Dangling resources: 0 images (0.00 GiB), 9 volumes (0.00 GiB). Recommended: keep images pruned; review volumes manually before deletion.",
+    "Unexpected new running containers: lockn-auth-api-1, lockn-auth-db-1, lockn-brain, lockn-gen-api-1, lockn-gen-db-1. Recommended: verify if intentional and update manifest if approved."
+  ],
+  "cleanupActions": [
+    "Pruned dangling images (reclaimed 0B).",
+    "Pruned stopped containers older than 24h (0 removed, reclaimed 0B)."
+  ],
+  "containerCount": 32,
+  "imageCount": 68,
+  "diskUsageGB": 431.87
+}

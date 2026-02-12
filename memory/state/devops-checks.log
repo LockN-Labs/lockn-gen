@@ -1,0 +1,62 @@
+2026-02-08 00:31:58 EST | ALERT | llm:11440=503 Loading model | docker=ok systemd=ok disk=34% mem_avail=71.8%
+2026-02-08 00:43:49 EST | OK | docker=healthy llm=4/4 dev=3/3 test=4/4 systemd=4/4 disk=34% mem_avail=69%
+{"timestamp":"2026-02-08 01:00:24 AM EST","status":"healthy","docker":"ok","llm":"ok","services":"ok","systemd":"ok","disk_use_pct":34,"mem_available_gib":147}
+2026-02-08 01:14:00 AM EST | status=healthy | docker=ok | llm=ok | dev=ok | test=ok | systemd=ok | disk=34% | mem_available=148Gi/220Gi
+{"timestamp": "2026-02-08 01:29:16 AM EST", "issues": [], "checks": {"docker": {"rc": 0, "out": "NAMES                      STATUS\nlockn-auth-api-1           Up About an hour (healthy)\nlockn-brain                Up 2 hours\nlockn-auth-db-1            Up 2 hours (healthy)\nlockn-caddy-test           Up 6 hours\nlockn-platform-api-test    Up 6 hours\nlockn-email-api-test       Up 6 hours\nlockn-speak-api-test       Up 6 hours\nlockn-speak-dev            Up 9 hours (healthy)\nlockn-platform-api         Up 12 hours\nlockn-email-api            Up 15 hours\nlockn-speak-api            Up 9 hours\nlockn-score-web            Up 15 hours\nlockn-score-api            Up 15 hours (healthy)\nlockn-cloudflared          Up 6 hours\nlockn-caddy                Up 9 hours\nlockn-swagger              Up 16 hours\nqdrant                     Up 22 hours\nchatterbox-v4              Up 23 hours\nlockn-logger-api-1         Up 24 hours (healthy)\nlockn-logger-seaweedfs-1   Up 24 hours (healthy)\nlockn-logger-garnet-1      Up 24 hours (healthy)\nlockn-postgres-dev         Up 12 hours (healthy)\nlockn-panns                Up 24 hours (healthy)\nqwen3-tts-api              Up 24 hours\nlockn-whisper-gpu          Up 24 hours (healthy)\nlockn-grafana              Up 24 hours\nlockn-otel-collector       Up 24 hours\nlockn-tempo                Up 24 hours\nlockn-postgres-test        Up 12 hours (healthy)\nlockn-logger-postgres-1    Up 24 hours (healthy)", "err": ""}, "llm_11437": {"rc": 0, "out": "{\"status\":\"ok\"}", "err": ""}, "llm_11439": {"rc": 0, "out": "{\"status\":\"ok\"}", "err": ""}, "llm_11440": {"rc": 0, "out": "{\"status\":\"ok\"}", "err": ""}, "llm_11441": {"rc": 0, "out": "{\"status\":\"ok\"}", "err": ""}, "dev_speak_3003": {"rc": 0, "out": "{\"status\":\"healthy\"}", "err": ""}, "dev_web_3080": {"rc": 0, "out": "OK", "err": ""}, "dev_api_3081": {"rc": 0, "out": "OK", "err": ""}, "test_web_3180": {"rc": 0, "out": "OK", "err": ""}, "test_api_3181": {"rc": 0, "out": "{\"status\":\"healthy\"}", "err": ""}, "test_speak_3103": {"rc": 0, "out": "{\"status\":\"ok\",\"tts_server\":\"connected\",\"chatterbox\":{\"status\":\"ok\",\"gpu\":true,\"torch\":\"2.11.0a0+git90ea4db\"}}", "err": ""}, "test_email_3104": {"rc": 0, "out": "{\"status\":\"ok\",\"postmark_configured\":true}", "err": ""}, "systemd_llama-coder-next": {"rc": 0, "out": "active", "err": ""}, "systemd_llama-qwen": {"rc": 0, "out": "active", "err": ""}, "systemd_llama-qwen-vl": {"rc": 0, "out": "active", "err": ""}, "systemd_openclaw-gateway": {"rc": 0, "out": "active", "err": ""}, "disk": {"rc": 0, "out": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sdd       1007G  321G  636G  34% /", "err": ""}, "memory": {"rc": 0, "out": "total        used        free      shared  buff/cache   available\nMem:           220Gi        70Gi       105Gi       5.5Gi        51Gi       149Gi\nSwap:           32Gi          0B        32Gi", "err": ""}}}
+[2026-02-08 01:43:13 AM EST] OK
+===== 2026-02-08 01:59:57 AM EST =====
+⚠️ Infrastructure Alert — 2026-02-08 01:59:57 AM EST
+- LLM-11441 unreachable (http://127.0.0.1:11441/health): curl: (7) Failed to connect to 127.0.0.1 port 11441 after 0 ms: Couldn't connect to server
+- systemd service llama-qwen-vl is inactive
+Recommended action: Inspect failed services/endpoints, restart impacted systemd units or containers, and verify app health endpoints.
+[Docker]\nNAMES                      STATUS
+lockn-auth-api-1           Up 2 hours (healthy)
+lockn-brain                Up 2 hours
+lockn-auth-db-1            Up 2 hours (healthy)
+lockn-caddy-test           Up 6 hours
+lockn-platform-api-test    Up 6 hours
+lockn-email-api-test       Up 6 hours
+lockn-speak-api-test       Up 6 hours
+lockn-speak-dev            Up 10 hours (healthy)
+lockn-platform-api         Up 12 hours
+lockn-email-api            Up 15 hours
+lockn-speak-api            Up 9 hours
+lockn-score-web            Up 15 hours
+lockn-score-api            Up 15 hours (healthy)
+lockn-cloudflared          Up 6 hours
+lockn-caddy                Up 10 hours
+lockn-swagger              Up 17 hours
+qdrant                     Up 23 hours
+chatterbox-v4              Up 24 hours
+lockn-logger-api-1         Up 24 hours (healthy)
+lockn-logger-seaweedfs-1   Up 24 hours (healthy)
+lockn-logger-garnet-1      Up 24 hours (healthy)
+lockn-postgres-dev         Up 13 hours (healthy)
+lockn-panns                Up 24 hours (healthy)
+qwen3-tts-api              Up 24 hours
+lockn-whisper-gpu          Up 24 hours (healthy)
+lockn-grafana              Up 24 hours
+lockn-otel-collector       Up 24 hours
+lockn-tempo                Up 24 hours
+lockn-postgres-test        Up 13 hours (healthy)
+lockn-logger-postgres-1    Up 24 hours (healthy)
+[LLM-11437] HTTP 200 url=http://127.0.0.1:11437/health
+[LLM-11439] HTTP 200 url=http://127.0.0.1:11439/health
+[LLM-11440] HTTP 200 url=http://127.0.0.1:11440/health
+[LLM-11441] ERROR url=http://127.0.0.1:11441/health err=curl: (7) Failed to connect to 127.0.0.1 port 11441 after 0 ms: Couldn't connect to server
+[Dev Speak API] HTTP 200 url=http://127.0.0.1:3003/health
+[Dev Platform Web] HTTP 200 url=http://127.0.0.1:3080/health
+[Dev Platform API] HTTP 200 url=http://127.0.0.1:3081/health
+[Test Platform Web] HTTP 200 url=http://127.0.0.1:3180/health
+[Test Platform API] HTTP 200 url=http://127.0.0.1:3181/health
+[Test Speak API] HTTP 200 url=http://127.0.0.1:3103/health
+[Test Email API] HTTP 200 url=http://127.0.0.1:3104/health
+[systemd:llama-coder-next] active
+[systemd:llama-qwen] active
+[systemd:llama-qwen-vl] inactive
+[systemd:openclaw-gateway] active
+[disk] /dev/sdd       1007G  325G  631G  34% /
+[memory]\n               total        used        free      shared  buff/cache   available
+Mem:           220Gi        69Gi       100Gi       5.2Gi        57Gi       150Gi
+Swap:           32Gi          0B        32Gi
+
