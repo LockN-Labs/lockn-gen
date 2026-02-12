@@ -1,0 +1,15 @@
+{
+  "promises": [],
+  "_schema": {
+    "id": "uuid",
+    "channel": "slack channel ID",
+    "threadTs": "message timestamp for threading",
+    "promise": "what I promised",
+    "taskRef": "Linear ticket or session key",
+    "promisedAt": "ISO timestamp",
+    "deadlineAt": "ISO timestamp (when I said I'd update by)",
+    "watchdogCronId": "cron job ID for the reminder",
+    "status": "open|fulfilled|escalated",
+    "fulfilledAt": "ISO timestamp or null"
+  }
+}

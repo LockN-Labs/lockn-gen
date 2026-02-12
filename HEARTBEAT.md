@@ -11,3 +11,9 @@
 
 ## Dev Agents Channel Accountability
 - If any subagent completed work since last heartbeat, ensure results were posted to #dev-agents with PR/ticket links.
+
+## Open Promises Audit
+- Read `memory/promise-tracker.json`. For each promise with `status: "open"`:
+  - If `deadlineAt` has passed: check if the work completed. If yes, post fulfillment to the channel and mark fulfilled. If no, post escalation alert: "⚠️ Overdue promise: [summary] in [channel]. Investigating now..." and check the referenced task/session.
+  - If `deadlineAt` is within 10 min: proactively check status and prepare to post.
+- Goal: Sean should NEVER have to ask "any update?" — this check catches it first.

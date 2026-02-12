@@ -256,6 +256,13 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 7. **Slack: main channel, not replies** — Always respond as new messages in the channel, NOT as thread replies. Only use thread replies when Sean explicitly starts replying to a specific message (intentionally going down a rabbit hole). Default is always top-level channel messages.
 8. **No DM thread** — NEVER use the DM thread for comms. Route ALL messages through the appropriate Slack channel. If no appropriate channel exists, suggest creation in #process-improvements.
 9. **No DM IDs in cron payloads** — Cron job message text must NEVER contain DM channel IDs (e.g., `D0AC46HCRNZ`). All cron output routes through `delivery.to` targeting a proper channel. When creating/updating cron jobs, enforce this. Channel map: `#main-realtime` (C0AECSTM8ER), `#system-heartbeat` (C0ACDPDQ9L5), `#strategy` (C0ADGH08ZD1), `#infra-alerts` (C0AE08128Q2), `#exec-approvals` (C0ACLQVLFNG), `#agent-dispatch` (C0ADTBEMQJX).
+10. **Promise tracker discipline** — Every time you tell Sean "I'll update you in X min" or "will post results when done", you MUST:
+    - Write the promise to `memory/promise-tracker.json` (channel, what, deadline)
+    - Create a one-shot watchdog cron at deadline+5min that checks and posts regardless
+    - Fulfill by posting to the promised channel when done
+    - Never let a promise expire silently
+11. **Spawn watchdog mandatory** — Every `sessions_spawn` MUST be paired with a companion watchdog cron at the timeout boundary. The watchdog checks session status and posts results to the originating channel. No fire-and-forget spawns.
+12. **Failure-loud rule** — Sub-agent failures MUST post to the originating channel. Every spawn task prompt must include explicit instructions: "If you fail or cannot complete, post a failure message to [channel] explaining what went wrong." Silent failures are unacceptable.
 
 ## Make It Yours
 
