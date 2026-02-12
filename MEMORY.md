@@ -58,6 +58,26 @@
 - **LockN Gen**: Media generation (image/video/music). ACE-Step 1.5 for music.
 - **LockN Ship**: Suggestion box, posts to Slack #ship channel + creates Linear tickets.
 
+## 🏗️ LockN AI — Agentic Interface (2026-02-11, Sean strategic directive)
+- **Vision**: Fully productizable agentic operating system — own the full stack, zero vendor lock-in.
+- **Framework**: .NET Aspire orchestration + C# provider abstraction interfaces
+- **Module map** (each has owned OSS impl + commercial SaaS adapter):
+  - LockN Bot — OpenClaw (Runtime, proprietary core)
+  - LockN Chat — Matrix / Slack (Comms, Apache 2.0)
+  - LockN Auth — Zitadel / Auth0 (Identity, Apache 2.0)
+  - LockN Work — Plane / Linear (Work Items, AGPL+commercial)
+  - LockN Doc — AFFiNE / Notion (Knowledge, MIT)
+  - LockN Mem — Qdrant (Vector Memory, Apache 2.0)
+  - LockN Net — Infra Stack (Caddy/Docker/CF)
+  - LockN Arch — D2 + Mermaid (Diagrams, MPL+MIT)
+  - LockN Flow — Temporal (Orchestration, MIT)
+  - LockN Watch — OTel + Grafana (Observability)
+  - LockN Voice — Fish Speech / ElevenLabs (TTS)
+- **Competitive moat**: Nobody else owns full stack. All competitors parasitize SaaS or are frameworks-only.
+- **Implementation**: Abstraction-first (provider interfaces), wrap current tools, then swap in owned modules incrementally.
+- **Timeline**: Phase 0 (2-3w scaffold) → Phase 1 (4-6w adapters) → Phase 2 (4-8w first OSS module) → Phase 3 (4-6mo full)
+- **Research docs**: `research/lockn-ai-aspire-architecture.md`, `research/lockn-ai-implementation-gameplan.md`, `research/agentic-os-unified-report.md`, `research/comms-layer-research.md`, `research/auth-identity-research.md`, `research/system-layers-research.md`
+
 ## 🏛️ Linear Organization
 - 7 initiatives, ~21 projects.
 - **Project-Level Priorities view is the canonical priority order.** Top project = what to work on next. Sean drag-and-drops to reorder. NOT initiative order — project order is what matters.
