@@ -135,6 +135,36 @@
 - **2026-02-11 #system-prompts directive**: Treat `#system-prompts` as the agent control plane for prompt/process governance (policy changes, incident analysis, behavior validation), not general execution chatter. No policy is complete without a validation check/evidence.
 - **2026-02-11 #product-accountability directive**: Use `#product-accountability` as the execution-truth layer (commitments, risks, shipped vs missed outcomes, corrective actions). Sean will use the thread there to interrogate product expectations; per-project PM subagents + CPO must be looped into that channel/thread.
 
+## 🔄 Process Decisions (2026-02-11, Sean directives — "burn to memory")
+
+### WIP Policy Change
+- **Hard WIP cap removed** — replaced with staleness-based workflow management
+- **>48h in same status** → stale flag alert
+- **>7d stale** → auto-move to Backlog with comment
+- Rationale: hard cap caused noisy false alerts; staleness tracking fits multi-agent parallelism better
+
+### Boot Check Architecture
+- **Main-session-only, single-pass** — no cron/subagent boot runs
+- Checks: all LLM endpoints, MCP integrations (Linear, Notion, Figma API, Figma Bridge), Docker state, Logger, Qdrant, memory_search
+- GLM (`:11436`) treated as optional/intentionally offline until Sean says otherwise
+- No `NOT_VALIDATED` status — everything gets a real PASS/DEGRADED/FAIL check
+- **Output always goes to `#system-heartbeat`** (`C0ACDPDQ9L5`) — never to triggering channel
+
+### Design Quality Gate (A/C/D Upgrade)
+- **9.81+ standard** with weighted sub-scores
+- Mandatory Gate Card on every design review
+- Two-stage: local fail-fast pre-check + cloud final gate
+- KPI: `first_pass_rate` target >70%
+- Notion: https://www.notion.so/Design-Quality-Gate-Operationalization-A-C-D-2026-02-11-304b5f0c1a51813fbe8edb677a6df1ad
+
+### Decision Queue
+- `#needs-seans-call` (`C0AEEM9QGAJ`) for blocked decisions requiring Sean's input
+- Urgency-based reminder policy; `decision_required` boolean tagging
+
+### Memory Protection
+- **All workspace state files MUST be git-tracked on `main`**: MEMORY.md, TOOLS.md, USER.md, HEARTBEAT.md, AGENTS.md, SOUL.md, BOOT.md
+- Untracked files are vulnerable to `git checkout`/`git clean` — root cause of MEMORY.md loss incident
+
 ## 🔒 Security Notes
 - Elevated exec allowlist has wildcard (`*`) — flagged, acceptable for single-human workspace.
 - Slack groupPolicy is open — acceptable per Sean's explicit decision.
