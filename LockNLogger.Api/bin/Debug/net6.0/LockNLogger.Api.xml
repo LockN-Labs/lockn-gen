@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LockNLogger.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ReceiptsController">
+            <summary>
+            Receipt endpoints with XML documentation
+            </summary>
+        </member>
+        <member name="M:ReceiptsController.Get">
+            <summary>
+            Get all receipts
+            </summary>
+            <returns>Receipt collection</returns>
+        </member>
+        <member name="M:ReceiptsController.Post(System.String)">
+            <summary>
+            Create new receipt
+            </summary>
+            <param name="receipt">Receipt data</param>
+            <returns>Created receipt</returns>
+        </member>
+        <member name="M:ReceiptsController.EmitDecisionRequested(DecisionRequestedReceipt)">
+            <summary>
+            Emit decision requested receipt
+            </summary>
+            <param name="decisionRequest">Decision request data</param>
+            <returns>Acknowledgment</returns>
+        </member>
+        <member name="M:ReceiptsController.EmitDecisionMade(DecisionMadeReceipt)">
+            <summary>
+            Emit decision made receipt
+            </summary>
+            <param name="decisionMade">Decision made data</param>
+            <returns>Acknowledgment</returns>
+        </member>
+        <member name="T:DecisionRequestedReceipt">
+            <summary>
+            Decision requested receipt payload
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.CorrelationId">
+            <summary>
+            Unique correlation ID for tracking
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.ActorType">
+            <summary>
+            Actor type (human/agent)
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.ActorIdentity">
+            <summary>
+            Actor identity
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.Timestamp">
+            <summary>
+            Timestamp of request
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.SourceChannel">
+            <summary>
+            Source channel/message/thread IDs
+            </summary>
+        </member>
+        <member name="P:DecisionRequestedReceipt.DecisionPayload">
+            <summary>
+            Decision payload (options, recommendation)
+            </summary>
+        </member>
+        <member name="T:DecisionMadeReceipt">
+            <summary>
+            Decision made receipt payload
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.CorrelationId">
+            <summary>
+            Unique correlation ID for tracking
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.ActorType">
+            <summary>
+            Actor type (human/agent)
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.ActorIdentity">
+            <summary>
+            Actor identity
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.Timestamp">
+            <summary>
+            Timestamp of decision
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.SourceChannel">
+            <summary>
+            Source channel/message/thread IDs
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.SelectedOption">
+            <summary>
+            Selected option from decision payload
+            </summary>
+        </member>
+        <member name="P:DecisionMadeReceipt.OriginalPayload">
+            <summary>
+            Original decision payload
+            </summary>
+        </member>
+    </members>
+</doc>
