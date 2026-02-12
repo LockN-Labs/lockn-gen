@@ -1,0 +1,30 @@
+--- docs-cache/openclaw-docs/2026-02-05T02-30/index.md	2026-02-05 02:31:09.264223580 -0500
++++ docs-cache/openclaw-docs/2026-02-07T02-30/index.md	2026-02-07 02:32:18.060119593 -0500
+@@ -1,12 +1,24 @@
+-# OpenClaw
+-
+ "EXFOLIATE! EXFOLIATE!" — A space lobster, probably
+ 
+ Any OS gateway for AI agents across WhatsApp, Telegram, Discord, iMessage, and more.
+ 
+ Send a message, get an agent response from your pocket. Plugins add Mattermost and more.
+ 
+-OpenClaw connects chat apps to coding agents like Pi through a single Gateway process. It powers the OpenClaw assistant and supports local or remote setups.
++## What is OpenClaw?
++
++OpenClaw is a self-hosted gateway that connects your favorite chat apps — WhatsApp, Telegram, Discord, iMessage, and more — to AI coding agents like Pi. You run a single Gateway process on your own machine (or a server), and it becomes the bridge between your messaging apps and an always-available AI assistant.
++Who is it for? Developers and power users who want a personal AI assistant they can message from anywhere — without giving up control of their data or relying on a hosted service.
++What makes it different?
++
++- Self-hosted: runs on your hardware, your rules
++
++- Multi-channel: one Gateway serves WhatsApp, Telegram, Discord, and more simultaneously
++
++- Agent-native: built for coding agents with tool use, sessions, memory, and multi-agent routing
++
++- Open source: MIT licensed, community-driven
++
++What do you need? Node 22+, an API key (Anthropic recommended), and 5 minutes.
+ 
+ ## How it works
+ 

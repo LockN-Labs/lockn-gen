@@ -8,3 +8,4 @@
 {"ts": "2026-02-11T13:33:08.298881-05:00", "containers": 30, "images": 77, "diskGB": 383.54, "issues": 3, "cleanup": ["Image prune: 0B", "Container prune (>24h stopped)"]}
 [2026-02-11 14:00 EST] 32 containers (1 crash-looping: speak-dev, 1 unhealthy: whisper-gpu), 76 images, 487GB disk (34%). Manifest drift detected — several container renames. 21 dangling volumes (19.6GB). No auto-cleanup needed.
 {"timestamp": "2026-02-11T14:22:56-05:00", "summary": "issues", "containerCount": 33, "imageCount": 77, "diskUsageGB": 487.09, "issueCount": 3}
+[2026-02-11T21:30:00-05:00] ✅ 33/33 containers up | 76 images (363GB) | 21.5GB volumes | 102.7GB build cache | 20 dangling vols | No cleanup needed | lockn-speak-db added to manifest

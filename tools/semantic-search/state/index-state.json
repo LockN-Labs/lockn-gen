@@ -1,0 +1,2550 @@
+{
+  "version": 1,
+  "files": {
+    "lockn-logger/docker-compose.test.yml": {
+      "sha256": "14b51e25337efc7a97175483a1d4d25badadc55cf25ab156dfea4308d52f567e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docker-compose.dev.yml": {
+      "sha256": "d7eeedab8fd97fd6fcf744d7497529e833cb538c6a73a71096394f6ce4688aa7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docker-compose.observability.yml": {
+      "sha256": "1be6c44a69c4192756444b43493181fab991059e404f868c38b94e2697dbfc1b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/README.md": {
+      "sha256": "37cfcbcb2d8363fa702bcaa9fa0adb4c425c749481af354b9ab6f30b72f37f59",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docker-compose.prod.yml": {
+      "sha256": "232a99f7423bb0c6db1c315ac38ee575de9af33add7f51fd551d398ceb182a0a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docker-compose.yml": {
+      "sha256": "af483ce2e54b73fc93fc45ffa080ab6b434b863f889ae7db6b71507b9b648e33",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/deploy.sh": {
+      "sha256": "4e69617eadc662d7860b422d06a50e268376c891fb16fae59bddc85276152efa",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/setup-branch-protection.sh": {
+      "sha256": "6f3040f901f6e5e336be748a1d0690897146b128ad5583ae0674ed6142e7415e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/compute-monitor.sh": {
+      "sha256": "279999607783a47a45716b611d117aec4cb4f44ee628f059894373489b997167",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/rollback.sh": {
+      "sha256": "65b0a2ddff5a36a95f92bdcfd9f3b7391654f3535f086e343817cc12f64729bd",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/branch-protection.sh": {
+      "sha256": "82dd8d64386c5cfc76a271dbcbd0122c9a56c1a494ca486a82c748628a953881",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/compute-monitor-cron.sh": {
+      "sha256": "01e47ae9799c9cebc3d9d055eba68bd50c6f3819f661ed7e87c77a23d8194cc1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/setup-tunnel.sh": {
+      "sha256": "e53337aa0ff4ab82a4d48ff826364517f2a399300497fd76c98d073b55276bd8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/scripts/backup-db.sh": {
+      "sha256": "58307f2fac280a953921a49b2204004b21cb5367d184897e00fd2292a8f0c7aa",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/qa/visual/package.json": {
+      "sha256": "d870d0c36faa2c48a85eba692ca7f07a4f3f917dde609c02bd27f4851aaa1d92",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/qa/visual/analyze.sh": {
+      "sha256": "a899f14092b9b98bc0ced2f7b0bbf8c425543ef7bf0ee3583d6f01ca8967eba3",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/qa/visual/capture.js": {
+      "sha256": "ccc1d3844e18930a27ad217cd167a215e1bcee0fd36828c09c263f4efdaa5ea4",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/qa/visual/README.md": {
+      "sha256": "3d330670f94a57fdabdb38e1fed02e3037cff86e862a742fec7f2c84a139fe7e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tools/metrics-scraper.py": {
+      "sha256": "04acb91c18d55f01f61cf813a4fe324e0b24bdd58b491c184523183d1f4fbd05",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/OtlpEndpointTests.cs": {
+      "sha256": "6b251ea0bca58d2abccce8d99b2fcd94b24e0597e7271abd2963afd00020ef43",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/ReceiptEndpointTests.cs": {
+      "sha256": "951e3fd87099ae33d2c5a0bf111b912ab6e8457d462dd81e3852f187ebdc0884",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/BudgetEndpointTests.cs": {
+      "sha256": "2608074a3c8ad7e4ff03cfb809af2cc3e8b9cc709ac2db691fc529b7cd839c83",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/CustomWebApplicationFactory.cs": {
+      "sha256": "fa6675341569207879556e575ff692accf34518a718a367f5328f06ad5d65556",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/DashboardEndpointTests.cs": {
+      "sha256": "ce45ac7d5b031631f75aaeba08551ff3c87b62ff386ae72316015671a61883f8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/StatsEndpointTests.cs": {
+      "sha256": "6b1cfa19ca6c13031344c65977e2fb96e3401b9df9927f385bf70bae879934e9",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/LogSummaryEndpointTests.cs": {
+      "sha256": "db63d344548cb5e9f2969836adf5fb780a775e193623aec04afd9cb0461f24fe",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/Usings.cs": {
+      "sha256": "50436eb3a60162e0cfad749eddfb06f8908f821a90ca44532df946a53e071359",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/ExportEndpointTests.cs": {
+      "sha256": "ad8ec74a60097633d4c7bc7b724da0ca0e14c2e836a8b3cd47e084eb2e591a84",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/SessionEndpointTests.cs": {
+      "sha256": "fa9b4a3c2d3553df9da960545369a4f892c427347ddffb0ca3d21bd7a0987f05",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/SearchEndpointTests.cs": {
+      "sha256": "9541ef2b3a8f1fd1027e070dce4f79b7dae36a74f95d9f49bddb12fe5f529ef3",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/AuthTests.cs": {
+      "sha256": "71da9888ca0c267c60200d203a777297f7bc7f71bd4b1723db52f46ff4c58daa",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/obj.bak/project.assets.json": {
+      "sha256": "1568ba474531b1b7bf9681c0595b60ff90d9d7f7dff676a95a8b27027154762d",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.IntegrationTests/obj.bak/LockNLogger.IntegrationTests.csproj.nuget.dgspec.json": {
+      "sha256": "89544c6db68d0e7a40dc460ce9b8743cb1e883797512f144766da219810d9d3b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Domain.Tests/Services/BudgetServiceTypesTests.cs": {
+      "sha256": "e64291d9b73520dfa76154a8f981c78344cece7e84bd0a3cdb226c5254cdff9e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Domain.Tests/Entities/ReceiptTests.cs": {
+      "sha256": "1972d0f38896cc09146362c6ad8ef21ea8e5cfb139003ba044a123541c2dea0d",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Domain.Tests/Entities/BudgetAlertTests.cs": {
+      "sha256": "f40ed86168f0b5a147c0c457ba67bb00bf4a653f4aa577eb0abadf7a8708a120",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Domain.Tests/Entities/BudgetLimitTests.cs": {
+      "sha256": "5f31e3dc374ae4ee9af945d24ef9bb7551c3282c7680eff3b2b3f08b7edb5cb1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Api.Tests/ToolAdapters/ToolSpanProcessorTests.cs": {
+      "sha256": "41d369f5a62bf856da95409147aaad7e22971cbda27924ec9695436fc7ab4074",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Api.Tests/ToolAdapters/ExecApprovalReceiptMapperTests.cs": {
+      "sha256": "fd06820d199567c2b6f2ba0ab53b2e15327225d1c58f24386ab7664e951f2be1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Api.Tests/ToolAdapters/ToolAdapterRegistryTests.cs": {
+      "sha256": "f8b00b1644d9466792ca2bf0ed9465d1a1df77e6d73a2ee2ce9620c15dccd75b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/tests/LockNLogger.Tests/UnitTest1.cs": {
+      "sha256": "ea4928fee64247fb540e8b69c4243f31b2b1ab7d5e55d979a8a0e17bd0eb3666",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/observability/otel-collector/config.yaml": {
+      "sha256": "3cd8c205af925ad7c368a8fc15326cfd05a0e23b4d52b2622673f9964dccd783",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/observability/tempo/tempo.yaml": {
+      "sha256": "6a81d44f449662fc8db0a4e2f742c3b3708b5f8b7b774f91ba679e9150dca1e1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/observability/grafana/provisioning/dashboards/otel-traces.json": {
+      "sha256": "e084c0d8abf56bc6441d26c6d9f4240d06790ed818aac3b3bc52099f78255408",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/observability/grafana/provisioning/dashboards/dashboards.yaml": {
+      "sha256": "e575c5bbbad340aa559bf8ee1facf5e893e1bf5fea00d60bd616bde54f54cfb8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/observability/grafana/provisioning/datasources/datasources.yaml": {
+      "sha256": "a4e6cdaf969a555ad00ceb17bfbc8b34a1fc2aa0d90dabfc685493e41474172f",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/.github/workflows/promote.yml": {
+      "sha256": "16ae8f01107df89d7c0b03c96afba9dc623297f0df2b33b8e5af2e7fdafded20",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/.github/workflows/qa-gate.yml": {
+      "sha256": "ee4d55e0720a5c5e00ee50d320637c413397a19f1f934b891a9e1691b65f67e7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/.github/workflows/deploy.yml": {
+      "sha256": "c578230f5eeaf66eda4a81135c1851fbbc813c0379a51893aed996a0d3b35903",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/.github/workflows/ci.yml": {
+      "sha256": "fbb71454e4a692dba78e9563973aa3979ff9c7178090fb04f1ac209c6270b13a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/appsettings.Development.json": {
+      "sha256": "73f95f9e0ceb205fc1c4dc50c07697fcfa29d7087868c2aef1d504cb38c771ec",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/appsettings.json": {
+      "sha256": "234c2a9969e89cbcbbfa56c27ccb5b546e416965e363e5369c99424561fc9d13",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Program.cs": {
+      "sha256": "2e1518c9d809e701639f57731b5318a60d6d7bb02783898d6c25ee88dc7d705b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/DashboardSummaryResponse.cs": {
+      "sha256": "2ab3c100908ed7aa52a67f4c57d23f14a97c0f1d220aad2f283cabb342400eae",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/UsageStatsResponse.cs": {
+      "sha256": "7c532b8998a3eeb7194c6d692bf23ef2cf0a4eafb8af3035da77f72acb4fc795",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/SearchResultResponse.cs": {
+      "sha256": "e31f01a6f31ae16f3f929afdbedbc908a092f78969c8625c56f7367afd6d5e02",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/InviteModels.cs": {
+      "sha256": "b5b410dfeb349dc67d6aa73f0fdacd76923a223396f45d5363f8d96a192b379f",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/CreateReceiptRequest.cs": {
+      "sha256": "856ec91e35cd4b5a05cddd49e804d89c60dacc36c24cf2a17ebf10c1bd7a6deb",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/AgentSessionResponse.cs": {
+      "sha256": "fcb6cd4b880d957684cdb04578de3d455a1f0e5386a137688e492d5bf803a3aa",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/ReceiptResponse.cs": {
+      "sha256": "3b03ac03c3cfd7e5be1f2584c3813de13d61878fd718cece41e46ccd02b16c11",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/OtlpIngestResponse.cs": {
+      "sha256": "f73d5dbd5fc9a01fa69de01783e542b58b0fed4d18278ee333a544a8208a3efb",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/SearchRecordResponse.cs": {
+      "sha256": "5c682e23a31bc9c3b183f720163fde8b7afab984890ebaca50a56aa9b604b41d",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Models/LogSummaryResponse.cs": {
+      "sha256": "1b19e1f5e1db440cad4dda7854bd768983475cfe2600bf9490f16c259e0d6848",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Properties/launchSettings.json": {
+      "sha256": "502f2d09570b7bf5ad9a98cdf920402d1033e282c22efc1344e4f653bee1346c",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Auth/RoleClaimTransformer.cs": {
+      "sha256": "5883681d1eb1af16f8c55cbcbe593c797477c11d6b841f7489f2976b06ba6ad4",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Auth/AuthConstants.cs": {
+      "sha256": "0a630ab0b5de5d3fbadf69804ef3ed5282da97605f7cbab067b45555e8b3604a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Auth/AuthServiceExtensions.cs": {
+      "sha256": "660681b7975ee7cc90750442ed891fa12b20debc97a2b70af9db64039879a8ed",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Auth/AuthSettings.cs": {
+      "sha256": "064908ab6b4139002831da5aea643ce270f2404f8a28f0a7ff7025e790f8496e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Middleware/GlobalExceptionMiddleware.cs": {
+      "sha256": "8b08684511405092215e2be0009277098c53a40a8b5b5e570bf57b848c67559d",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/app.js": {
+      "sha256": "ad0f7afe031db982549bed365434725c55f1781b5f41862a32ef70928e86f1f2",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/index.html": {
+      "sha256": "3c1c3a69f182615d5138da849429111b61ceea6011761c41a8394ea32c49b2c0",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/style.css": {
+      "sha256": "5790feced5e74e35eb456cf3683cd94e858a5c473c793eeeaea0b8f1edfd7f3c",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/pacman/game.js": {
+      "sha256": "c6c2086e98f600d6911875ddabb4038a9f3405526bf5b0f2b48a687398235da8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/pacman/index.html": {
+      "sha256": "1deadc41255544e2bdbd1fec34df429ddf4b5aeefd110c5ff8394e2042a1fa37",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/pacman/style.css": {
+      "sha256": "101ef96171203775a2b526e063065d39d27d653c2539bdae4d5ff08f0b0dc8e1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/embed/widget.js": {
+      "sha256": "25c40cffd23abf2f7aa40aeb20abc8acc504fdaa085a37ee3213b23c8eab2ad2",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/wwwroot/embed/widget.css": {
+      "sha256": "d04cd4f80daff084f9d4f2592b397ee91704202f452053f3edb0aac5899f8654",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Errors/ErrorCodes.cs": {
+      "sha256": "e489d18b42096db10acdcf7240d780b8db09a23d04194dfc9d125f44d4a76d30",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Errors/LockNException.cs": {
+      "sha256": "44d7e63580ddb47db4fb53482184de757efd99e6050bbd0db4f10c1dfc8b0ccc",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Errors/ErrorResponse.cs": {
+      "sha256": "5339acb82d8ecc561da0ea0624658668fa29b9d368061a31e47467b989949ca8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Services/InviteEmailService.cs": {
+      "sha256": "4633e00a5a588f173465331fddb1e320b9df0ae017b3478936c9bf44a5921af0",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Services/ExecApprovalReceiptMapper.cs": {
+      "sha256": "0ee5ca735a619d88c665c5c0ae8d942e9b89946c62e2735ff111969c1e2cc620",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Services/ToolSpanProcessor.cs": {
+      "sha256": "b1d6020870ee548d8d0d43188c83289666cf42576d8971040f1ae727aa970f22",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/LogSummaryEndpoints.cs": {
+      "sha256": "9d13c0d4169dc0170445fc7341b802340bd3579d6af359671d13fd945ed9d068",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/BudgetEndpoints.cs": {
+      "sha256": "57b4080d6128604792d322ee0f62456182cc7ef0a1c058f173340fdcdc868218",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/RealtimeEndpoints.cs": {
+      "sha256": "31591e0168855d86bdd628b59f5b80b252146d899f6adbf969268ccabb41d5af",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/DashboardEndpoints.cs": {
+      "sha256": "66a84807b42af3edd6e0a6cde22b273db57558f8f81eb3fe4b46d9398430decd",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/ReceiptEndpoints.cs": {
+      "sha256": "f47d6bfaf63674810d2dfe87c9cf1c282b94884fb351508dc9467a0ea7fea074",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/InviteEndpoints.cs": {
+      "sha256": "205090282f154bbd736f5fbc7a103876e267313c99b82f0d383c29964c32858b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/LogEndpoints.cs": {
+      "sha256": "acb1a3c3a0e99a3cb64cfb6e4c2503f98724acdb9e87a29cb99948dc1a992114",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/ReportEndpoints.cs": {
+      "sha256": "f34d0906c00bab6b93998adfe027da0e2a59a15e73e9948bfe67e9ec7faf9ac7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/EmbedEndpoints.cs": {
+      "sha256": "ee22dc844b5fc58ba6c04d611ec2803a2b048c60e09479e7e317aa5a34b541ee",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/StatsEndpoints.cs": {
+      "sha256": "78ce6876aae9a09ad7f018c5bb7a555da1a12d30ffe7ab822a6ed2d2a562365a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/ExportEndpoints.cs": {
+      "sha256": "95e9f703594fb0d1fce020b7d244696b95415cd8bc854948335fad4ec37aecad",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/SessionEndpoints.cs": {
+      "sha256": "3c7ab44169d0b4aa759eb34fc040dae3169d603bd6969d3fb89d272fb37b5620",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/ProviderHealthEndpoints.cs": {
+      "sha256": "ee5969e7a52746cbae49258e420a94ee270baddfdd7d764fd1f52843f3eae899",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/SearchEndpoints.cs": {
+      "sha256": "565711a9515441663430639bb9595582719b9834fa4d7622a50b46070440d64b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/OtlpEndpoints.cs": {
+      "sha256": "10eb018f638ec47223378dcc908f42d603d2eded71134183cf818917ef03855b",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Api/Endpoints/SearchRecordEndpoints.cs": {
+      "sha256": "b2c2d5937a98f337854af76112d8f7f16bb9dcc65f78507b7152ef6747115641",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Class1.cs": {
+      "sha256": "523023f236bef062f7dddcd3666990d3060c9228fef9249b86a388eca8663459",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260207013145_AddInvites.cs": {
+      "sha256": "395491a1e6de1ae9af556cad790ef7e92725325f790ca0de1d623499ccebf4f8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/AppDbContextModelSnapshot.cs": {
+      "sha256": "b61eeb16fe6d4e622f6fd2e2a28cbcd6d6db23dbeb5eaf4d3ff78724216c08eb",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202232641_AddOptionalAgentSessionId.Designer.cs": {
+      "sha256": "3a2d3b70911a9628ab8fcd2bcdc5f63ef8450711a74a37a81f884279b9a8bfb1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202195805_InitialCreate.Designer.cs": {
+      "sha256": "ae2a2d19a813cb3b56a1b167b0f518a8acd10242412791b68844ace0588be475",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202232641_AddOptionalAgentSessionId.cs": {
+      "sha256": "b35912cf5c962e155443ea2691ba21bdc8fb3b18891a698184f5380fe4cbea96",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260207013145_AddInvites.Designer.cs": {
+      "sha256": "a3b469e8a4b7c1c05744af546f2e6dc96d0d52d97b346c888d35c6b0e37a3e2d",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202200516_AddReceiptAttachments.Designer.cs": {
+      "sha256": "dc3869444cf7632272fefd3c1d4e3b5165535b8339cb7794d816b438e26a77a7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260203133645_AddBudgetLimitsAndAlerts.Designer.cs": {
+      "sha256": "44475e37aa17561142d3ec225f2223254b01ee1e62b0f227613d4cb137da62f7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202200516_AddReceiptAttachments.cs": {
+      "sha256": "e944ff1973ba35454efe94bd7729bcf9602a35fc85e6e52abd2ee52419e71408",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202195805_InitialCreate.cs": {
+      "sha256": "174ed5045efef502736077a196b6d32c695bc6be2584affedc98ac7271439705",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260203133645_AddBudgetLimitsAndAlerts.cs": {
+      "sha256": "dc78c464448ed938a74cfd3726ac3cf7ad2a2dd621e09190250005e97100d331",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202204905_AddSearchIndexes.Designer.cs": {
+      "sha256": "678d681a741b9363a93fd39d6690d72e33d7834663120b013b9abe775d5305ce",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Migrations/20260202204905_AddSearchIndexes.cs": {
+      "sha256": "8aedf48e1ff7fa5fa9b899f65793d33c29c1c061787f2ac5adbd12e1298cbb01",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Cache/GarnetCacheService.cs": {
+      "sha256": "af53e04c13582c96875344538e7248fe18b1db7eb54bdfb38ecc5d4ef87e70e2",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/ToolAdapters/ToolAdapterRegistry.cs": {
+      "sha256": "790cfaea934e23a413b3e2744d90bc079cf613af85380eb1caabf2a2b12ba994",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Storage/MinioOptions.cs": {
+      "sha256": "d587b1b5d642fe56db6fbf968ec90856c569f01bec7378de403c411e60ea84b7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Storage/MinioFileStorageService.cs": {
+      "sha256": "42f1a23f1338d78dc9fbbd7637529a5c7048f82c8976089b4305105da49cddab",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Services/ProviderHealthService.cs": {
+      "sha256": "8da7a4587e559debb6c765b92d92706ce22fe3939d6df3c9df393eeed8de226a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Services/BroadcastService.cs": {
+      "sha256": "bef87750ebf8564fa4e434d1c3a65ab7564d6c13829ef86be941aa7d67a935f6",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Services/ExportService.cs": {
+      "sha256": "bf4991909f3dbd4a9fdd6e74bc5109c98110210030f2141d43ac63a48868c483",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Services/BudgetService.cs": {
+      "sha256": "186b8431cf8dcbb7dd9bcdbe3530d367de76d929af268ef26df1181e7835ee58",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Services/ReportService.cs": {
+      "sha256": "040a5d65f84fa61b26f983183f1b137315350d0c74f0552fc9651bf0d9419ace",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Infrastructure/Data/AppDbContext.cs": {
+      "sha256": "75bc5ebf7f120e8f60aec78ffa5dd5bc8ea17b7fab6ce2eae870052ff8919273",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Class1.cs": {
+      "sha256": "4c2cf48f4120628c6ca836e6cf62ef59ebd6889b6cbfd2073201d241d231f080",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/DTOs/ProviderHealthStatus.cs": {
+      "sha256": "1bd4c51dbf1d9ec5b49fcee2923ef2ac90fe35e6733df7d988b81c59269973ce",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/DTOs/RealtimeModels.cs": {
+      "sha256": "1519316b85eceac9f08527a95e98d700c867bbdbd6f553fca70bf374fa4c7b89",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/DTOs/ReceiptExportRow.cs": {
+      "sha256": "280b50f7bf088ce1b5c1f8f129413df3c0cc789f352cff3e50d85aae7f879ab2",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/DTOs/ReportModels.cs": {
+      "sha256": "209476353889e832689ca2ecaca15f2b490f8d018928186130aeb615e24cebcd",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/ToolSpanKind.cs": {
+      "sha256": "9067845330ca27d5ba56ae8fd7e3324c4159ae12d33406f50ded80dac3d7ddac",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/IToolAdapter.cs": {
+      "sha256": "bc69927e68423b15888bd9f88d640b9bbd04c3424d023a86b74b299981ca9151",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/IToolAdapterRegistry.cs": {
+      "sha256": "edbaa310c753e05a116885e03f505f83e8114f1d940108ba3f1d29a5637acac3",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/BaseToolAdapter.cs": {
+      "sha256": "023745da8979da3af662c081514aebb8413038ec8d6187fac81f69be5b989192",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/ToolSpanEnrichment.cs": {
+      "sha256": "9f30ca77b2a03fa9fe1079d2566482e3996e64172d31889590ac53352b9e342c",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/MessageToolAdapter.cs": {
+      "sha256": "f38f51aacb5a97e5b81feca6d14392a4e279a2dce69f0c45bf3a5d03c02ba3b8",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/ExecToolAdapter.cs": {
+      "sha256": "2fb8437f865f0fd80d620c9477124d5345dd787f295f032e46869c84dbc4f549",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/BrowserToolAdapter.cs": {
+      "sha256": "b22bd1cd43c6c37909591658ce773a8a8ba5761ece541f409667428bd8749722",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/ReadToolAdapter.cs": {
+      "sha256": "ac66cf211d02900c4ff2a6c043b17363249e7627153139e8f688a9b82bf450be",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/WebFetchToolAdapter.cs": {
+      "sha256": "1779b111b668f1b7434a03ec1befef65cf5467e4faab6483b94cd18898e6eab2",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/ToolAdapters/Adapters/WebSearchToolAdapter.cs": {
+      "sha256": "67f2c4b2cc2cf2eeea226577989269820ac1b128b76f38b09e5ab6ef4c8fd3a7",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IBudgetService.cs": {
+      "sha256": "73fa7b613166d2ba4b080f9a1bac3dc34d4c719b2ae50a6c884f283dccdfd8c6",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IReportService.cs": {
+      "sha256": "345c4b3c9ffa58a878a67d3db4e8264e398fd03187abcc83ab12fc67af0dcd19",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/ICacheService.cs": {
+      "sha256": "0c9530293b39eaf1e3c6e866d31b4bb1ee1d10ed21a453c692b76f6fcf6da848",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IProviderHealthService.cs": {
+      "sha256": "a8754850001e9fa7079a4be7b53a4d1f23c688282eb6cf86756129a05e2edda4",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IExportService.cs": {
+      "sha256": "598fa68bc2d1685953c16b59c452323f84b73a33e3740ca33139319fb67367a5",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IBroadcastService.cs": {
+      "sha256": "9af6805fa106a64ac755ce40ca26b50c10bb3a5f650cf187d45ef79809b5a420",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Services/IFileStorageService.cs": {
+      "sha256": "d34f1189fb6d6b7ec1e585d8e1f58a6e27d3c57a462c7f7b08bfc6674685cbbd",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/Receipt.cs": {
+      "sha256": "09637e375d4d8e5cd93ccb5ffe9b92e90cd0ef084add6059fa6e067a44dee593",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/Invite.cs": {
+      "sha256": "c912bef0f37c55ccdad4cb2a84f51c88aa3d5801581b03be132e109a3137347f",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/AgentSession.cs": {
+      "sha256": "69f35406b678af6e4b3f096fcf77b026d14f4888887a892a71c8403cf9b2ffd5",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/BudgetLimit.cs": {
+      "sha256": "f192cf8f0202c4af7f6ce7b5d15a3cf11c09c227e988dfdcfb6561aa984d4b3f",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/SearchRecord.cs": {
+      "sha256": "9be99d83cdbec6d3e827c5bf18ce77b2eb2219e01c7fe3483cf685b42a5b4f03",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/src/LockNLogger.Domain/Entities/BudgetAlert.cs": {
+      "sha256": "8c9a00bb6745000356d796fe5ffb5d22e3d33f7ae74c54894ff169002e8c294e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/cicd/SKILL.md": {
+      "sha256": "32160199687b2c6d8cf0be5ecbaaddb9eb3010f94c254e21b949373fe735bd5f",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/cicd/scripts/scaffold.sh": {
+      "sha256": "e6f7a79686e816b0b62cbd14b3a5fe93a7156a41be9e5cd396a27d46376916bb",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/cicd/scripts/branch-protection.sh": {
+      "sha256": "3133fec17eaea43cf297a1fe33b1137545ae804eaec401286514ad95ab4865e5",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/package.json": {
+      "sha256": "aa3a810628b8b3f95a433bce202aac6f54bdefdf74a839692ae0b3f8ad8f27f9",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/capture.js": {
+      "sha256": "d5ebb3b3b06c8564bc6355bc099f69cc852681ad2b95ac4ef53f86b8d407b898",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/SKILL.md": {
+      "sha256": "b67d37ca7dab952303aa4ec91ee0efc82fe6e566f662de9ea30b2cbca9ea86cf",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/config.schema.json": {
+      "sha256": "c55da32b9e920b44177db92e7225017cbebbd4843b3f43170637d338ebc2c0b6",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/scripts/collect-usage.sh": {
+      "sha256": "12cd3ca1ea574b447ac8d968f0425a6249c83b7d10a714cdd5ebb9d8741e2823",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/scripts/log-receipt.sh": {
+      "sha256": "fe5e5f8f21800b77470bc93acbbf8fa7131776c758d3a7888686ef7fd9e94710",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/skills/lockn-logger/state/last-usage.json": {
+      "sha256": "528c6bd5a56d23f4c0e0f4f730ba233279ac3e84f25e5bb4f9fd4ae3fc4de1ce",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/state/usage-state.json": {
+      "sha256": "cf79336e96995e4c46cfeda5f30493dc2a169b8f5be35bf3520c5189bf03faa0",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-47-requirements.md": {
+      "sha256": "c8e8e81c33647fc73e28d9f8a8ec5d7acf071cc17020c57a6001e61511fe4d4a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-49-requirements.md": {
+      "sha256": "28162b7de8948ba3c7702bd7bb2840c5c299d5ac51ab7ab288a225c016e855a1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/ERROR-HANDLING.md": {
+      "sha256": "1936f78cb8cc5a5af25c4ddf127c8f6205beb384cb7a6d3693c06aecb96d2ea5",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-46-requirements.md": {
+      "sha256": "296cbf7080fbb73fbab91c68188a45426b4de555bc4aef3a12b9402409d4de10",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/ACCESS_CONTROL.md": {
+      "sha256": "09272489cc8e31b5d94acd7ff93e84b80e5c600b7614556b1069d44c40f83341",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-48-requirements.md": {
+      "sha256": "2ea745e899f7d7a9a3c9644a205600571a9c270f5905533ea3ac994551c33e54",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-52-architecture.md": {
+      "sha256": "079e43321d6a404bdc642094848fbabee1de85d41bd67602d85e94bb3ca79250",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-48-architecture.md": {
+      "sha256": "86a4bb6a5d2f685cc43cbc6802fce31b726890c064ac8c0b044adc09e84e8c16",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/EMBED-WIDGET.md": {
+      "sha256": "31a9e0618721a9439ae012ed66e88e82a25d0edaf7b90033b0884998f1b0c0ec",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-49-architecture.md": {
+      "sha256": "e36387bbdc7aacf2f7a09cccb302d98d17d8746381742ccae600070e4c4570e0",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-50-requirements.md": {
+      "sha256": "0a549700967c1edb61c7ad6f55ec06d0e4254e2d884a6334fc6acf5781d22fa5",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/DEPLOYMENT.md": {
+      "sha256": "8f7dbb337f9c0b9e7aa969dcf9b8433d134a949e998a49f8d572de35e6e26c5a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-54-requirements.md": {
+      "sha256": "53e69a650743619d1153b48053b7de8b3b1455199deba17cef5e0606e5bb7187",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-51-architecture.md": {
+      "sha256": "27f82da7ce82a5858b0554298d778a43c683b9d6b9c832f27590e8de0a6e1814",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-55-requirements.md": {
+      "sha256": "2106a80b81865691a683a7156c16936c244d168140b23b0de245244fa5f9e65e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-47-architecture.md": {
+      "sha256": "c59c5c1530abd553f59ebf6e38f58b1930a6278c5d8ed84ac2c93d2d47ce3154",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/cicd-architecture.md": {
+      "sha256": "78ed0240cc16a92254b49af360e2839e38f3eb5878e910d640f74712acfa4d57",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-54-architecture.md": {
+      "sha256": "0123284ebbf4befe0c9db38c96e643cd0a6d8bdc65903d7470595080667f2743",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-214-phase2-architecture.md": {
+      "sha256": "07e0f9fea41cbeb8ca92c75dd7e2c6f8661ece7202f27f75f101778feb94f2a6",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-50-architecture.md": {
+      "sha256": "b204abaffe0efea8883c43ef6062d74e2605dc307933392763ed1fda4fde2f42",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-51-requirements.md": {
+      "sha256": "868b66971e10fd48883d8642b2e1a720572bd8fa347ce645fde56ce46a664554",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/AUTH0_SETUP.md": {
+      "sha256": "eeab7e86fa1f507ef2a2eb51d356277c50057bf1500a3570aa9057b66dcdbbda",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-52-requirements.md": {
+      "sha256": "6d01f91158d85f81af60ec1c4edcc6ea5f1c32943f544a0818475621bbe07816",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/AUTH-ARCHITECTURE.md": {
+      "sha256": "6dbc71b32dfc78231cc18d7deb7c670c5f0ac22314ddd946e7a7fdb025717b5a",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-53-requirements.md": {
+      "sha256": "1994769c9fe105ce8fd45bce867716264d5a81a39edd6f252c91b197cd9882c1",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-46-architecture.md": {
+      "sha256": "707e48c174b701e793534bd76a0b147d9297b2badf4d5b6f4047472c4e04c0be",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/LOC-55-architecture.md": {
+      "sha256": "056721be58e1cf0836a62113ee726d5ac6f4d6d3c21769a05fe6f33f7bc5db2e",
+      "updated_at": 1770863403
+    },
+    "lockn-logger/docs/architecture/LOC-213-tool-use-logging.md": {
+      "sha256": "3a7ba6819a02c95123ea7857d4e70f0ec67cf4ded592ceb1a23f8ef648d11fe4",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/LOC-36-requirements.md": {
+      "sha256": "754fd5345269c2722a482232744be6ce8e009538d34f1ba52fa75f53a2b2ab5d",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/ARCHITECTURE.md": {
+      "sha256": "5b315031d201c3350443edc7a4172fa71fcfa4ed5a0927fc548a6bf16cc27b76",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/README.md": {
+      "sha256": "e44ebfa0b624c509ada11bcaf0534990ca2e287b9160d085feb8210ad15833ee",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/LOC-37-requirements.md": {
+      "sha256": "7398114ee1fd735572674e822885a7c1dbc494fff41ce2651e14cbaf560512cc",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/LOCKN-LISTEN-CHARTER.md": {
+      "sha256": "1e94e97e6d83b9b1a160b717bd1c696f2d61d87718e48c9ea6a01dd8d138a87d",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker-compose.yml": {
+      "sha256": "33f9cd5ef487cdb41d1dcbe898c6204a21f40b1bc572a2f5532eb70e3c2c41d3",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker/chatterbox/server.py": {
+      "sha256": "9124b04e0bc067bf26ddff3f408f64adaf4039296c0f85d054c83130c71bacf1",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker/chatterbox/logger.py": {
+      "sha256": "548c2a2842df9840158c31b3f925f64102dc28777dd02b88ec39e4ecb07c0280",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker/chatterbox/tests/test_logger.py": {
+      "sha256": "4903681b783a0468802f79d01d203c659e21ac6fa3851a957e2d13a0d984a5ff",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker/chatterbox/tests/__init__.py": {
+      "sha256": "3be00322f20dcf6f3ed766fc77dca361c8a47e9ad2c6b1154140e99ca76c6d74",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docker/chatterbox/.pytest_cache/README.md": {
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/wwwroot/index.html": {
+      "sha256": "5a01325311149e2f6bd80db417edebccb57092adf4617ba280eae75e92ce1c05",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/tests/LockNVoice.Tests/StreamingTtsTests.cs": {
+      "sha256": "611a6c98f1fe47aa7888a1580ef9bb80b58c2d77249dc467c6d7fdf08b3d0cac",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/tests/LockNVoice.Tests/ApiKeyServiceTests.cs": {
+      "sha256": "4be99571c30ed6451fcc3233577fb738cb0c4ecfc73a70d7f01ead127a473478",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/.github/workflows/ci.yml": {
+      "sha256": "19da30f24a3c332835dd6e976fd24130a62655a0395fc47d7985ce8ded190c7d",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Repositories/VoiceProfileRepository.cs": {
+      "sha256": "6fa7847a53845430442dcd1614cffacc2cee3770f829ad091c672d996f0b6906",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/AppDbContextModelSnapshot.cs": {
+      "sha256": "bbfba54c7a8c972ebb980c3cd9e9b6a6e47d4cc169c54f8dc1881265352b2e92",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203083000_AddSampleIndexAndPromptTextToVoiceProfileSamples.cs": {
+      "sha256": "bf4110f459f051bac815ca6d34acff3ad7c2157cf5478bfdaf6cbbaaebec3b61",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203000000_InitialCreate.cs": {
+      "sha256": "f02865a857b32bd6639001640541c59ddf7f1606745389116c879c371d627d43",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203000000_InitialCreate.Designer.cs": {
+      "sha256": "18097fdd353c5f960da265fd1de973755c1c9c03edf7c7b49f4c260b8e38f596",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203080000_AddVoiceProfileSamples.cs": {
+      "sha256": "f20472835d0bd8ea0108362abb9593a45b25fb5dac7019f9fc09f74f13e171a0",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203065149_AddTtsGenerationEntity.Designer.cs": {
+      "sha256": "7aa0a6ee4ee689798a000cc9475b35098468e96f6c3fc8d6b865f86cbe4c1a0e",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Migrations/20260203065149_AddTtsGenerationEntity.cs": {
+      "sha256": "2319edf3bd6b54f7a21280f1941583dcb95173a27c209b0a6724e0be9a4e01b6",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Services/ChatterboxTtsService.cs": {
+      "sha256": "df639047fa9f338c3c0a903b35eadaa26a68cf1052a842752d937218f97bcd89",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Services/ApiKeyService.cs": {
+      "sha256": "610a137037e144a5bb5de24e1bfa1d597dcbd45da75faa80348fd943a62e72ce",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Services/PreviewCacheService.cs": {
+      "sha256": "d44d6b8bb6b8a566e66b4375c30012921af904d4cc58b86f13b5dbd351d528e0",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Services/LockNLoggerClient.cs": {
+      "sha256": "f5efcb6609f4556c0796a1da131efd7df46659e8555d286b7e8903ecca25ca0f",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Services/MagpieTtsService.cs": {
+      "sha256": "4ff54b55594adf11e05e2e9f5917678a3238ada3c62c9464d4344cfb0a89f94a",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Data/VoiceProfileSeeder.cs": {
+      "sha256": "769f48e976a53870897dbb75a538e756557c8a29ef47d978d0873e0bcc49db11",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Infrastructure/Data/AppDbContext.cs": {
+      "sha256": "5da41d862f3a286b69ef8203f5eaff6866039e8eb4dd6163103dd7b5260c92da",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/CreateVoiceProfileDto.cs": {
+      "sha256": "8627b8a08ada3b5bbd52fe0d4ea61d1d9a894932ee11e3210c253310a6329678",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/ApiKeyDto.cs": {
+      "sha256": "5eba16258b8c136321efa092dd4e5ac762ef01fa2d6ce9aa3efa239cbe8689ba",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/VoiceProfileDto.cs": {
+      "sha256": "9adc1eda2c8069cacbc53734005cc9b9ef95172b5c7c191ab71ee7afbf84c120",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/StreamingSynthesizeRequestDto.cs": {
+      "sha256": "2629562a8e896876518bdf3e6c705e60bc6d25fa48cf650d7dd0972db790b60d",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/SynthesizeRequestDto.cs": {
+      "sha256": "a50090662d8667cfd1fa1b19a20519f894d5e56cee5fbcf94086e43d1b61ccb0",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/ProfileStatsDto.cs": {
+      "sha256": "4f401dff94332d981bf33725d9a4a935bb2936d582985743d10c342b521e5201",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/ApiKeyCreatedDto.cs": {
+      "sha256": "dcc2b6a9c076d488c1206ef25cd212cddc510dde26cc5acad9d2eedc9992e1d5",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/CreateApiKeyRequestDto.cs": {
+      "sha256": "9c6278171e5da49e5a20182fb252151489d6b5fc32cb038b4e217f918b5202bb",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/DTOs/GenerateFromDescriptionDto.cs": {
+      "sha256": "8b1b2e23aec5721f222f12ece29ee399c0e3140df5660f07b62b1d3e1826f4cd",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Interfaces/IPreviewCacheService.cs": {
+      "sha256": "e48718d748f58c3ce79391023f92028d6169629a2ea969537285f83d31459177",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Interfaces/IApiKeyService.cs": {
+      "sha256": "e4399306b43c103cbfa2f3030083d3adf02b8bcf3a5e56d4ffa742748f59367e",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Interfaces/IReceiptLogger.cs": {
+      "sha256": "e061d63e14c077d773ad00e3cf40a630c94d533907bdf65a4e37f03031c3250e",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Interfaces/ITtsService.cs": {
+      "sha256": "ad1e8f2ad08ab45896303b2ad09f422df76ba286e6ae89e68ea4cbf6040533b9",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Interfaces/IVoiceProfileRepository.cs": {
+      "sha256": "9ea6edbb81753521d0c39b3364deb0eef508180e1cd50adc54f0d3de23db2abd",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Entities/VoiceProfileSample.cs": {
+      "sha256": "44ac962c4795ab099668e6cbe94e8ef916e8756b587b54386185da330bf97323",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Entities/TtsGeneration.cs": {
+      "sha256": "07448dbe1c15ae5754ba33c613393730cbc4d097cc931e88c1071c7fc5b76c3b",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Entities/VoiceProfile.cs": {
+      "sha256": "dfec2e77b3c871b3895b6644a58cbc1221cec4c5c91f666c04c747389f585979",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Domain/Entities/ApiKey.cs": {
+      "sha256": "519b7e084cd20bc861f55370a0487727f015a5e49ce4e3166c3988ebd7fa4a72",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/appsettings.json": {
+      "sha256": "e355f7e7ca62a5f4d56725345fd47a5bb8fe584b740d8e19fd410f6689ae8f26",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Program.cs": {
+      "sha256": "abbc7f8cdd3431e859880ec4afb0233c3c301d338e64d1193e19d89ddee10131",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Properties/launchSettings.json": {
+      "sha256": "a42184c4b5e9b98d4cbe96f24c072d4bea092ec015b78c8dd822c271bf0e0995",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Middleware/ApiKeyMiddleware.cs": {
+      "sha256": "3d0a70b1d85f0ff409ccc91d8d4fd31893080c256d621e9ef355abc654c04d21",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Middleware/GlobalExceptionMiddleware.cs": {
+      "sha256": "a84ab7b117f45797af0d2ba211a4d3bdebbafcbf777ebf198b8a1a6119e4c056",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/wwwroot/index.html": {
+      "sha256": "325ec41c6bd51adb0995260617ea26d3a228a34ab97aa4c9b8a136b00647b422",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Errors/ErrorCodes.cs": {
+      "sha256": "09fe58f938a01d3912c674cb42bce120b87fc702c3a435a3f9acb787b44c9b47",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Errors/LockNException.cs": {
+      "sha256": "29eea3c396f31aa43ab8a946743f0d91238b89e8b904df78ce58f301e28264c7",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Errors/ErrorResponse.cs": {
+      "sha256": "a71be0283c2a58fe4ab7e38239408866c02088910aa91968ba10f697102305c2",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Endpoints/VoiceProfileEndpoints.cs": {
+      "sha256": "ccf2a26f29c3ab3c35ea1af967f168cc660418cc6a43924b2c57acd08dec81e6",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Endpoints/TranscriptEndpoints.cs": {
+      "sha256": "bd2d612d46f5c8da7a14a34dd895cf26b7033763b9893004e141b591f82d77f0",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Endpoints/ApiKeyEndpoints.cs": {
+      "sha256": "8f160597a6d1f803b120a6a88c003db4bb5a3df0a09d45495f00763fdfdc2d86",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/src/LockNVoice.Api/Endpoints/TtsEndpoints.cs": {
+      "sha256": "12b25913a3098f8e73280329b364829f08eb3feed4080bf05782ac2158099b60",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/test-prompts/iconic-voice-descriptions.md": {
+      "sha256": "b6b58982c0a9531489f978c107c1eac9333974caf204ffe3f09cfc83a7dbc27b",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/LOC-69-architecture.md": {
+      "sha256": "4fbccbae6aa20d558c207d0f94a90c11cf8894a0b8d3b9a629f1c325605a0f10",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/ERROR-HANDLING.md": {
+      "sha256": "7b226f4066873c71f811de299007fdf3ab3d3ae47d2bc7e4a96d7104343a1606",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/LOC-68-requirements.md": {
+      "sha256": "50236653915022f2a3d8e8bfdf3e292a6c4ae81200636d439e4ba341b1751f23",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/LOC-37-architecture.md": {
+      "sha256": "7fdd6db8cd5b69612fd8a18250891e06acf3c4be072e2f5a22f5f329e5b9d427",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/LOC-69-requirements.md": {
+      "sha256": "0c1b3475ce899ef22f87849ceb0807038bf4c196f40d260f2d27ed2893267e7e",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/loc-37-architecture.md": {
+      "sha256": "33e6d5b7c9a78028d0bb2fd7299a85ba35b2b202eca8c30eb0b534f2cb8172ac",
+      "updated_at": 1770863403
+    },
+    "lockn-speak/docs/LOC-36-architecture.md": {
+      "sha256": "7563ee4c0c38e70424ff1d9036c642a70a40e50afd6b66068355016ddc13fb90",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/README.md": {
+      "sha256": "0b982f2dae43b8598c407d071425b0767b7c4721145ec3df02b4c3551afc1df2",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/CHARTER.md": {
+      "sha256": "8ac30918690da1bdd26d0f08bd9b40c856f6ea305842404862609fb1cec30d48",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/phase4-signoff-comment.md": {
+      "sha256": "c5ec2245b4f8968ef5bbf2ceb40da24d93d2777622e59902612459bcafed7fca",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/phase3-completion-comment.md": {
+      "sha256": "11cef436adb9e162e47863e6e3b4a1cf136f20091975a876052bbcd710328b09",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/draft-phase2-architecture.md": {
+      "sha256": "2340a6314475711705d58aae36db4069ca7792cf726c90671f2738987cfc65bc",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docker-compose.yml": {
+      "sha256": "29ba09594a1f5e3e6342197be489e105a786c002b3736d34b8ba9a04b6b63ce7",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/whisper-api/api.py": {
+      "sha256": "c0c74efce6b616de155f86923b34a6f216330c8228e3e016a5416c828da0159f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/tests/LockNListen.Tests/VoiceActivityDetectorTests.cs": {
+      "sha256": "f594db01ca5ea6a256710efa5a3ba09a8a6243631606ab7f0babc7b1e7b39e54",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/tests/LockNListen.Tests/SttWebSocketHandlerTests.cs": {
+      "sha256": "be39c5fb207b40770e3396c016f5466f82b05d681a80c691cc1825c05e781e8c",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/.github/workflows/release.yml": {
+      "sha256": "d532d155f8022ae334c03c64179fda607acd3a0e292827e691ee92c3475572b0",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/.github/workflows/ci.yml": {
+      "sha256": "df6bf374a98d88403d2979452f74663e88e43b7c2f9efe2ed360cc8085e133f8",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Class1.cs": {
+      "sha256": "2b6cfb2aab293c9ab4e3fb2c7455cc81ecfd8daf738956c11b304bbbeb6cac2b",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Speech/FasterWhisperSttService.cs": {
+      "sha256": "d64d2c292889a5273edbf535b9dba7ef8e57f2b9b2f37844b85a7db2839134b8",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Speech/VoiceActivityDetector.cs": {
+      "sha256": "33e3b41ecb1bdfb74407a3cdf516e28073f64bf89ffe065ab0b716e030bda7f2",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Auth/ApiKeyHttpClient.cs": {
+      "sha256": "872f023273f5b7ba14b33920b4f0a39dce66668cbff2764d0af97bed370d313b",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Auth/ApiKeyService.cs": {
+      "sha256": "99b756ee4d610f2e6d0f0949f05e6ceac7321fb6013fef75d7fd5ce389bab14a",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Auth/InMemoryApiKeyRepository.cs": {
+      "sha256": "04cb2670c693c08043217eb99fa6cdabb893a00dfe565edd4dbd53d71aecfb9e",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Auth/ApiKeyOptions.cs": {
+      "sha256": "b7d211569e2430f2d9472c5ceb284b3dcc527e5b321317125fa33fb53d4a9e25",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Sound/OnnxSoundClassifier.cs": {
+      "sha256": "d91f9ac4ab194800d4295806341a267696aca272588e87793a5c164c19498d4e",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Sound/AudioPreprocessor.cs": {
+      "sha256": "fd771a50f278eb563f202776f0a4b3109f9212aa3e4afbbc3a16e1fcec7cb816",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Sound/SoundClassifierOptions.cs": {
+      "sha256": "5abd75950cb4540e905f08be8d835c55423e8ce7c1a52429ffdc567118c709bc",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Services/WhisperSttService.cs": {
+      "sha256": "98fa4f523e327c0adb4e6d6445fecae96852639b5049dab4d6980d5fd4c4f43d",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Infrastructure/Services/LockNLoggerClient.cs": {
+      "sha256": "66b04e4faf863300e96a5aa17504787cd5afb0047e3c721ea05a6a8e38957a49",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Class1.cs": {
+      "sha256": "3ae396a4d6b1ae68bb8748cee6c6825248bbbddd8913f86a0f1093e03ffe2a20",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Models/ApiKeyValidationResult.cs": {
+      "sha256": "4e473bebc85214ed2095add9f2a3db764666fbaddbdfebb69d6f6ae6db5bae45",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Models/SoundClassification.cs": {
+      "sha256": "2e03e9cc97451bf41fab6b9ce21dad70c91b8d9c45c4ba02b3e16ee1ff053cda",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Models/ApiKey.cs": {
+      "sha256": "7f56360124ffe486f2dba23c2ebbc14d69cdac9b7fbdce2ceb2d95317d7eed4a",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Interfaces/ISoundEventDetector.cs": {
+      "sha256": "8863b05528594fcc30c119e0cf3036afc13118d6592c348df2b31a7ad6016159",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Interfaces/IStreamingSttService.cs": {
+      "sha256": "0a9636e96d752ecd6319ae036d4f6dd6cfc55532dbb9ab9d9b0800c82f50153b",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Interfaces/IReceiptLogger.cs": {
+      "sha256": "a59ca69ea55e81618f2b94574f75102431a925c8d227dd7b743d15508349d95f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Interfaces/ISttService.cs": {
+      "sha256": "5e2458228d22dab58f46f8f21fee59a0362fa24a2f38b155d5c87e5cb6d1d0b3",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Services/ISoundClassifier.cs": {
+      "sha256": "b778d4a6b3720a8beafaae97df1bd4591963c153c1f5233fd1669a51d4fb2322",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Services/IApiKeyService.cs": {
+      "sha256": "d313a4857c74951e651b3e87d1f3336aa86c386fb52eeba2786a078014ea4297",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Services/IApiKeyRepository.cs": {
+      "sha256": "69f8f319c32f6b2de57cd4506b0ded84c72e69e86acdf3fd82450770296aaddb",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Domain/Entities/Transcription.cs": {
+      "sha256": "be952ed6f1371b7ecc7d93741b903218e836ee06332a577cd8fe8f78bd05f7dd",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/appsettings.Development.json": {
+      "sha256": "73f95f9e0ceb205fc1c4dc50c07697fcfa29d7087868c2aef1d504cb38c771ec",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/appsettings.json": {
+      "sha256": "764dcd9aa73ce27bb5a3d94329f82f47201f0c021f49c2af09ed0136b0b43c87",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Program.cs": {
+      "sha256": "2811dc20bfbbae7d4eb44e41ef408c0f7755f2b55d3040e55197cdd7a050131f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/SttWebSocketHandler.cs": {
+      "sha256": "08226014417bdefa1fca45bd5b879820dc142a55d37aa1fdf6b514fd834dac6c",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/SttWebSocketMessages.cs": {
+      "sha256": "d0bd850b2e137724303e0263c1870595ad1bc83bc4b03bf33c4f27413e037ee9",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/IWebSocketHandler.cs": {
+      "sha256": "a7c8f71f8ca1fe3e2c694ce51f64c6d1ffee1a6567ab059d77d7268206c0ea95",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/WebSocketMessages.cs": {
+      "sha256": "9f86fe08bf8194513346f6644769744a2e7a48bc7a28bdce247bf31f948bb78e",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/ClassificationWebSocketHandler.cs": {
+      "sha256": "c5efbf4394bff696c6218672b9101262ef2e944386884a87529dc085af4db86c",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/WebSockets/AudioChunkBuffer.cs": {
+      "sha256": "84b3d6478df48bc2e7d19b01c47176f8456f36f1fef88cef34a89dd1b41f7000",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Properties/launchSettings.json": {
+      "sha256": "0a767c841d34f904849db42536f614f0fd9c551b24e9accd55d02a25e414e74d",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Middleware/ApiKeyMiddleware.cs": {
+      "sha256": "4eef6ea883833b70d9ee09482581c95cb5b36bba2a3af7f3c8e685dd7d72010f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Middleware/ApiKeyValidationMiddleware.cs": {
+      "sha256": "3e60bf5db724d9dd36952d1deb799c2f7013125c77575e1dfe887d8b79ff8252",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Middleware/GlobalExceptionMiddleware.cs": {
+      "sha256": "bbfb9efd1ec83096eb9334dba5366ee94a5267d32944b0dede5f24d875af543a",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Errors/ErrorCodes.cs": {
+      "sha256": "e51b3de05b572c5828aa8eadb1e1b75fff154e49957a45092ced7d4a32cb5596",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Errors/LockNException.cs": {
+      "sha256": "e213c572c7332ee4f0aed326c0d09d362399d20cf09b66ee3b88d789a432387c",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Errors/ErrorResponse.cs": {
+      "sha256": "16dbd772a28c33ddce51f07dae0fcb054679551e8b313bcd07f101f28ceca12f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Endpoints/ClassificationWebSocketEndpoints.cs": {
+      "sha256": "4c7913e4bfc504b2a48d8033e09258f896acf475e549cdc0c96dd14c99344cbc",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Endpoints/SttWebSocketEndpoints.cs": {
+      "sha256": "d20bf67e257708061ad1350bde42111b5119df13f1897f2f90db566ed49133c8",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Endpoints/AuthEndpoints.cs": {
+      "sha256": "1c34c77ce06ab542b9c4e1f67efd161beb1beb843f3be3e3ed3f9bb52d56211f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Endpoints/ClassificationEndpoints.cs": {
+      "sha256": "d5ff6767877d7aac36620c3a1f365a6c3a7a25ca2be030748673c6eb45eb1c27",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/src/LockNListen.Api/Endpoints/TranscriptionEndpoints.cs": {
+      "sha256": "9479fe1a9e0e4cd6c413809bbdd7ec93caa64e50b11b0c3f6c70e57a1ac5c5ca",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/panns-api/api.py": {
+      "sha256": "ee7187d363b4ab0562fc4ad4e9c871116a8c45c81d4130318398d93d30d59fea",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-40-architecture.md": {
+      "sha256": "d0f4705a0a8682da5054ef0d91068752e45bfffc41e8b3d8117091aef4afdb01",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/ERROR-HANDLING.md": {
+      "sha256": "9b63756c8e4ac49be7f1c76da3b63a10c7b3344996ec2522994b0056424fb562",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-43-architecture.md": {
+      "sha256": "e60ad44eb75ec1c28df03544f06d4aad6dd94ba36030929f6c858f707b9fb78e",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-45-architecture.md": {
+      "sha256": "d757b3ebd428aca5bf955109f86909d91f6e58124431e0013ddfe57c1c7f4634",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-42-requirements.md": {
+      "sha256": "6ae091911e656af312ff25094181367e6f67288f8158b8ddf4d2650ccd91b111",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-41-requirements.md": {
+      "sha256": "f99f3a860285017f198c06e33f06aa5383a4be796530ffe6902763e208007e72",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-44-requirements.md": {
+      "sha256": "d7322076f9660e50e012f25de0b899e93ca2888afb1493d12210b1e2d6a39075",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/ARCHITECTURE.md": {
+      "sha256": "fbe9fdbce0983723d183b0765c6bd1edb895c73f89571c5d9ef1c1725e9ab86e",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-45-requirements.md": {
+      "sha256": "738a0fed57a187809ecf7e588f26f4d20dd43fddfd6b84cb0b0e209e1f29bdbd",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-44-architecture.md": {
+      "sha256": "1d1a1371ed65b0cdc680e65b6a0c16c678fe8d49322929025a100a124c33033f",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-41-architecture.md": {
+      "sha256": "f41e4fb38544ada254fd2a03b3e218a12611019c0fbc6d89e550453c31561e1a",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-164-WebSocket-STT.md": {
+      "sha256": "affa2587c57a7a35db3f00920ad30daddff28f4148738a1512d9e055d58e93ab",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-43-requirements.md": {
+      "sha256": "f61d76d9804d30396dc0199fc704cb19a1c257625b68b857f2a3deb880f8dbea",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-40-requirements.md": {
+      "sha256": "5fd55c9434f9a04722ff4aa310098ec96c0feef082f653fafd0ca3f2a8acf0df",
+      "updated_at": 1770863403
+    },
+    "lockn-listen/docs/LOC-42-architecture.md": {
+      "sha256": "4f8f3082c2d298b69bd0fe839f6bfc886099a302eaeb04b2a20fea524076b456",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docker-compose.test.yml": {
+      "sha256": "d604888f48ebfb7389c5cd05e5edbdeb437208e62306254f4ccb4c13915688bf",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/README.md": {
+      "sha256": "20eb3258d022a5eaed4a20a6bc0e5de43a76aa70bf7e395320f0cb211b2e805a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docker-compose.yml": {
+      "sha256": "08375fe4d536afaf5118efb40b5b6a7ee7f10db61816a2013e84eba5ea11c88c",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/DESIGN.md": {
+      "sha256": "eb2241f0fa021a05b17a9422960bc8f812ffb45c2cb45b97868a5d7697c061dd",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/index.html": {
+      "sha256": "e27170b8c66ee4610cdd357b4a7107a230e8885e02e1cf61fc7991544d65ebe4",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/auth-guard.js": {
+      "sha256": "93b5c0cf326a00f9036ace485a5cd6c3164146599c6ed793bb56c198525599d0",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/sense/index.html": {
+      "sha256": "90a0c44e6a0c10332be687921097af484ef87e36a188ae9d6be4939db5d2383e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/gen/index.html": {
+      "sha256": "29f7c3a2ca92b8f7bf02acdc85a78f9ed3e2138394400ec9513d7a9e7d575320",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/voice/index.html": {
+      "sha256": "b366e9349dad60a8b9e32c08fd66f96a4086b4ec80a37c93ce3fda88f2cbec22",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/voice/redirect.html": {
+      "sha256": "b366e9349dad60a8b9e32c08fd66f96a4086b4ec80a37c93ce3fda88f2cbec22",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/pacman/index.html": {
+      "sha256": "4716e39d8816dd2e11a15f0872ec379ad8206de8bae94539e8d3f6bd4a895d82",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/trial/index.html": {
+      "sha256": "748add76a096a9bbedfd3ce9d98be0745ffd1be86b61454338824d1ed073f879",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/listen/index.html": {
+      "sha256": "2997d227807e080b3eacc8b633b8a164cd8ad5238a705f50374575b9dfbc2528",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/look/index.html": {
+      "sha256": "b53126e73e67f8bc8e1aa3612d4901c90aac3a4706ec52098ec108e27b31a455",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/logger/index.html": {
+      "sha256": "560f0773b5b64de9daabf98ee8ee57af8943f0955b8f91a88f1c4c1ea2f0c680",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/waitlist/index.html": {
+      "sha256": "a5c1961225f9cbb18015303dcf4a02b7c28d9b789b2667f62c7c2fc29d44ce42",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/speak/index.html": {
+      "sha256": "82c2cfc27808853eb8ccbbc4f1a963005f735a611ddf611615329c8a6a18bb2a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/portfolio/index.html": {
+      "sha256": "8224026ee1e022a2b02bc071bce132120ef77f070fa36529ee9bbec3582b158d",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/turbo/index.html": {
+      "sha256": "66da462ceeed908d1f46710c744a342275c786edf1be1bf469fbfc5ee2b1009a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/auth/callback/index.html": {
+      "sha256": "d882fe2618442008fc0fdde0f45eedba57f176c415a36367aa96f4ce2ddff4b4",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/loader/index.html": {
+      "sha256": "151199d39446d4c503f688fc13a1abb6dc50740dcc0fd378e2cce634e81b2db2",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/ship/index.html": {
+      "sha256": "0fce37beac1aff867eca6659449507941dc521e44f1f8c9b25ea1c0d849e9068",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/brain/index.html": {
+      "sha256": "8db46296f3ae8268c9a78693a96e89c1fd1e0f25b9dfdc38998c99166a444f34",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/docs/quickstart/quickstart.js": {
+      "sha256": "bd731a549e7e449175415018fe0abdc6a171c3f269e583e64c6784abb38a3629",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/web/docs/quickstart/index.html": {
+      "sha256": "9f96023fdce786c81402c95dc1fbdf1b484974abb0d194be24f8636d652a2b1b",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/services/email-api/main.py": {
+      "sha256": "1a2f0f18fb99e4b718e51540eb91953d32b21c047988abcc52761facbfcd0cb1",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/services/speak-api/main.py": {
+      "sha256": "788c3ecb3bea0d783fa9cab3ee54df67621a46692aa9f328ce31f5b0cccd9124",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/swagger-specs/apikeys.json": {
+      "sha256": "fe69c8e58f84f9dc45310c0d9c4297c5ed99a3cc24fb62d6568cb8b5d324736c",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/cloudflared/config.yml": {
+      "sha256": "21d292b2b862486e878881b5b1e1b417fce6a9d5e350b0933467bd3e3f3893a4",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/cloudflared/47a1565c-82b9-42b1-8113-766eb744eb50.json": {
+      "sha256": "9c4b8264a51bbde17de0e9ae43bf5c28fac5687d22acdadcfa5749fa6c60970d",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/cloudflared/d94a000d-0079-4bf0-9087-9609c1b7fc2a.json": {
+      "sha256": "d263bc6959cff0fd8bb459bdd8c37ff59495bad6d1ff03c77b3767397433b9e5",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/package.json": {
+      "sha256": "38e9f28232ef58ab4ffecaa32525afdbbb6efca41566703286fad28b9b0af806",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/playwright.config.ts": {
+      "sha256": "17185c2d105801449690a6c68d80ed53190b44030e962d4d85e0ba64d0258371",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/package-lock.json": {
+      "sha256": "6c8272d45bb92c110802fe809372ded59328482cf7f1d062e432548dc0c06899",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/landing.spec.ts": {
+      "sha256": "e6e902ed550ee29fc11a3ee60a5bf2659e4cf8110350d5a743b7bd15c0b4edc7",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/brain.spec.ts": {
+      "sha256": "f960096c2f110c130c84fed5e5a34192d8d5dcf07b6cdeb2c133a8b7ccd220ae",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/waitlist.spec.ts": {
+      "sha256": "3decc461b380a3d8dab6e2f01e0684b4887b99ab6a48e490cd32b63659243bf0",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/sense.spec.ts": {
+      "sha256": "b0eacc94f6b9376a4c6b69ccd702d811a5c150569b285085eb83d5e1c079a430",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/speak.spec.ts": {
+      "sha256": "6a79aa0b0134b3a1a626d9b19b166097839bb18da851a500c95f782f195a315d",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/logger.spec.ts": {
+      "sha256": "90464f4c4cb7b28d09d4c85f464b6fb9da4c46171ca7e1444c097cd083478484",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/README.md": {
+      "sha256": "f4b00b59b9e5bcb44927992b6cfbccbcff0bcc34f1b76dbe2d79ea2557f960ea",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/smoke.spec.ts": {
+      "sha256": "17be3738958048a1ded0f7e84c09e96142d3b2d48d6f634bcf9791c579ebb25a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/cross-navigation.spec.ts": {
+      "sha256": "8d2116827e4239570351f4ce419d25d015cc432e3bab651173bf064240f0ba0a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/listen.spec.ts": {
+      "sha256": "3c93654117620414dd8fcb6d294529134ecb17d47958bd86c9a0b09f77558740",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/look.spec.ts": {
+      "sha256": "85e29f6e367b96b456aeff09bf72ea5ce6b1fc37ffea6009f1248d3556ad895a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/portfolio.spec.ts": {
+      "sha256": "6d13968105aa2aedaec463b6a0100d22a60408b979593e70c24c962fb3a27fc8",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/api-health.spec.ts": {
+      "sha256": "c1983ccc9fbcee4dd9711baab6fad6a95ac6e51a5246b957676c8336c543de2c",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/helpers/visual-qa.ts": {
+      "sha256": "b94e3ade5ba554875daf589daee5935e1daa7fd4e023ec950b1fb030ca65d53e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/tests/e2e/helpers/api.ts": {
+      "sha256": "9f7a6e1cde7ee74c0151e2054c6291271fe5408f5ace3c1bbed830a111e00153",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/PULL_REQUEST_TEMPLATE.md": {
+      "sha256": "7cb77c6df95324155dded5e2e622aa69be599a6d18fcb7b0206748918a7404c2",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/SERVICE_RECOMMENDATIONS.md": {
+      "sha256": "65e62b1b0b99cbed578b94219a1628d723c6f66afbd4d8b8b9608e05bbcefaa3",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/AUTONOMOUS_WORKFLOW.md": {
+      "sha256": "c6b5a207bbc1c644977654a3ad10ef14f33f5a2e9c0d7a590c199e9ee337865b",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/workflows/e2e-tests.yml": {
+      "sha256": "760e70e172e57bac8b9842499aca0639f19bc189403d63af5ec5a53ee5614147",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/workflows/ci.yml": {
+      "sha256": "78f27bb92cf911cb6a14bf9afd725c38f451223131c24cfe66c9d96e5269538e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/app-manifests/lockn-qa.json": {
+      "sha256": "273385536725a25cf7bed76a498b012dfe994fada36781d88312b5371113a492",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/app-manifests/lockn-orchestrator.json": {
+      "sha256": "43eae3ece700c59ce5f746b4291d0ea698e95d80efb458a567d7d496532baf67",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/app-manifests/lockn-coder.json": {
+      "sha256": "cb782479c12ebabd5e24a6d008868c214eb1aca6b0cb5f2e14679a8967493eba",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/.github/app-manifests/lockn-reviewer.json": {
+      "sha256": "9fa829407dd950e4560ea867903b1d070ebb1d35f94882425ce695fd7c5f2efe",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/package.json": {
+      "sha256": "e73f51457da3a5e4da71a3dad16543016417e8fd09d7382027de9507ff8ea45a",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/package-lock.json": {
+      "sha256": "dd23fcbcb8ebceba580fcddd5f7efe4d12d9f1838a19d90804fd8e525b1ae19e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/tsconfig.json": {
+      "sha256": "fe2880db699f38a2c28928e23852ff3e355be8df6f24cf0719db10a432d72af8",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/app.ts": {
+      "sha256": "fc376c42288c3be77b9a20119cd5f8884ef0c3f083c2436679798f23cea15e90",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/server.ts": {
+      "sha256": "b423d273bfb2d75e2fe085e4d2b151048b57f62d80a1c58da4ee87e2940383e0",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/middleware/firstCallTracker.ts": {
+      "sha256": "8cd2695e360aa5dceaa7edcaee91a97a98162bb45b138fa86d1145d01b85eb33",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/waitlistClaimStore.ts": {
+      "sha256": "9a9c8558a12a5c4d0b02bb6d70a9427a204bc612fabf6edf0a0edd59e1c852dc",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/stripe.ts": {
+      "sha256": "ae0b62043e1ff5c3bbe3579e9167df619994210776158b8bd5d8ae1d2bf5fe6b",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/waitlistEmailWorkflow.ts": {
+      "sha256": "aaf8357ebbe3d2bb65101a43e9929b4f08bcdbab3fd649aaf18d792194e2b9b8",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/entitlements.ts": {
+      "sha256": "4b3e183046e2aa9f1fb0d19e41b6050bbc44cc5485d02c332913eae0695dda57",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/healthAggregator.ts": {
+      "sha256": "58de9923d1cfaf938f922848b303d3e0750657c486eac629d38c70137b6c0167",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/quickstartService.ts": {
+      "sha256": "cc0cb5105e9068490248027b71d5ea23e57841b82a55c98df91c6897de84b2a0",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/services/entitlementStore.ts": {
+      "sha256": "ff09ec7045472e39473d1785927b3ac37adc00d3959ecbc6b5a28adbbe2190fe",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/quickstart.ts": {
+      "sha256": "47a2e8a802426f3492452f13867cb0b8548b0128de15ba452ddc057513b002cc",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/stripe.ts": {
+      "sha256": "d8887f2f3ebb2abfb06e4457491317e9dc730d965aef146cad4dfe09267c5207",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/funnel.ts": {
+      "sha256": "9cc84c3b236997c0c0652ed2ff142ebf9f7541a9fc9a9a4cd4d7e4da2423696c",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/suggestions.ts": {
+      "sha256": "a3e740b19b091658b7f1e56827f3437835012073cb868b173931e1a2e58dcb49",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/waitlist.ts": {
+      "sha256": "3d511517aad5f9f89899fcf64e0b66603e50379f4d00ab3afc9148d7bfae4239",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/health.ts": {
+      "sha256": "fdbef6eaed9f38f711e482a5266cadc41601720271b55b9499a369e4380685b5",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/routes/webhooks.ts": {
+      "sha256": "444f3fe96ece8bf0183a8d54be9ebec02761f4cd380ecf3de797deac726ca57c",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/types/waitlist.ts": {
+      "sha256": "69e62f242a165cafc54d84fddcb45577bc3a44e69614c3da276564d51721f48e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/platform-api/src/types/health.ts": {
+      "sha256": "59053972df658d028abbab1747a479d5817fb98ceefa9c954d772f3ceaae0204",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/workflow-engine.ts": {
+      "sha256": "dba35fbea01050e24d6c21c8b639ed5d12263b1f3597f3038fd6fd6a8048eee8",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/README.md": {
+      "sha256": "988e899fa9c72c73dadef0f8436d59511157bae46d5f2b69a59cddbddcb7a6e8",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/adapters/index.ts": {
+      "sha256": "35703bc298d83dfcea8ed0cd2035dd0846f0fce17009893483c32ec84e4b897e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/adapters/notion.ts": {
+      "sha256": "5b63314429aaf88d4b0e736cce3e1408e1d7d7438fb0331368131b0491fb106e",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/adapters/linear.ts": {
+      "sha256": "41071c6b51ae74d96b8fe83385206bcff7d9ba61136e84a38f4dd5345661c5f1",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/framework/adapters/github.ts": {
+      "sha256": "65da10f6f2171a0ebc1eb92186a9a1d90f8cfc15dd89d670f1844f4773259f26",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/auth0/actions/check-user-role.js": {
+      "sha256": "c5e12f9ea1dce5546f3dff8ed64c989e7619e7c6538f1b8eae55750f6102e842",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/LOC-257-IMPLEMENTATION.md": {
+      "sha256": "4e0d30be4ea514948c28b45e9b8650f41f11542c99655d07d71b009b08830295",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/LOC-270-IMPLEMENTATION.md": {
+      "sha256": "00f0c6f5c3d3572c956faca9eff4c2a7279757408c0b3548336c9c652ba5e99d",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/LOC-255-IMPLEMENTATION.md": {
+      "sha256": "f4f238e5c53f9ee473228f80d20ec6b15fe6f06255912c8081d61cf34c222b8b",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/SCORE-DEMO-RESCUE-DEPLOY.md": {
+      "sha256": "7e5d6938585a9d21ecbe2fdb77e88fadcd4afc77e135284a53b72625a3183c51",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/LOC-256-stripe-paid-beta-plan.md": {
+      "sha256": "59f206e5f41f852fcb4380cc0345bb7b75449f4c67d68d023b628cfea5ad7773",
+      "updated_at": 1770863403
+    },
+    "lockn-ai-platform/docs/TEST-ENV-EMERGENCY-GATE.md": {
+      "sha256": "75d10b79f5198606f47f9880503214435bd0ee17600b0016f9e2e59c240c1101",
+      "updated_at": 1770863403
+    },
+    "lockn-score/README.md": {
+      "sha256": "0a5b2ee73753c749e03d22fe2a27edf3b799adc4ff7f86cfaf73bd123a10f78f",
+      "updated_at": 1770863403
+    },
+    "lockn-score/audio/stream.py": {
+      "sha256": "f9949b7d3e7728f0da48ccc318f7d071ae4567a127771c6c9de3e2827d9c66b4",
+      "updated_at": 1770863403
+    },
+    "lockn-score/audio/config.py": {
+      "sha256": "21e985c96cd9a6b28921c75187ebfecddc4df5602b9e20e982e64649a72b33b5",
+      "updated_at": 1770863403
+    },
+    "lockn-score/audio/detector.py": {
+      "sha256": "7a648b225e8d42cc9a5e0e8147923d0bd2593548f0f2f35aeadc7fdc6a6261cf",
+      "updated_at": 1770863403
+    },
+    "lockn-score/tests/conftest.py": {
+      "sha256": "e4941161db379e31384e33606d6e92ec86ac4e6a211327536e5773ff76510bed",
+      "updated_at": 1770863403
+    },
+    "lockn-score/tests/test_api_session_crud.py": {
+      "sha256": "40e713aebc73963467c9a520bbd20df4d39cc2874b6e1bb95125ecb28b009955",
+      "updated_at": 1770863403
+    },
+    "lockn-score/vision/config.py": {
+      "sha256": "4ca8b8a54ce56e4d56445b04cfdc146f38faf6a857478ec1c06a0b55bc7e17e7",
+      "updated_at": 1770863403
+    },
+    "lockn-score/vision/detector.py": {
+      "sha256": "d66f1a9cc0ba596629f620f16853e0369cde64e60901b3a5320b20250f14ea43",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/__init__.py": {
+      "sha256": "64282d56fd7c981adfc0844319275ebbf128f60fd14f4dc3dd64e00794b69fb9",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/voice/config.py": {
+      "sha256": "ecbf99d31a91f2657f857b42579cf2459d9ee020ce893ca099cba04738dc8c36",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/voice/commands.py": {
+      "sha256": "bb2a6ec3d84a105462cd03678aea07301554df85148c918cd43ec4544b92d7a3",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/voice/listener.py": {
+      "sha256": "5cffd44a341e076ebb160b4ad225c69821626b8f8a566bd5fe269e5f5d7fb491",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/api/score_api.py": {
+      "sha256": "48f53c7c27f7867ca86626dd64b348139f494ecc474281c450c5f2a2f5dcf399",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/api/__init__.py": {
+      "sha256": "77b5cc12c7bac30b4b391aab4269e168a308f0a3379494b345513b1d5b24ab5c",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/fusion/config.py": {
+      "sha256": "63b29e4afbb870c7b7da62def37044aae9f4ae9fcd3e7cc2c575f413bead01b5",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/fusion/rally_tracker.py": {
+      "sha256": "c27ea0ef27eb73b6d2739635806e43837d02282ac78899b43a1c8188ffcdd69c",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/fusion/engine.py": {
+      "sha256": "ed65e79066e78427d2eee4378ee04a919ee45cbc00dee7ae69be78bf876e6622",
+      "updated_at": 1770863403
+    },
+    "lockn-score/src/fusion/__init__.py": {
+      "sha256": "fcff56ede6c3e84102c8c503bb5d4fd95bb0b73b607b8048868727ebfba6f043",
+      "updated_at": 1770863403
+    },
+    "lockn-score/docs/iphone-streaming-research.md": {
+      "sha256": "d1701d87dbdbe4c18dfcc86d2298c76ec57271a81c3a7e3e6e492650581eb07b",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/README.md": {
+      "sha256": "9e280b755d044577198adbb452ac5619b3869fc0fc736f7e76088ebc1f5214f8",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docker-compose.yml": {
+      "sha256": "dce899d4713fa7e35d4f94e80ead68682bf3a4cb3e868610507393c3166a2d99",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/workflows/txt2img-sdxl.json": {
+      "sha256": "a95232ee04d9e12571d1a21a9f386e631e466d44bf209c086963fb53a8c03b9b",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/tests/LockNGen.Domain.Tests/Entities/GenerationTests.cs": {
+      "sha256": "ee3690795b20a8dcba230f419c8c4b7e2a2b6d3bc5da2295a9773baa9f0d26a0",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/.github/workflows/release.yml": {
+      "sha256": "27644ac73e0686aa375161bd900019579ea25a835b90f2917e1281d4b23c336e",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/.github/workflows/ci.yml": {
+      "sha256": "7627576530b8d12911d8bd474359c383df78c30e8de202f30778087f1c7a4fa5",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/appsettings.Development.json": {
+      "sha256": "475833cb7b6e49224f539b66f5621a2780a692186f35b5587587f82d7e584990",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/appsettings.json": {
+      "sha256": "fc9f54845b5c34297105a1f28d0c5d692a714c5812f5f70742e999312716fb54",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Program.cs": {
+      "sha256": "456ed9d1b063653c32d8b8962fe51ab765e60830040e01d7f2955561f44b97fc",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/WebSockets/ProgressWebSocketHandler.cs": {
+      "sha256": "f6b0166d18f8c3d1a21f62f826ca04422479a659679227eddefebe8651eb0d84",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/DTOs/GenerationExtensions.cs": {
+      "sha256": "98339116b29c5aebf92f9e560c9c10fdc952a6f9e1b15217bd8891c62d78349e",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/DTOs/PagedResponse.cs": {
+      "sha256": "1c5f9413161c292a02799deecb1d2f79cb7f74c49e8a1618b24bf1176378ed2f",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/DTOs/GenerationResponse.cs": {
+      "sha256": "dc96fc5442d6b9b281d9b45afdeb02fab8c72ef309a8e70a1500c2f15cba4c92",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/DTOs/GenerationRequest.cs": {
+      "sha256": "19938bd32d9034969638e50556557bdbd28f6c0d080d8ec9fdf4652660bc307d",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Middleware/ApiKeyAuthMiddleware.cs": {
+      "sha256": "2cd296293b607bb21e38a40ed9801311a39b3895f88b22856ad151417da72ba9",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Middleware/RateLimitMiddleware.cs": {
+      "sha256": "eafb7e1122cb4960b7a7556ce5ae2cc1b00e2a6b3689097c0c56ab3ffea8ff8b",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/landing.html": {
+      "sha256": "4dca8ea86f45401e6e424c9450ed0e1f4c2c66a17ebe2b1a0ca46cd525a0b5d6",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/index.html": {
+      "sha256": "18070c4a63d4adb1c2aa7211aa20521c787c0c41faac841063aaf8efacf6ebfa",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/css/landing.css": {
+      "sha256": "3af5f8df2b5b2fcec32dcf43b33bb4a1270a4f6960622b40fab858efa38ea2a8",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/css/styles.css": {
+      "sha256": "193b49358575987e28a1a3184d9a15fb8874173e1acd7840b630ff79b01c23d5",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/js/app.js": {
+      "sha256": "62530e3cfabbbd099e10f24a0c58ebf27e6dc2e2b0f3ab7e8347447f45110150",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/js/form.js": {
+      "sha256": "d5092f6024f473e7372b10895ff1b340d2e129d50aee6f762bd24fa7a61d4e5e",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/js/api.js": {
+      "sha256": "73327fe194103285c73525f736d0b18fd73db7ddc45c06d8d13034c4cb2a7c98",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/js/modal.js": {
+      "sha256": "23ef31911a46f3471b6bd41dde4057924d13f999d5eb604c5fa24e42ce21bdc3",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/wwwroot/js/gallery.js": {
+      "sha256": "ad652196821aa1c5ec30fb0a4bf2ef6c29e72f456b333b78a6a4633b5758a667",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Telemetry/GenerationTelemetry.cs": {
+      "sha256": "445b6a1c11e1eb87b026333a5d2c7acf4a14628a1fa050737a2e442d91e60cf3",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Telemetry/OpenTelemetryExtensions.cs": {
+      "sha256": "ee85b103d0b52f2861c7bd5cf962bfcf4fef2c8d168a56d65daea82e8522e1e3",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Validation/GenerationValidator.cs": {
+      "sha256": "a5c99ae7611a19fd7b58c834a9debd26800197e3555a7656885d7248d0fb9ec6",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Endpoints/AdminEndpoints.cs": {
+      "sha256": "bb94d0b1ca885df0281064620f57b172babc885fb5f45a13efcc2c2ec7c61414",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Endpoints/GenerationEndpoints.cs": {
+      "sha256": "d8e27e635d90473ede2da7282fb8b2afaa8a261008d4d564f5e064d2958a483b",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Endpoints/ProgressWebSocketEndpoints.cs": {
+      "sha256": "02d1e9a92f3d2e8207e0d90399b2c5162334ad2f50134df001620363ffd09a2e",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Api/Endpoints/ModelEndpoints.cs": {
+      "sha256": "3499742ed1a38df45b454b3fa841e256fb890d55761a831764f17438c1239e01",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/WebSockets/ProgressBroadcaster.cs": {
+      "sha256": "01721a0a877c6a6855080a370e98402b4735c5ebe42d050681291610ca449f36",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/RateLimiting/RateLimitOptions.cs": {
+      "sha256": "e8fcd9fd1756ae393e33881080c35185460ef58da441c8a4403590f20431b74d",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/RateLimiting/InMemoryRateLimitService.cs": {
+      "sha256": "3f66c310d3fd3661b8936d1e3754c18e072125366bd2cd53259df159fe9e4519",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/RateLimiting/RedisRateLimitService.cs": {
+      "sha256": "3c4af74f2aa138bdf00222fc82ea5e224717b992299b10883dd519f7d7fb6825",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/ComfyUi/ComfyUiClient.cs": {
+      "sha256": "1ddb39f2ccfeae8d2f27482e63917518da1aac951b75afc6b09c3c84bcc2b559",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/ComfyUi/ComfyUiOptions.cs": {
+      "sha256": "c3e175a7b721c4c43c3fd7f49f97e3f2d6a0dd66a9d06eefd278486c37d4f778",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/ComfyUi/ComfyUiProgressMonitor.cs": {
+      "sha256": "9236e5363a486ba2be0b1bd3c53af18306c6e1bd421ef4ee4a1f06761421ddc5",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/ComfyUi/WorkflowLoader.cs": {
+      "sha256": "811a084bce6052cf023c18c449440fe76d2bfff0073d2eeda0e0ec62ac6804c9",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Telemetry/GenerationInstrumentation.cs": {
+      "sha256": "647830920acc39fb450a5e89dbcddb0704fab4a1c453a94cad1e3d0c7cddfa83",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Services/GenerationService.cs": {
+      "sha256": "63f9b59abeaeb5a2c11f5bfb57f4cdfb9939f5ee815b68b093f04b60715daa28",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Services/ApiKeyService.cs": {
+      "sha256": "df6309e55e18aab3ad9548d73f799cfd70ac57d7b2e284c161fc0a7b05a4d1f1",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Services/GenerationWorker.cs": {
+      "sha256": "15650a57b7148954498c80d9222204d9073246d0a98ad244c15259009cc26ab7",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Services/MetricsService.cs": {
+      "sha256": "d5f57b90bf5f8eb06435a5eb2e14a75d32e34cefbf77a703db8f1d60cbe3c7ed",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Data/AppDbContext.cs": {
+      "sha256": "c59eb8ffcfed12ed1cf729f3d8b04f4e3fb1269140dbd00f260f170a56530b11",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Data/Migrations/AppDbContextModelSnapshot.cs": {
+      "sha256": "992af103e478216dab997318de8a57b39b5ed0fbc603059df6b447da746ca691",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Infrastructure/Data/Migrations/20260203000000_InitialCreate.cs": {
+      "sha256": "c3ac528a91c35c3d71f69b4cf198d9e00cee871bb6aaad77ab15724393e60434",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/DTOs/SystemStats.cs": {
+      "sha256": "c54d7606203e284abe743e692f48652a9ae673cd5155d6e32bb0dc25e1dd30a2",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/DTOs/ComfyWorkflow.cs": {
+      "sha256": "f389e4f0b01bbb1d6e103bb147403ee8feca2c8728fc58640e7aa62bccf06509",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/DTOs/ProgressMessage.cs": {
+      "sha256": "122d4eed6eae21fdd4228cbcdd3735f59dce1b3b9dcf7a6dbab6cadb42c81c77",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/DTOs/PromptHistory.cs": {
+      "sha256": "2aaf564e3573f90e0e3e77a0201aca6e9af6d3ab3cd5266a68a515bc5008ba56",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IWorkflowLoader.cs": {
+      "sha256": "33c83e18dc2433c442f63a55198cc73db0c663c11e3ec5f694630991e677993a",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IComfyUiClient.cs": {
+      "sha256": "82dba70ef07614844374521581d8bc173bb1dc4c82da17b3312c396c5b24825b",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IProgressBroadcaster.cs": {
+      "sha256": "1cf9689e470c9be8d057478e6c5b6cc3d92ae75fa666df01710ae437f6c7522c",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IApiKeyService.cs": {
+      "sha256": "f0f41053c625e32ed3071dc5f1018607e2869fc6e9d137051858196d374d537e",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IGenerationService.cs": {
+      "sha256": "bc077aa2f358e5b51492d43ede36f8410a5585edaa1916931d8dbcd4aa1969d7",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IMetricsService.cs": {
+      "sha256": "8d7d1a8f6b98221f1ea40a318df4885f8baced7cbe8dc0a1cbe7699ae255bf4f",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Services/IRateLimitService.cs": {
+      "sha256": "b6e5563b94b8cabe1deb1ad0a8ca6924c3d05a1cb02fec1abe3b1c880d8d50bc",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Entities/Generation.cs": {
+      "sha256": "d11ae4e7c57c43929a0fcb55ebb52c25f1b43a4a36eeb7e3c972427fc18350e1",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/src/LockNGen.Domain/Entities/ApiKey.cs": {
+      "sha256": "082ff32e1ff600b6fa8539f3422ac93458dd51d944d24952a86326f60ec7dab4",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-64-architecture.md": {
+      "sha256": "736d092559a7e9a88c67d4263f0defd8865d74a1fbbf7053e85933285c4eb8e9",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-60-requirements.md": {
+      "sha256": "4a61c405b675517b6ae505531850f970bf5124f58f1edfedf0d0858ef1f24703",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-66-architecture.md": {
+      "sha256": "5e75f1801d953c2e3d6eeda6ba0f70cf93f5569460e7b617be28c62586ff2e24",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-66-requirements.md": {
+      "sha256": "81b989029b1019401b7b70d1cc924d654a0494e111c2a254ab0412582d7b1b5c",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-61-requirements.md": {
+      "sha256": "2366c3d7c9be10fbd08ac0748d4dbe3d51feb7427093e6534e7d140a136802fd",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-60-architecture.md": {
+      "sha256": "8354db269295add9bcd23e2c8b41bc4a63bc22410e5a59d11012f745ce3273a5",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-63-architecture.md": {
+      "sha256": "affec69db3aeea0f20864f3b4e1120772376f1d0f0a8e506f84fb011ed5d7394",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/requirements.md": {
+      "sha256": "fc8b47852687899101342f614daf3884c422b9535156e6545b92ccbb1dd9c3ee",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-58-architecture.md": {
+      "sha256": "ba9216a2adeca211484f9a9b85503988d900e5710e79738ffe6bdefe3c1bd8ca",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-67-requirements.md": {
+      "sha256": "5f576123ccd0de99a440b9d9ce6aa383041eb2e54ebabd9d79d18caef533618a",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-65-requirements.md": {
+      "sha256": "a0ef060bb8c3c3976a170b5cea6f290f78d6c5790e648e5edeb96e47cc3976b1",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-59-requirements.md": {
+      "sha256": "776c06e16e36626cebed9db900a28cce66cf14be965d58360842a108fa60d0b9",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-62-architecture.md": {
+      "sha256": "0103c0480e5c3a7f370a27453f0d7f4e0714ebbb4ae5f8fc099b70b5d1649076",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-65-architecture.md": {
+      "sha256": "f6a53bd0db3f338b29149561cfacae72f6e731c9e50b81f46f42f1d0f1ee63ad",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-57-requirements.md": {
+      "sha256": "8407f00b9e77f3a8a4b1efd2d4ba659e2bd0733449810a159a317a4463acb386",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-64-requirements.md": {
+      "sha256": "41ea90cea548579a0f4474eda444993a604ddecd752f51f6017df151b806b6f4",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-59-architecture.md": {
+      "sha256": "bc3cedeb48f4bbe70b131a5cb090e8a675651ee5fa053857e119294b620d12fd",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-62-requirements.md": {
+      "sha256": "ee03465399c63264a24929b1f26d1a79120e086ccdccfaa2ba6f9b2888bf16b5",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-67-architecture.md": {
+      "sha256": "2f5e327c23fb25b57025259868f4f2f06a38296c02a0b1ecff1936e2a2da09f6",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-58-requirements.md": {
+      "sha256": "5be4fc17b94cbf78ac87e15a2e50e0c5b39326cde8640ffb2a86ecdc7fc90da2",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-63-requirements.md": {
+      "sha256": "eaa7f11c661e1329fdabb47f6f5c7964f2a28d17db7d340fd85838c07defd901",
+      "updated_at": 1770863403
+    },
+    "lockn-gen/docs/LOC-61-architecture.md": {
+      "sha256": "fdd4c97813097693ba96fb581ca3a6dc19feb55ae47cb9df67df135141c3fd8b",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.test.yml": {
+      "sha256": "265406a922d087a8115c9454e3044c490ad1cd4bfa514cf8bbc589528eed7d1b",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.dev.yml": {
+      "sha256": "61a07b3afa8772c293786770b874e5039e5c3e02b5a08ef659c0c69598e876a8",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.shared.yml": {
+      "sha256": "b942ae236732e2ad80dfca26e89a0924b2ae3c2bb42a82f407567516e8c64c5c",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.observability.yml": {
+      "sha256": "21e857f4d10c4a96e079ecc9b690ff52183e55d2ad8921eee3729422b7b2569c",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/README.md": {
+      "sha256": "21b230c2e3af0e937032ecb503458d6d90c854ff9f9475a531c89dbf37d45e0e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/model-matrix.yaml": {
+      "sha256": "b848f897c9f323f5c52041e11557b8804b3d4c1e63426d0e5211f29ecaafb01d",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.prod.yml": {
+      "sha256": "143664da3a2f5ae621d441058c2629ba3a0d39db95b7b416687ef5721c584feb",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.local.yml": {
+      "sha256": "ce651a2daad5e4db556b09e28ca165d839adc9c7ca627454a394c822bcfd3767",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/lockn.sh": {
+      "sha256": "96b58ea828f01f0d5bf9a9562b55cfefd5f934fc87bdc12eabdce59f8464ea7c",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker-compose.yml": {
+      "sha256": "cd99e8b2e5f0ccf1ffbaacd7bfdf9212453653b55d493223ffc71bccf2917afc",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security/audit.sh": {
+      "sha256": "4e8a7b8e5449024816ca5481668758380b704afca83f04acd4ee03344ed8ff50",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/templates/workflows/ci-dotnet.yml": {
+      "sha256": "86e6c8ed15c37d73ef2f6e30c712a797fdd4c8018556a44e74dbc53f0e2e90f8",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker/lockn-ai-tts/smoke-tts.py": {
+      "sha256": "01c5f275bc30a0bd1181af2d78bbb9f41a1f1e820753593b8d68c276f84a7437",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docker/lockn-ai-base/smoke-test.py": {
+      "sha256": "e55deac35eaf1a69212f2e59b10da80ab7aed371f0a047da045ba4c4784b47de",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/scripts/install-caddy.sh": {
+      "sha256": "6c727d87c0278546692c4e47259726cfba2c5172bb5c30ceda4b55b733aea66e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/scripts/install-tailscale.sh": {
+      "sha256": "a3a62a12a6281600d03d76327ae4172ca7d43790ff6f9fe57156d09dea493abc",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/package.json": {
+      "sha256": "2d4380f18aadf3dd4e440584c5d09cd4d5688391f284c9b3639b22be7ac235c3",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/README.md": {
+      "sha256": "cd3664a699c2d3b556d4f0b69244638401538e706c744effe4c47cb0604960d9",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/playwright.config.ts": {
+      "sha256": "92015d1f830a9f238dea8102052fecdd4e831687c67f910aada2663cc05f9b5e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/package-lock.json": {
+      "sha256": "12b209ac0db5434d50157641924921af7e02be54423d829e4cc6312d01052ef9",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/tsconfig.json": {
+      "sha256": "7a072823f6d82176c6d59ebb8f7c8d90bcd449cf04e6a67b28276eaf74d4ba7f",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/scripts/run-visual-qa.sh": {
+      "sha256": "b1973c46af697a8b8e6da5292c5cb5eb167efb82b46723cadccdf87aa331c179",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/scripts/update-baselines.sh": {
+      "sha256": "4f724213ce2d37cac69b85b6554c3e817b274a5ac0c8c69bc723f8da1cda7faa",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/scripts/promote.sh": {
+      "sha256": "ca6469b1fc89648fe06d4323753766a09073319927de431c88417450a297465e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/scripts/extract-ac.sh": {
+      "sha256": "dd5c7c69a9c8b61f11a485fe0abaa56addedff2feb22e0e32dd37e359c947503",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/scripts/run-tests.sh": {
+      "sha256": "6f91e8a98912b3b675af7935d20a3d961aa92b85628da308ef03ed423919432f",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/test-results/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/tests/smoke.spec.ts": {
+      "sha256": "da76fcc2dd1b1f920e67859f067eb18ccb2b20d3e701716c48d2dfd11d55c522",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/tests/visual-qa.spec.ts": {
+      "sha256": "872913d0fa0b2d1d6b839b17e9796fd84372a8b405257307eb88cf87269612bc",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/src/visual-qa-report.ts": {
+      "sha256": "6164b73807ca8675ffc0330664d3a3d5f55509b4384406627928198d1bfb97d2",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/src/visual-qa-flows.ts": {
+      "sha256": "5d86f21b6ef0398b1b6f87f1b96bb873ddad59e8af3469ab200e9f74b17fef92",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/src/types.ts": {
+      "sha256": "dd3526366cd565816c1483e707380440582d71d474d56832c17588584c03dbf4",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/src/visual-qa-analyze.ts": {
+      "sha256": "100d6efe52c870369256f2cad9e659d885957e098f7a9f040bfd684760dd0ed4",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/docs/LOC-174-subtasks.md": {
+      "sha256": "169b4f73dcd59e2da8f6b6f541ab4adbd1b278dea66ff7edce08f77f6ab1293f",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/qa-agent/docs/LOC-174-architecture.md": {
+      "sha256": "5dfad5daa2e60c5e2453b0eace2c05cacc58e3b554ff40933434781437e03e2f",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/cloudflared/config.yml": {
+      "sha256": "3c173a75818ff82542eaedfbedd02219cb581196edcb25d13d13d1efc0f6fa21",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/cloudflared/setup.sh": {
+      "sha256": "132a8b3e62a94ab1bad7e007fa3567a0aa3e5731042642a51fa05144b8235194",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/process-results.py": {
+      "sha256": "c37557b4819cd37075181e543aa9280317417dd02d3828b60d863657993df6b2",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/ARCHITECTURE.md": {
+      "sha256": "3c55935313c4dade4f1b11c8108d13d10d7404e51d7dc914fc6cd2e5127c2186",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/2026-02-08-security-assessment.md": {
+      "sha256": "53e62d4fa0ca6141e513cb27d3587f4750e20d7e79babaa24f48c2fa2b5fb009",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/security-audit.sh": {
+      "sha256": "9f4609411ecd3436f4a5f8d68eb360875f02d334c89883d77467d60c65f3da0e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/dashboards/security-audit.json": {
+      "sha256": "e5ac9b4a4ddae72da94563a4ba389327845031454174c860b6f4bc21d848894d",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/scanners/trivy-scan.sh": {
+      "sha256": "e34f44625e1dfe5a8e7ba70750692fbcc90bcf69eb6fd6e3cf59329f05472141",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/scanners/license-check.sh": {
+      "sha256": "bd76b3d6ebae2c53c6eae9318cbe7c9f4d28b24517efe8158157fb1bacf1f0ae",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/scanners/dep-audit.sh": {
+      "sha256": "184baacf1ae1947929db6c8d500e2076a90135c9d09d9df2e4c5206fd912c67c",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/scanners/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/config/security-audit.yaml": {
+      "sha256": "f585a23fddb6a3d29350d8b111f7522702710795f6ae4de858c36c4958482a7c",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/tests/test-dry-run.sh": {
+      "sha256": "c1b7b975809f17af99dbb736dd81c4a7a72cba55e334e00f519fcb40917a23f0",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/reporters/slack_notify.py": {
+      "sha256": "e1eb8aed41a9d951dc7f19b12e7b83920d575c182ecec63eb9f162e884dd65f8",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/reporters/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/storage/store_results.py": {
+      "sha256": "0d112c86eb07514bc3fb7e83547a5828642f37b063f50762c4e3831e7e3c13e8",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/security-audit/storage/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/.github/workflows/https-smoke.yml": {
+      "sha256": "b3687d82425b8e630c518fdbd406a3f204843bc35f5fb37da38d8973a82bca7f",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/.github/workflows/deploy-pipeline.yml": {
+      "sha256": "8621f02204ad3383eebdb9d6cd8e0d7dd6a82152a66e5429a253a92a63493aa7",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/.github/workflows/deploy.yml": {
+      "sha256": "87004889c47e6903357d9efac923c4910e70693d9c3afa6e0c11d25568304652",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/.github/workflows/validate.yml": {
+      "sha256": "1d65b67d753111b5ed9742c68c43158c6c9409c4245a732907975c23fccd0875",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/.github/actions/https-smoke/action.yml": {
+      "sha256": "005787533beaadc6734ab8d1aca48c70adb1a265f0a5d1e238dcd5d4ceb86e4d",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/spikes/LOC-038f6481-ml-runtime-layer.md": {
+      "sha256": "5b8f21b6529137a0027b89ddbe43175f489dcc73580f4c6bca66fa03b33e4804",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/docker-compose.otel.yml": {
+      "sha256": "8a7ce59274243314f21b9c476b8c6138ee69f6725577225bfd60d57701997607",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/README.md": {
+      "sha256": "2b24538c462ba6bc271dd8d758e858e0891bb30276beebd3a689eacd27f2f0b6",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/tempo-config.yaml": {
+      "sha256": "935aa06f6c385be7721304d3ee87fbf7d9f7f355450824975a9105ba940da895",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/otel-collector-config.yaml": {
+      "sha256": "df5b071071076474374f44837bb2f7781ec5c835e39cd6107b83511fb0097c6b",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/grafana/provisioning/dashboards/dashboard.yaml": {
+      "sha256": "8edff3c7cb85959f0151efbaf007254ecc82edbace7018e361ea97f6f826de49",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/grafana/provisioning/dashboards/lockn-overview.json": {
+      "sha256": "c2330aba089c163c377160f54ac789d2fb185b990a469d5f35a6943e29b5fbbc",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/grafana/provisioning/datasources/tempo.yaml": {
+      "sha256": "35f6ef17e2d8c8f293f97d4653dfa97699627830d4c8adddb5650ebaf2179a16",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/otel/grafana/provisioning/datasources/prometheus.yaml": {
+      "sha256": "f5eaedcc6f6ab13c8ea48a58aef6b2d4475d39abf5782408fff07f4bd1712f8e",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docs/stack-reorganization-plan.md": {
+      "sha256": "0c6bc74cf29c6d2de5835ca9edd29f334718c21fd8fd73951dd9efbce36c13c6",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docs/stack-plan-v2.md": {
+      "sha256": "48e5fb8b87e2f51b99c4cffef01b8b71986d8ef1ea5d5dcff2e206118c806d43",
+      "updated_at": 1770863403
+    },
+    "lockn-infra/docs/https-smoke-workflow.md": {
+      "sha256": "565827b0cb0163b191155b25bffc49dc6c2da336eb54a7cbddbbb49590e72a72",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/README.md": {
+      "sha256": "ad2e7f021a6d8e67da29c9f5f521f00a52de1b8b462f8b958f1cf93467364c80",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/docker-compose.yml": {
+      "sha256": "289db1ed650ccb76d8e469c512bcd53f84a67697d12bd979e5d78e662eb0264c",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/tests/LockNAuth.Tests/InviteClaimTests.cs": {
+      "sha256": "67766d5c5cb603ee1b6cf090231d2c1a6f36b31cd4e52b3203c517cb55a72c11",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/.github/workflows/ci.yml": {
+      "sha256": "df6bf374a98d88403d2979452f74663e88e43b7c2f9efe2ed360cc8085e133f8",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Class1.cs": {
+      "sha256": "7f4f4413b7f227cc717958f6c6a00ff72825ad5dc74fde6aca2d015779b0f450",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Services/ApiKeyGenerator.cs": {
+      "sha256": "6ecfc1d4d4e3999c28c884a7501be170ea99f1f2e1871adaf754084fbff65a89",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Services/InviteTokenService.cs": {
+      "sha256": "dc2bb2f2486a0b02e2296916b354dd038b78d2fe1cec4f34587702a763b60cc9",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Entities/WaitlistSignup.cs": {
+      "sha256": "53f7ce6076e4e63d8c5ac7afbe151d127e142d598090edd266c90d0dc4b39432",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Entities/DripEvent.cs": {
+      "sha256": "9b75f470247ad0fdb6ed1c11d06b70e3f98d83b1c647e014a682cf0874448667",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Entities/InviteToken.cs": {
+      "sha256": "f7d3253fa0a3d59f54025c2632067429ff9b85bf745199f6bcb338be729a0c21",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Domain/Entities/ApiKey.cs": {
+      "sha256": "a8509861a49b2639be52bf939d5a162de2e62e052e8297a57379233ecdf29d31",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/appsettings.Development.json": {
+      "sha256": "7138f780e53dca0767edf4916d4ff50ba58385eb11342762e646fec327f95787",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/appsettings.json": {
+      "sha256": "df5ea4b348c9320c7af960bbf09ede4e12cd56eb3002e254f7e3afff7a2329f3",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Program.cs": {
+      "sha256": "5e7d134da108311914263358e8797c8afddae9af065a784b3b38440f6aca636c",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Properties/launchSettings.json": {
+      "sha256": "9f9bb7d8ee94e2691c29fb8c5ed2660a3baad87bdc9b713fde3023f39e653b13",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Auth/Auth0Options.cs": {
+      "sha256": "712d7753a5a33e3f94b261589c44023602b074694594b5582301424b9ed215ea",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Auth/Auth0Extensions.cs": {
+      "sha256": "fc055aebcacfd058d48f205b508ed6ab82848c82e902202c901ec4a3e66200f0",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Configuration/InviteTokenOptions.cs": {
+      "sha256": "9e967a44070246eec2675543338b68f474b6f63b6cd9938e2fc6fd66fc435478",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Configuration/DripSequenceOptions.cs": {
+      "sha256": "394ad0d71f0268efb92c5f2349af5ca719d3c6e13783b294df3e8c79054e0002",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Services/IPostmarkEmailClient.cs": {
+      "sha256": "f09007c3e76483a5c81dd06c086baabcdf83e779ca95838b28295344b258fe5a",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Services/PostmarkEmailClient.cs": {
+      "sha256": "3f6813919c9a9f465a0270c4a4b985a2c62dabd2c6ea312d81c6612d53f1335d",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Services/PostmarkTemplateSyncService.cs": {
+      "sha256": "3d2df384c96777146f3b30cf62d6a8e9832a4fe5232f52042944fce382e32d97",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Services/DripSchedulerService.cs": {
+      "sha256": "3387e263b3aaf8d110dbf68d4257e6eefda313c7f7ed74b279c786606946a6b4",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/DashboardEndpoints.cs": {
+      "sha256": "68ffd1e8d9238f86b420da8f83d9c3614b95f55ad3068fb31fab38a3b16fa79c",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/WaitlistEndpoints.cs": {
+      "sha256": "eb035ceffa148c84594abc2391cb1aa97c81b3e5cd0bc8abb054efb74c13f34b",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/InviteEndpoints.cs": {
+      "sha256": "48e1c3fb45860bc580357a8217cc3ba32d62775e34b16aa0b00fa1c3467f862a",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/AuthEndpoints.cs": {
+      "sha256": "4879a094f07b1f584c33cb8a3ed43686614efbc5f8dd82cbe88023a037d7818d",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/TemplateEndpoints.cs": {
+      "sha256": "414f44f37c65227dff673836a02933c029d1b3835d6ab8e2cf70bd3624df415d",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Endpoints/ApiKeyEndpoints.cs": {
+      "sha256": "e15cef880885b74af846a53ddb8c22d664055bfcc7800a4017a8b29b9a8c4d05",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-invite.html": {
+      "sha256": "670181a10ee9a97733b0aea101efafd485162e966ef83aa0ba04f2321a300686",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-reengage.html": {
+      "sha256": "ae66df7596e5261f650b15a75dd14fbd5e5793e2ceffaa847a2486c8962447d2",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-day3.html": {
+      "sha256": "27e251f10bbe0c4ecfca6d879710111fca3ae39ad82b0cab1a2f3709aec81dbd",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-day1.html": {
+      "sha256": "81fa4934b471279aa351db913c4c575e07eabc81b795c1a36e5d9737e4ba6663",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-welcome.html": {
+      "sha256": "3dbf24d34fdeaebeb44d46fcbce92d65d913987d4d6e200d9fd76b3b3cdf9acc",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Templates/waitlist-day7.html": {
+      "sha256": "01e7e4fe1c7e11bedadce0b7ee720686719b6ff24958bdb01023a231b4b3cd23",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Api/Data/ApiKeyDbContext.cs": {
+      "sha256": "bd55dd363c3b2d3d6ef94cb64a555b68a099ee9e9c321f62f91facaa59857189",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Middleware/ServiceCollectionExtensions.cs": {
+      "sha256": "b60f9fa4a2beb60ba823708fd6c2443037f47575c8423112c5f2e6a2e534e748",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Middleware/Class1.cs": {
+      "sha256": "b53a5d38c93da12644755e5702cc42ce41ec264ff08536d6cfec47d539d51649",
+      "updated_at": 1770863403
+    },
+    "lockn-apikeys/src/LockNAuth.Middleware/ApiKeyValidationMiddleware.cs": {
+      "sha256": "795fb099488a5a2a727577ee793af0b4b0a228911fc7ae52d5ff9c6a568ec193",
+      "updated_at": 1770863403
+    }
+  },
+  "last_run": 1770863403
+}

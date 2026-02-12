@@ -1,0 +1,69 @@
+You are creating a production-ready OpenClaw skill called `lockn-speak` that can be installed into any OpenClaw instance.
+
+Goal:
+- Add a skill that provides LockN Speak TTS capabilities.
+- Enforce subscription licensing via API key before any synthesis call.
+- If license validation fails, deny usage with a clear upgrade message.
+
+Environment assumptions:
+- OpenClaw skill layout uses `SKILL.md` + helper scripts.
+- Skill will call LockN Speak API over HTTPS.
+- License checks are performed against LockN licensing endpoint.
+
+Required deliverables:
+1) Skill directory scaffold:
+   - `skills/lockn-speak/SKILL.md`
+   - `skills/lockn-speak/README.md`
+   - `skills/lockn-speak/scripts/speak.sh`
+   - `skills/lockn-speak/scripts/validate-license.sh`
+2) Copy-paste installation instructions for a new OpenClaw instance.
+3) Example `.env` variables and secure handling guidance.
+4) Failure-mode behavior and user-facing error messages.
+5) Smoke-test commands.
+
+License gating requirements (mandatory):
+- Require `LOCKN_LICENSE_API_KEY` in environment.
+- Before any TTS request, call:
+  - `POST ${LOCKN_LICENSE_URL:-https://api.lockn.ai/v1/licenses/validate}`
+  - Headers: `Authorization: Bearer $LOCKN_LICENSE_API_KEY`
+  - Body must include: feature=`lockn-speak`, instanceId, requestedAction=`tts.generate`
+- Only proceed when response indicates active subscription + feature entitlement.
+- Cache positive validation for a short TTL (e.g., 5 minutes) to reduce latency.
+- Never cache failed validation as success.
+
+LockN Speak invocation requirements:
+- Use `LOCKN_SPEAK_BASE_URL` (default `https://api.lockn.ai/v1/speak`).
+- Require `LOCKN_SPEAK_API_KEY` for provider authentication.
+- Endpoint for generation: `POST $LOCKN_SPEAK_BASE_URL/tts`
+- Input contract:
+  - text (required)
+  - voice/profile id (optional, default from env)
+  - style/speed options (optional)
+- Output:
+  - save audio file locally and print path
+  - include concise success metadata (duration, model/voice used)
+
+Security requirements:
+- Never print raw API keys.
+- Fail fast if required env vars missing.
+- Sanitize shell inputs (quote variables, reject empty text).
+- Return non-zero exit code on license or API failure.
+
+SKILL.md should include:
+- What the skill does
+- Inputs to collect
+- License requirement note
+- Example invocations
+- Troubleshooting (401/403/429/network)
+
+Installation section (must be copyable):
+- Create skill directory and files
+- Export required env vars:
+  - LOCKN_LICENSE_API_KEY
+  - LOCKN_SPEAK_API_KEY
+  - LOCKN_LICENSE_URL (optional)
+  - LOCKN_SPEAK_BASE_URL (optional)
+  - LOCKN_SPEAK_DEFAULT_PROFILE (optional)
+- Restart/reload OpenClaw and run smoke test
+
+Produce complete file contents, not just descriptions.

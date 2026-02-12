@@ -1,0 +1,45 @@
+--- docs-cache/openclaw-docs/2026-02-03T02-30/index.md	2026-02-03 02:30:28.435046296 -0500
++++ docs-cache/openclaw-docs/2026-02-04T02-30/index.md	2026-02-04 02:31:00.848745946 -0500
+@@ -1,6 +1,3 @@
+-# OpenClaw Docs - Index
+-Fetched: 2026-02-03T07:30:15Z
+-
+ "EXFOLIATE! EXFOLIATE!" — A space lobster, probably
+ 
+ Any OS + WhatsApp/Telegram/Discord/iMessage gateway for AI agents (Pi).
+@@ -19,8 +16,13 @@
+ ## Start here
+ 
+ - New install from zero: [Getting Started](/start/getting-started)
++
+ - Guided setup (recommended): [Wizard](/start/wizard) (openclaw onboard)
+-- Open the dashboard (local Gateway): [http://127.0.0.1:18789/](http://127.0.0.1:18789/)
++
++- Open the dashboard (local Gateway): [http://127.0.0.1:18789/](http://127.0.0.1:18789/) (or [http://localhost:18789/](http://localhost:18789/))
++
++If the Gateway is running on the same computer, that link opens the browser Control UI
++immediately. If it fails, start the Gateway first: openclaw gateway.
+
+## Key Changes Summary:
+
+1. **Dashboard URL**: Added alternative localhost URL and clarified browser behavior
+2. **Network model**: Significantly expanded with:
+   - Multiple gateways documentation link
+   - Token generation note for wizard
+   - Legacy TCP bridge deprecation notice
+   - Links to configuration docs
+3. **Features**: Added more detail to several features:
+   - Streaming link to /concepts/streaming
+   - Subscription auth now mentions Claude Pro/Max, ChatGPT/Codex
+   - Group activation toggle mention
+   - Voice wake mention
+4. **Note added**: Legacy Claude/Codex/Gemini/Opencode paths removed; Pi only
+5. **Quick start**: Massively expanded with:
+   - From source instructions
+   - Multi-instance quickstart
+   - pnpm/npm alternatives
+   - openclaw doctor mention
+6. **NEW SECTION: Configuration (optional)**: Basic config example
+7. **NEW SECTION: Docs**: Full docs index with all page links organized by category
+8. **Credits**: Added titles and expanded contributor list
+9. **NEW SECTION: Core Contributors**: Maxim Vovshin, Nacho Iacovino

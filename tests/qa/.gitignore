@@ -1,0 +1,30 @@
+# Downloaded footage
+footage/*.mp4
+footage/*.mkv
+footage/*.webm
+footage/*.avi
+
+# Individual results
+results/individual/*.json
+
+# Generated manifests
+test_manifest.json
+qa_results.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

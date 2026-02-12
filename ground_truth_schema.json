@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://lockn.ai/schemas/ground_truth_schema.json",
+  "title": "LockN Score QA Ground Truth Schema",
+  "description": "Manual ground truth annotations per clip for LockN Score QA.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["clip_id", "version", "annotations"],
+  "properties": {
+    "clip_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "description": "Unique clip identifier matching pipeline output clip_id."
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "created_by": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "annotations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ball_detection", "audio_events", "score"],
+      "properties": {
+        "ball_detection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total_frames", "frames_with_ball"],
+          "properties": {
+            "total_frames": {"type": "integer", "minimum": 1},
+            "frames_with_ball": {
+              "type": "array",
+              "items": {"type": "integer", "minimum": 0},
+              "uniqueItems": true
+            },
+            "ball_trajectory": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["frame", "x", "y", "radius"],
+                "properties": {
+                  "frame": {"type": "integer", "minimum": 0},
+                  "x": {"type": "number", "minimum": 0, "maximum": 1},
+                  "y": {"type": "number", "minimum": 0, "maximum": 1},
+                  "radius": {"type": "number", "minimum": 0, "maximum": 1}
+                }
+              }
+            }
+          }
+        },
+        "audio_events": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["events"],
+          "properties": {
+            "events": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["frame", "type"],
+                "properties": {
+                  "frame": {"type": "integer", "minimum": 0},
+                  "type": {"type": "string", "enum": ["bounce", "hit"]},
+                  "duration_ms": {"type": "number", "minimum": 0},
+                  "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+                }
+              }
+            }
+          }
+        },
+        "score": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ground_truth_score"],
+          "properties": {
+            "ground_truth_score": {"type": "number"},
+            "notes": {"type": "string"}
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "environment": {"type": "string"},
+        "camera": {"type": "string"},
+        "quality_notes": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen3-coder-next",
+  "messages": [
+    {
+      "role": "system", 
+      "content": "You are Qwen3-Coder-Next, an expert implementation agent. You receive structured tickets and implement them efficiently with high-quality code. Focus on: 1) Ticket Analysis, 2) Architecture Design, 3) Implementation, 4) Testing Strategy, 5) Documentation. Always start by analyzing the ticket thoroughly."
+    },
+    {
+      "role": "user",
+      "content": "TICKET: LOC-413 - Self-Serve Billing Portal\n\nRevenue Impact: Reduces voluntary churn and enables immediate plan expansion, protecting MRR and increasing ARPU without manual intervention.\n\nRequirements:\n- Build authenticated billing portal linked to Stripe customer portal/session APIs\n- Support plan upgrades/downgrades with proration previews\n- Add cancellation save-flow (pause, downgrade, or coupon retention offers)\n- Add one-click reactivation from canceled state\n\nAcceptance Criteria:\n- Paid users can change plans in <2 minutes with clear proration and next-invoice preview\n- Cancel flow includes at least 2 retention offers and captures structured cancel reason\n- Reactivation from canceled/paused state works without support tickets\n- All billing actions emit events to revenue analytics\n- QA validates end-to-end on test Stripe environment\n\nThis is revenue-critical (RICE 162.0). Implement immediately and comprehensively. Analyze and begin implementation."
+    }
+  ],
+  "temperature": 0.1,
+  "max_tokens": 4000,
+  "stream": false
+}

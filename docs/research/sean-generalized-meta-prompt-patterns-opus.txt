@@ -1,0 +1,196 @@
+Generalized System-Improvement Prompt Patterns (Opus Rewrite)
+Derived from Sean directives in Slack history
+Compiled: 2026-02-11
+
+---
+
+PATTERN 1 — Ranked Operating Agenda
+Template:
+"Review current signals across channels/systems and produce a ranked, bucketed execution plan with immediate actions, blockers, and owner handoffs."
+
+Intent:
+Force prioritization, reduce context switching, and convert raw signal into actionable sequencing.
+
+---
+
+PATTERN 2 — Anti-Repetition Reliability Contract
+Template:
+"Design process changes so I never need to repeat the same instruction. Prioritize acknowledgment, continuity memory, and deterministic follow-through."
+
+Intent:
+Eliminate instruction loss and brittle execution loops.
+
+---
+
+PATTERN 3 — Self-Healing Control Plane
+Template:
+"Enable autonomous recovery primitives (restart/retry/health repair) so agent workflows can self-correct without human intervention."
+
+Intent:
+Reduce downtime from orchestration failures.
+
+---
+
+PATTERN 4 — Suspected Root-Cause Reframe
+Template:
+"Assume observed failures may be caused by [specific subsystem hypothesis]. Validate that theory before broad fixes."
+
+Intent:
+Prevent shallow patching; enforce root-cause-driven remediation.
+
+---
+
+PATTERN 5 — Dynamic Model Routing Override
+Template:
+"Reassign unstable or mismatched workloads to a better-fit model and rename workflows to reflect the new routing policy."
+
+Intent:
+Keep execution resilient under provider-specific failure modes.
+
+---
+
+PATTERN 6 — Memory Hallucination Guardrail
+Template:
+"Assume stale indexed memory may persist after correction. Add correction overrides, recency weighting, and live-check precedence for operational facts."
+
+Intent:
+Stop historical state from masquerading as current state.
+
+---
+
+PATTERN 7 — Vector Investment Decision Gate
+Template:
+"Before scaling vector memory, quantify expected retrieval gain, maintenance overhead, and current-file-scale sufficiency. Invest only if net operational leverage is clear."
+
+Intent:
+Avoid premature infra complexity.
+
+---
+
+PATTERN 8 — Observability as Product Primitive
+Template:
+"Build real-time visibility for model usage, token flow, caps proximity, and system health; package it as an internal control surface and eventual product capability."
+
+Intent:
+Turn ops telemetry into strategic and product value.
+
+---
+
+PATTERN 9 — Projectization Trigger
+Template:
+"When a capability crosses strategic importance, escalate from ad-hoc tasks to formal project kickoff with milestones, tickets, and stakeholder review."
+
+Intent:
+Move from reactive execution to coordinated delivery.
+
+---
+
+PATTERN 10 — Always-On Mission Control UX
+Template:
+"Design a persistent operator dashboard: open threads, system focus, active work, critical blockers, and next priorities at a glance for all-day monitoring."
+
+Intent:
+Compress decision latency for executive oversight.
+
+---
+
+PATTERN 11 — Process Hardening Loop
+Template:
+"Treat each recurring issue as a process bug. Harden workflow until failure is difficult to reproduce."
+
+Intent:
+Institutionalize continuous improvement from incidents.
+
+---
+
+PATTERN 12 — Quality Gate Before Handoff
+Template:
+"Enforce a mandatory visual quality gate with explicit threshold(s) before implementation handoff. Iterate until pass."
+
+Instantiated example:
+- Composite VL score must be > 9.81 / 10.00.
+
+Intent:
+Prevent low-quality design debt from entering build queues.
+
+---
+
+PATTERN 13 — Fallback Compute Policy
+Template:
+"If preferred model path fails, immediately fail over to approved local alternative and continue the loop without blocking."
+
+Intent:
+Keep iteration velocity under cloud/provider instability.
+
+---
+
+PATTERN 14 — Agent-Actionable Work Doctrine
+Template:
+"Assume all work is agent-executable by default. Remove ‘manual’ buckets; only escalate true human decisions to a dedicated approvals channel."
+
+Intent:
+Prevent idle queue states and ambiguous ownership.
+
+---
+
+PATTERN 15 — Two-Level Priority Scheduler
+Template:
+"Operationalize L1 project-priority queue + L2 issue-priority queue. Pull from top of both, execute in that order, and enforce continuously."
+
+Intent:
+Align execution with strategic priority ordering.
+
+---
+
+PATTERN 16 — Parallelism with Conflict Controls
+Template:
+"Run parallel work across top priorities when non-conflicting; serialize only dependency/file/domain conflicts."
+
+Intent:
+Maximize throughput without inducing rework collisions.
+
+---
+
+PATTERN 17 — Scheduler Cadence Coupling
+Template:
+"Align dispatcher cadence with worker spawn cadence; stagger dispatcher offset to avoid race conditions."
+
+Instantiated example:
+- Worker: :00/:10/:20/:30/:40/:50
+- Dispatcher: :05/:15/:25/:35/:45/:55
+
+Intent:
+Ensure deterministic dispatch and low reaction latency.
+
+---
+
+PATTERN 18 — Operationalization Bias
+Template:
+"If a strategy is approved, convert immediately into live ops artifacts: ticket, schedule, labels, guards, escalation path, and status telemetry."
+
+Intent:
+Close gap between agreement and execution.
+
+---
+
+PATTERN 19 — Communication Ordering Requirement
+Template:
+"Provide short progress updates if needed, but preserve strict message order and coherence."
+
+Intent:
+Maintain trust during active investigation loops.
+
+---
+
+PATTERN 20 — Evidence-Seeking Follow-up Prompt
+Template:
+"Identify the failing component precisely (job, run, subsystem), then report exact failure target before proposing correction."
+
+Intent:
+Avoid vague remediation and improve debugging precision.
+
+---
+
+Reusable Meta-Prompt (Combined)
+
+"Act as an execution systems architect. Convert strategic directives into hardened operations by: (1) ranking work into immediate/near-term/structural buckets, (2) enforcing explicit quality and decision gates, (3) routing all tasks as agent-actionable unless human judgment is strictly required, (4) scheduling with conflict-aware parallelism using project→issue priority queues, (5) instrumenting observability and failure detection, (6) integrating correction-memory safeguards against stale retrieval, and (7) returning concrete operational artifacts (tickets, cron schedules, guardrails, and escalation channels). Prefer resilient, testable workflows over ad-hoc fixes."

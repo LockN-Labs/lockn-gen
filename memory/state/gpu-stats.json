@@ -1,1 +1,13 @@
-[{"timestamp":"2026-02-11T20:04:00-05:00","gpu":"RTX PRO 6000 Blackwell WS","mem_used_mib":81775,"mem_total_mib":97887,"mem_pct":83.5,"gpu_util_pct":8,"mem_util_pct":1,"temp_c":43}]
+{
+  "history": [
+    {
+      "ts": "2026-02-11T20:46:00-05:00",
+      "gpu": "RTX PRO 6000 Blackwell",
+      "mem_used_mib": 95886,
+      "mem_total_mib": 97887,
+      "gpu_util": 2,
+      "mem_util": 1,
+      "temp_c": 42
+    }
+  ]
+}

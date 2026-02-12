@@ -1,0 +1,71 @@
+{
+  "workspace_id": "35eb5f0c-1a51-8176-b662-000371c99c1f",
+  "root_page_id": "2ffb5f0c-1a51-800c-891b-c16ee9e721a3",
+  "structure": {
+    "description": "LockN AI Notion workspace — restructured 2026-02-09",
+    "hierarchy": [
+      "🚀 Product Hub — dashboard of all LockN products and revenue roadmap",
+      "⚙️ Engineering Hub — infrastructure, models, architecture principles, dev workflow",
+      "💼 Business Hub — company overview, costs, revenue strategy",
+      "📂 Databases — Projects Registry, ADR Log, Research Library (queryable)",
+      "🏗️ Architecture — decisions, agent arch, model hierarchy, tech summaries",
+      "🔧 Operations — infrastructure, cron jobs, skills, service permissions",
+      "🔬 Research — research summaries, spikes, explorations",
+      "🔒 Security — security assessments, audit reports",
+      "💼 Business Summaries — business plans, capability maps",
+      "📊 Executive Summaries — container for business/tech/research/security summaries"
+    ]
+  },
+  "pages": {
+    "root": "2ffb5f0c-1a51-800c-891b-c16ee9e721a3",
+    "model_hierarchy": "2ffb5f0c-1a51-81fb-939c-e0df932254cf",
+    "agent_architecture": "2ffb5f0c-1a51-81e0-88cd-de2e36fcaa4e",
+    "cron_jobs": "2ffb5f0c-1a51-8124-83f1-dc030a743835",
+    "infrastructure": "2ffb5f0c-1a51-81ab-89f9-e4deacf70173",
+    "skills_inventory": "2ffb5f0c-1a51-8118-9f9c-edc265c5f719",
+    "architecture_decisions": "2ffb5f0c-1a51-81e5-a6b8-fd7e76148a6b",
+    "executive_summaries": "302b5f0c-1a51-817b-bbad-cb251b55f0ed",
+    "tech_architecture_summaries": "302b5f0c-1a51-8169-b03d-c136785b195e",
+    "business_summaries": "302b5f0c-1a51-816c-a897-f72eacd087c0",
+    "research_summaries": "302b5f0c-1a51-81f9-bd33-f93a7b2e101b",
+    "security_summaries": "302b5f0c-1a51-81dc-bbfd-eaf92ebb29e0",
+    "service_permissions": "300b5f0c-1a51-81f0-a70f-f0208dd8046b",
+    "prospective_skills": "300b5f0c-1a51-81c1-b547-e8cab2611173"
+  },
+  "sections": {
+    "_note": "These IDs will be populated by the reorg subagent after creation",
+    "product_hub": "303b5f0c-1a51-817c-b916-fae86561d3ba",
+    "engineering_hub": "303b5f0c-1a51-814f-a9bb-ee06f5397481",
+    "business_hub": "303b5f0c-1a51-81c5-972c-f92f2d3b240d",
+    "databases": "303b5f0c-1a51-81e3-a6f2-f6ecd2bfe975",
+    "architecture": "303b5f0c-1a51-810f-ae58-d082ac724407",
+    "operations": "303b5f0c-1a51-8190-aa03-c66f4acb7a74",
+    "research": "303b5f0c-1a51-8125-9f3e-ed72a1ec70d8"
+  },
+  "databases": {
+    "_note": "These IDs will be populated by the database subagent after creation",
+    "projects_registry": "99247acf-fd43-4018-9662-9f3b5290ae60",
+    "adr_log": "67ee7411-edea-4440-8506-076a4b4db057",
+    "research_library": "3488f6ec-8c93-469d-89a3-82a5f8ff39a4"
+  },
+  "api": {
+    "version": "2025-09-03",
+    "access": "MCP via openclaw-mcp-adapter (native tools: notion_API-*)",
+    "rate_limit": "~3 req/sec average",
+    "auth": "API key via NOTION_TOKEN env var (local MCP server)"
+  },
+  "review_policy": {
+    "description": "Docs are reviewed 4x daily by alternating models (Opus + Codex)",
+    "guidelines": [
+      "Use native notion_API-* tools — NOT curl",
+      "Check content against actual system state (docker, systemctl, Linear, git)",
+      "Update page content directly — don't just report issues",
+      "New content should go in the correct section per hierarchy above",
+      "Architecture decisions belong in the ADR database (not loose pages)",
+      "Research findings belong in the Research Library database",
+      "Project status updates belong in the Projects Registry database"
+    ]
+  },
+  "last_sync": "2026-02-10T11:00:00Z",
+  "last_restructure": "2026-02-10T00:46:00Z"
+}

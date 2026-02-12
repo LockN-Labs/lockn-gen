@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LockN Control — Mission Control Mockup</title>
+  <style>
+    :root {
+      --bg: #0D1117;
+      --panel: #121821;
+      --card: #18212B;
+      --border: #243041;
+      --text: #E6EDF3;
+      --muted: #94A3B8;
+      --p1: #FF4D4F;
+      --p2: #FAAD14;
+      --ok: #52C41A;
+      --info: #4DA3FF;
+      --gap: 12px;
+      --radius: 8px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #0B0F14;
+      color: var(--text);
+      font-family: var(--sans);
+      padding: 24px;
+    }
+
+    h1, h2, h3 { margin: 0; }
+
+    .workspace {
+      display: grid;
+      gap: 32px;
+    }
+
+    .frame {
+      border: 1px solid #2B3647;
+      background: linear-gradient(180deg, #0f141c 0%, #0d1117 100%);
+      border-radius: 12px;
+      padding: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .frame .label {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .dashboard-1920 { width: 100%; max-width: 1920px; min-height: 1080px; }
+    .dashboard-2560 { width: 100%; max-width: 1600px; min-height: 900px; transform: scale(.85); transform-origin: top left; }
+
+    .dash-grid {
+      display: grid;
+      grid-template-rows: 22% 46% 32%;
+      height: calc(100% - 20px);
+      gap: var(--gap);
+      min-height: 980px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .alerts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+    }
+
+    .alert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--p2);
+      border-radius: var(--radius);
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      min-height: 120px;
+    }
+
+    .alert-card.p1 { border-left-color: var(--p1); }
+    .alert-card.p2 { border-left-color: var(--p2); }
+    .alert-card.p3, .alert-card.acked { border-left-color: var(--info); }
+
+    .sev {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .alert-title { font-size: 18px; font-weight: 700; }
+    .meta { font-size: 14px; color: var(--muted); }
+
+    .actions { display: flex; gap: 8px; }
+    .btn {
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #111722;
+      color: var(--text);
+      padding: 6px 10px;
+      font-family: var(--sans);
+    }
+
+    .middle {
+      display: grid;
+      grid-template-columns: 58fr 42fr;
+      gap: var(--gap);
+      min-height: 0;
+    }
+
+    .subpanel { margin-bottom: var(--gap); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #1D2836;
+      vertical-align: middle;
+    }
+
+    th { color: var(--muted); font-size: 14px; font-weight: 600; }
+    .mono { font-family: var(--mono); }
+
+    .dot { font-size: 14px; margin-right: 6px; }
+    .ok { color: var(--ok); }
+    .warn { color: var(--p2); }
+    .bad { color: var(--p1); }
+    .info { color: var(--info); }
+
+    .gauges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .gauge {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px;
+    }
+
+    .kpi { font-size: 34px; font-weight: 700; font-family: var(--mono); }
+
+    .docker-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .cell { height: 14px; border-radius: 3px; }
+    .cell.ok { background: #2f8f1f; }
+    .cell.warn { background: #a27412; }
+    .cell.bad { background: #a63133; }
+
+    .bottom-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .wip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .wip.under { border-left: 4px solid var(--ok); }
+    .wip.at { border-left: 4px solid var(--p2); }
+    .wip.over { border-left: 4px solid var(--p1); }
+
+    .component-states {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .state-block { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+    .state-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .token { background: #141d29; border: 1px solid var(--border); border-radius: 6px; padding: 8px; margin-bottom: 8px; font-size: 14px; }
+
+    .empty-state {
+      background: var(--panel);
+      border: 1px dashed #2F3D52;
+      border-radius: 10px;
+      padding: 24px;
+      text-align: center;
+      min-height: 140px;
+      display: grid;
+      place-items: center;
+    }
+
+    .empty-state strong { font-size: 24px; }
+
+    @media (max-width: 1300px) {
+      .alerts { grid-template-columns: 1fr; }
+      .middle { grid-template-columns: 1fr; }
+      .component-states { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="workspace">
+
+    <section class="frame dashboard-1920">
+      <div class="label">Frame 1 — Mission Control — Full Dashboard (1920×1080)</div>
+      <div class="topbar">
+        <div class="title">LOCKN CONTROL · Mission Control</div>
+        <div class="mono">Last Refresh: 15:30:12 · Auto: ON (5s/15s)</div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="section-title">🔴 Alerts &amp; Blockers</div>
+          <div class="alerts">
+            <div class="alert-card p1">
+              <div class="sev bad">P1 · CRITICAL</div>
+              <div class="alert-title">llama.cpp:11438 DOWN</div>
+              <div class="meta mono">3m ago · impact: dev blocked</div>
+              <div class="actions"><button class="btn">ACK</button><button class="btn">Open Logs</button></div>
+            </div>
+            <div class="alert-card p1">
+              <div class="sev bad">P1 · CRITICAL</div>
+              <div class="alert-title">Cron failed: nightly CI</div>
+              <div class="meta mono">14m ago · retrying</div>
+              <div class="actions"><button class="btn">ACK</button><button class="btn">Open Job</button></div>
+            </div>
+            <div class="alert-card p2">
+              <div class="sev warn">P2 · WARNING</div>
+              <div class="alert-title">Billing threshold 82%</div>
+              <div class="meta mono">est 5 days remaining</div>
+              <div class="actions"><button class="btn">Open Billing</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="middle">
+          <div class="panel">
+            <div class="section-title">🟢 Active Threads</div>
+
+            <div class="subpanel">
+              <table>
+                <thead><tr><th>Agent</th><th>Task</th><th>Elapsed</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>orchestrator</td><td>Sprint planner</td><td class="mono">00:21</td><td><span class="dot ok">●</span>RUNNING</td></tr>
+                  <tr><td>dev</td><td>LIN-342 fix auth</td><td class="mono">01:07</td><td><span class="dot ok">●</span>RUNNING</td></tr>
+                  <tr><td>ux</td><td>dashboard wireframe</td><td class="mono">00:09</td><td><span class="dot ok">●</span>RUNNING</td></tr>
+                  <tr><td>research</td><td>eval harness</td><td class="mono">00:42</td><td><span class="dot warn">●</span>WAITING</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="subpanel token">
+              <div class="state-title">Cron Jobs</div>
+              <div class="mono"><span class="ok">●</span>ingest-linear 2m ago | <span class="ok">●</span>heartbeat 1m ago | <span class="bad">●</span>nightly-ci 14m ago | <span class="ok">●</span>backup 22m ago</div>
+            </div>
+
+            <div class="subpanel token">
+              <div class="state-title">In-Progress Linear Tickets</div>
+              <div class="mono">LIN-342 dev | LIN-355 devops | LIN-361 research</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="section-title">⚡ System Status</div>
+
+            <div class="gauges">
+              <div class="gauge"><div class="meta">CPU</div><div class="kpi">67%</div></div>
+              <div class="gauge"><div class="meta">RAM</div><div class="kpi">74%</div></div>
+              <div class="gauge"><div class="meta">GPU</div><div class="kpi">81%</div></div>
+            </div>
+
+            <div class="token">
+              <div class="state-title">Model Servers (11436–11440)</div>
+              <div class="mono"><span class="ok">●</span>11436 q:0 model:Qwen-Coder</div>
+              <div class="mono"><span class="ok">●</span>11437 q:2 model:Llama-70B</div>
+              <div class="mono"><span class="bad">●</span>11438 q:- model:-</div>
+              <div class="mono"><span class="warn">●</span>11439 q:7 model:DeepSeek-R1</div>
+              <div class="mono"><span class="ok">●</span>Ollama q:1</div>
+            </div>
+
+            <div class="token">
+              <div class="state-title">Docker Health Grid</div>
+              <div class="docker-grid">
+                <div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div>
+                <div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div>
+                <div class="cell ok"></div><div class="cell warn"></div><div class="cell bad"></div><div class="cell ok"></div>
+                <div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div>
+                <div class="cell ok"></div><div class="cell ok"></div><div class="cell warn"></div><div class="cell ok"></div>
+                <div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div><div class="cell ok"></div>
+              </div>
+            </div>
+
+            <div class="token">
+              <div class="state-title">Gateway</div>
+              <div class="mono">Sessions: 7 · Mem: 1.8GB · Cron: 6 · Queue lag: 240ms</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="bottom-header">
+            <div class="section-title">📋 Priority Queue</div>
+            <div class="wip at">WIP: 3 / 3 (AT LIMIT)</div>
+          </div>
+          <div class="token mono" style="font-size:16px;">Next Ready: LIN-377 (unblocked, est 3h, project: Platform)</div>
+          <table>
+            <thead><tr><th>Rank</th><th>Ticket</th><th>Title</th><th>Owner/Agent</th><th>Priority</th><th>Blocker</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td class="mono">LIN-355</td><td>Stabilize cron retries</td><td>devops</td><td>Urgent</td><td>none</td></tr>
+              <tr><td>2</td><td class="mono">LIN-342</td><td>Auth token race condition</td><td>dev</td><td>High</td><td>none</td></tr>
+              <tr><td>3</td><td class="mono">LIN-361</td><td>Research eval harness</td><td>research</td><td>High</td><td>waiting on GPU</td></tr>
+              <tr><td>4</td><td class="mono">LIN-377</td><td>OpenClaw memory compaction</td><td>unassigned</td><td>Medium</td><td>none</td></tr>
+              <tr><td>5</td><td class="mono">LIN-369</td><td>Refactor agent prompt router</td><td>dev</td><td>Medium</td><td>blocked by LIN-355</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame">
+      <div class="label">Frame 2 — Component States</div>
+      <div class="component-states">
+        <div class="state-block">
+          <div class="state-title">Alert Cards</div>
+          <div class="token"><span class="bad mono">P1</span> · Critical outage · ACK/Open Logs</div>
+          <div class="token"><span class="warn mono">P2</span> · Degraded/warning</div>
+          <div class="token"><span class="info mono">P3</span> · Informational</div>
+          <div class="token"><span class="mono">ACKED</span> · Quieted but tracked</div>
+        </div>
+        <div class="state-block">
+          <div class="state-title">Status Components</div>
+          <div class="token">Model Server: <span class="ok">online</span> / <span class="warn">degraded</span> / <span class="bad">offline</span></div>
+          <div class="token">Docker Cell: <span class="ok">healthy</span> / <span class="warn">starting</span> / <span class="bad">unhealthy</span></div>
+          <div class="token">Ticket Row: normal / blocked / in-progress / done</div>
+        </div>
+        <div class="state-block">
+          <div class="state-title">WIP Gauge States</div>
+          <div class="wip under">Under limit: 2 / 3</div>
+          <br/>
+          <div class="wip at">At limit: 3 / 3</div>
+          <br/>
+          <div class="wip over">Over limit: 5 / 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame">
+      <div class="label">Frame 3 — Empty / Zero States</div>
+      <div class="component-states">
+        <div class="empty-state"><strong>✅ All clear</strong><div class="meta">No critical or warning alerts in last 15m</div></div>
+        <div class="empty-state"><strong>🟢 No active threads</strong><div class="meta">No subagent sessions currently running</div></div>
+        <div class="empty-state"><strong>📭 Queue empty</strong><div class="meta">No ready tickets. Check backlog filters.</div></div>
+      </div>
+    </section>
+
+    <section class="frame dashboard-2560">
+      <div class="label">Frame 4 — 2560×1440 Variant (scaled preview)</div>
+      <div class="topbar"><div class="title">LOCKN CONTROL · Mission Control (2560×1440)</div><div class="mono">Denser table rows · larger KPI bands</div></div>
+      <div class="token">Uses same 22% / 46% / 32% tiering with expanded table viewport and larger health grid (32+ cells).</div>
+      <div class="token">Typography scales to keep 14px minimum metadata and 18px+ section labels, preserving 3–4ft readability.</div>
+      <div class="token">Auto-layout-compatible block structure maintained for Grafana translation.</div>
+    </section>
+
+  </div>
+</body>
+</html>

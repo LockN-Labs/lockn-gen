@@ -1,0 +1,34 @@
+{"patch": {
+  "tools": {
+    "elevated": {
+      "allowFrom": {
+        "slack": ["REPLACE_SLACK_USER_ID", "REPLACE_SLACK_CHANNEL_ID"]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "small": {
+          "sandbox": true,
+          "disabledTools": ["web_search", "web_fetch", "browser"]
+        }
+      }
+    }
+  },
+  "channels": {
+    "slack": {
+      "groupPolicy": "closed",
+      "permissions": {
+        "elevated": false
+      },
+      "allowlist": ["REPLACE_SLACK_CHANNEL_ID"]
+    }
+  }
+},
+"notes": [
+  "tools.elevated.allowFrom.slack restricted from wildcard to specific IDs",
+  "Small models configured with sandbox + disabled tools for containment",
+  "Slack groupPolicy set to closed with elevated permissions disabled",
+  "Slack channel allowlist explicitly defined"
+]}

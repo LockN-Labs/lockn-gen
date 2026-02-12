@@ -1,6 +1,6 @@
 {
   "createdAt": "2026-02-07T21:30:13-05:00",
-  "updatedAt": "2026-02-11T14:00:00-05:00",
+  "updatedAt": "2026-02-11T21:30:00-05:00",
   "expectedContainers": [
     "lockn-auth-api-1",
     "lockn-auth-db-1",
@@ -30,19 +30,14 @@
     "lockn-score-web-test",
     "lockn-speak-api",
     "lockn-speak-api-test",
+    "lockn-speak-db",
     "lockn-speak-dev",
     "lockn-swagger",
     "lockn-tempo",
     "lockn-whisper-gpu"
   ],
   "notes": {
-    "lockn-postgres-dev": "Missing since 2026-02-10. Needs recreation via docker-compose.",
-    "lockn-chatterbox": "Renamed from chatterbox-v4 (confirmed 2026-02-11)",
-    "lockn-qdrant": "Renamed from qdrant (confirmed 2026-02-11)",
-    "lockn-qwen3-tts": "Renamed from qwen3-tts-api (confirmed 2026-02-11)",
-    "lockn-gen-api-1": "Removed from manifest — no longer running as of 2026-02-11",
-    "lockn-gen-db-1": "Removed from manifest — no longer running as of 2026-02-11",
-    "lockn-postgres-test": "Removed from manifest — no longer running as of 2026-02-11",
-    "lockn-speak-dev": "Crash-looping (SIGSEGV) as of 2026-02-11 14:00"
+    "lockn-speak-db": "Added to manifest 2026-02-11 — speak postgres DB",
+    "lockn-speak-dev": "Recovered from SIGSEGV crash-loop, healthy since ~14:30 2026-02-11"
   }
 }

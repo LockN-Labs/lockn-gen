@@ -1,0 +1,23 @@
+[Unit]
+Description=GLM-4.7-Flash Q6_K Local Inference
+After=network.target
+
+[Service]
+Type=simple
+User=sean
+WorkingDirectory=/home/sean/llama.cpp/build
+ExecStart=/home/sean/llama.cpp/build/bin/llama-server \
+  --model /home/sean/models/text/GLM-4.7-Flash-Q6_K_XL.gguf \
+  --host 127.0.0.1 \
+  --port 11436 \
+  --ctx-size 131072 \
+  --n-gpu-layers 99 \
+  --batch-size 2048 \
+  --ubatch-size 512 \
+  --flash-attn on \
+  --threads 8
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

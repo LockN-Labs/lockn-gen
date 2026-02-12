@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "name": "Homepage",
+      "url": "https://app.example.com/",
+      "priority": "high",
+      "description": "Main landing page - first impression for users"
+    },
+    {
+      "name": "Dashboard",
+      "url": "https://app.example.com/dashboard", 
+      "priority": "high",
+      "authRequired": true,
+      "description": "Main app interface after login"
+    },
+    {
+      "name": "Login Page",
+      "url": "https://app.example.com/login",
+      "priority": "high",
+      "description": "User authentication flow"
+    },
+    {
+      "name": "Sign Up",
+      "url": "https://app.example.com/signup",
+      "priority": "high", 
+      "description": "User onboarding flow"
+    },
+    {
+      "name": "Mobile Homepage",
+      "url": "https://app.example.com/",
+      "viewport": "mobile",
+      "priority": "medium",
+      "description": "Mobile responsive homepage experience"
+    },
+    {
+      "name": "Mobile Dashboard",
+      "url": "https://app.example.com/dashboard",
+      "viewport": "mobile",
+      "priority": "medium",
+      "authRequired": true,
+      "description": "Mobile app interface"
+    },
+    {
+      "name": "404 Page",
+      "url": "https://app.example.com/non-existent-page",
+      "priority": "low",
+      "description": "Error state handling"
+    },
+    {
+      "name": "Pricing Page",
+      "url": "https://app.example.com/pricing",
+      "priority": "medium",
+      "description": "Product pricing and plans"
+    }
+  ],
+  "viewports": {
+    "desktop": {
+      "width": 1920,
+      "height": 1080
+    },
+    "tablet": {
+      "width": 768,
+      "height": 1024
+    },
+    "mobile": {
+      "width": 375,
+      "height": 812
+    }
+  },
+  "auditSettings": {
+    "maxIssuesPerPage": 10,
+    "screenshotQuality": 90,
+    "waitForLoad": 3000,
+    "retryFailedPages": 2
+  }
+}

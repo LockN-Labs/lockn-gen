@@ -1,0 +1,39 @@
+{
+  "site": "OpenClaw Docs",
+  "url": "https://docs.openclaw.ai",
+  "timestamp": "2026-02-03T02:30:00-05:00",
+  "timestampUtc": "2026-02-03T07:30:00Z",
+  "pages": [
+    {
+      "path": "index.md",
+      "url": "https://docs.openclaw.ai",
+      "md5": "c57b6dc9f7e71ed1078d075fbc68725a",
+      "bytes": 3655
+    },
+    {
+      "path": "getting-started.md",
+      "url": "https://docs.openclaw.ai/start/getting-started",
+      "md5": "6bd26e0e1ec1aac1088489d2615ca3ad",
+      "bytes": 2779
+    },
+    {
+      "path": "configuration.md",
+      "url": "https://docs.openclaw.ai/gateway/configuration",
+      "md5": "f7f1d9ef14260579fdbda5dd34d8f25c",
+      "bytes": 2889,
+      "truncated": true
+    },
+    {
+      "path": "help.md",
+      "url": "https://docs.openclaw.ai/help",
+      "md5": "a7000881998f70a8bba919a7149e15f1",
+      "bytes": 4432
+    }
+  ],
+  "totalBytes": 13755,
+  "priorSnapshot": null,
+  "diff": {
+    "status": "initial",
+    "note": "First snapshot - no prior baseline for comparison"
+  }
+}

@@ -1,0 +1,150 @@
+Sean System-Level Improvement Instructions + Meta-Prompting Examples (from Slack history)
+Compiled: 2026-02-11
+Scope: Sean-authored directives focused on system/process improvement, reliability, orchestration, and continuous improvement.
+
+---
+
+[1] 2026-02-11 18:35 ET
+"Please review the latest from all our channels and compose a ranked and bucketed list of next steps for us to improve our overall system performance and efficiency"
+
+[2] 2026-02-11 18:55 ET
+"Do you copy?
+
+I really don't like repeating myself.. what can we prioritize in our system to ensure I don't need to keep repeating myself?"
+
+[3] 2026-02-11 19:02 ET
+"Let's enable commands.restart = true in gateway config"
+
+[4] 2026-02-11 19:26 ET
+"No - I think the issue may be structured outputs with Kimi ran crons"
+
+[5] 2026-02-11 19:30 ET
+"Let's reassign them to deepseek for now - and rename as appropriately"
+
+[6] 2026-02-11 19:30 ET
+"I'm wondering if the way our memory is working - if we're hallucinating about issues that had happened in the past, but maybe they are still being retrieved from indexes even after correction?"
+
+[7] 2026-02-11 19:36 ET
+"Yes let's move forward with your ranked priorities - thank you"
+
+[8] 2026-02-11 19:49 ET
+"Thanks - I think we'll use qdrant for LockN Loader for now, and I think the lockn-code cross repo memory references are still in play?"
+
+[9] 2026-02-11 19:50 ET
+"What's the value? Would it be worth it?"
+
+[10] 2026-02-11 19:53 ET
+"Maybe something we invest more in as we build out LockN Loader and LockN Brain"
+
+[11] 2026-02-11 20:04 ET
+"Are we doing anything with Grafana and Prometheus yet?
+
+It seems like it will be really useful to increase system transparency and observability
+
+Probably something productizable as well
+
+We should have a simple view for how much usage our models are all getting, with a realtime linegraph, separate views for total tokens / tokens in / tokens out
+
+Would also be great if we could see the caps that claude and codex are approaching on the per session and weekly time scales
+
+Open to suggestion here - seems that LockN Logger Integration would make sense
+
+Maybe we bring all of these concepts together in a new LockN Control project"
+
+[12] 2026-02-11 20:05 ET
+"I think this is worthy of proper project kickoff"
+
+[13] 2026-02-11 20:29 ET
+"Cool - we need to have LockN Control have a main view where we can track open threads, current system focus, easily see what's running, any blockers or things that the human should be immediately aware of, and what's the next priorities in view - think of it as a view we can have on a separate monitor all day to track our system at a glance"
+
+[14] 2026-02-11 20:30 ET
+"We should probably get the UX team started on the vision here"
+
+[15] 2026-02-11 20:32 ET
+"I think we're forgetting the Figma part of this.."
+
+[16] 2026-02-11 20:34 ET
+"Done - we have Figma starting automatically on startup, is there anyway we can get this bridge up and running automatically as well?"
+
+[17] 2026-02-11 20:44 ET
+"The bridge is ready - and yes I think it's worth full pm-kickoff for LockN Tune so we have the Linear project and next steps, and can prioritize accordingly from there"
+
+[18] 2026-02-11 20:48 ET
+"Hmmmm what do we need to do to allow our UX subagents to access the Figma bridge?"
+
+[19] 2026-02-11 21:08 ET
+"We need to make sure this whole process is fool-proof and hardened - the Figma design integration is critical to our vision"
+
+[20] 2026-02-11 21:22 ET
+"Did we have the Qwen VL cloud large param model check out the UX to give feedback?
+
+This should be part of our process for iterative design
+
+This should be gating the vision agent scoring the design styling, cohesiveness to our platform and overall UI/UX to greater than 9.81 on a 0.00 to 10.00 scale"
+
+[21] 2026-02-11 21:25 ET
+"Please try with our local VL model if the cloud has an issue"
+
+[22] 2026-02-11 21:27 ET
+"Please try with our local VL model if the cloud has an issue
+
+And advise on this agents.defaults.compaction.reserveTokensFloor"
+
+[23] 2026-02-11 21:45 ET
+"We need this whole process to be hardened and foolproof - please suggest improvements if necessary"
+
+[24] 2026-02-11 21:55 ET
+"We need to update our processes to ensure that Figma designs are reviewed by vision model and score greater than 9.81
+
+This should be part of our process for iterative design
+
+This should be gating the vision agent scoring the design styling, cohesiveness to our platform and overall UI/UX to greater than 9.81 on a 0.00 to 10.00 scale"
+
+[25] 2026-02-11 22:05 ET
+"What is Sean-assigned manual work?
+
+Please remember - everything is agent-actionable work and should be assigned accordingly
+
+If there's ever anything that needs human intervention or Sean's input - please post in <#C0ACLQVLFNG>"
+
+[26] 2026-02-11 22:06 ET
+"Are we following the Project-Level Priority queue ?"
+
+[27] 2026-02-11 22:08 ET
+"We should run parallel work across the top projects whenever possible with no conflicts in order to max out our throughput"
+
+[28] 2026-02-11 22:10 ET
+"Thank you - we also have the Issue-Level Priority by Project view in Linear to act as our queue within a given project
+
+Please suggest any system-level improvements to ensure this is operationalized"
+
+[29] 2026-02-11 22:14 ET
+"Do you think the suggested CRON interval is quick enough for priority dispatching?
+
+Considering our dev-agents are spawned with new work on 10 minute intervals?
+
+Maybe it makes sense to have this at 10 minute intervals as well, but staggered on the 5 minute mark
+
+What do you think?"
+
+[30] 2026-02-11 22:16 ET
+"Yes love it - the rest of your suggestions here make sense as well
+
+Let's operationalize it"
+
+[31] 2026-02-11 22:19 ET
+"Which cron failed?"
+
+[32] 2026-02-11 23:18 ET
+"Please search our slack messaging history for messages where I give system-level improvement instructions and meta-prompting techniques for continuous improvement
+
+Please take your time and output two .txt files the first with all examples and the second with all generalized patterns of those examples rewritten by Opus"
+
+---
+
+Additional recurring instruction motifs from Sean in-channel:
+- Prefer quick iterative updates (in-order) over silence.
+- Harden brittle processes after each failure mode discovery.
+- Convert ideas into operational artifacts (tickets, cron, docs, runbooks).
+- Tie policy to measurable gates/thresholds (e.g., >9.81 VL score).
+- Bias toward autonomous execution; escalate true human-decision blockers to #exec-approvals.
